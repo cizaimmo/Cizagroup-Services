@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CizaGestion+ — CIZA GROUP</title>
+
+<!-- SEO -->
+<meta name="description" content="CizaGestion+ par CIZA GROUP — Gestion administrative, financière et opérationnelle pour entreprises, commerces et particuliers.">
+<meta name="keywords" content="Gestion Burundi, Administration, Comptabilité, CIZA GROUP, CizaGestion+">
+
+<link rel="icon" href="logotransparent.png">
+
+<style>
+:root{
+  --bg:#06142E;
+  --gold:#F2B840;
+  --glass:rgba(255,255,255,.08);
+  --border:rgba(242,184,64,.45);
+  --txt:#fff;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(160deg,#06142E,#0b1c34);
+  color:var(--txt);
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 18px;
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--gold);
+}
+header button{
+  background:none;
+  border:none;
+  color:var(--gold);
+  font-size:18px;
+  cursor:pointer;
+}
+header img{height:42px}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px 70px;
+}
+.hero img{
+  width:120px;
+  filter:drop-shadow(0 0 18px rgba(242,184,64,.6));
+}
+.hero h1{color:var(--gold);margin:18px 0 10px}
+.hero p{max-width:760px;margin:auto;opacity:.9}
+
+/* LAYOUT */
+.container{
+  max-width:980px;
+  margin:auto;
+  padding:30px 20px;
+}
+.section{margin-top:42px}
+.section-title{
+  color:var(--gold);
+  font-size:26px;
+  margin-bottom:18px;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px;
+}
+
+/* FORM */
+.form-box{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:26px;
+}
+input,select,textarea{
+  width:100%;
+  margin-top:12px;
+  padding:14px;
+  border-radius:12px;
+  border:none;
+  background:#0b1c34;
+  color:white;
+}
+textarea{min-height:120px}
+.btn{
+  margin-top:18px;
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#F2B840,#ffd977);
+  color:#06142E;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.success{
+  display:none;
+  margin-top:20px;
+  background:#0b1c34;
+  border:1px solid var(--gold);
+  border-radius:18px;
+  padding:26px;
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  margin-top:60px;
+  padding:28px;
+  text-align:center;
+  font-size:14px;
+  opacity:.9;
+  border-top:1px solid var(--border);
+}
+footer span{display:block;margin-top:6px}
+
+/* SCROLL TOP */
+#topBtn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--gold);
+  color:#06142E;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <button onclick="history.back()">←</button>
+  <img src="logotransparent.png" alt="CIZA GROUP">
+  <div>
+    <button onclick="setLang('fr')">FR</button>
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('rn')">RN</button>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="logotransparent.png">
+  <h1 data-fr="CizaGestion+"
+      data-en="CizaManagement+"
+      data-rn="CizaGestion+"></h1>
+
+  <p
+   data-fr="Gestion administrative, financière et organisationnelle assurée par CIZA GROUP."
+   data-en="Administrative, financial and organizational management by CIZA GROUP."
+   data-rn="Serivisi zo gucunga ibikorwa, amafaranga n’imirimo zitangwa na CIZA GROUP.">
+  </p>
+</section>
+
+<div class="container">
+
+<!-- C’EST QUOI -->
+<section class="section">
+<h2 class="section-title"
+ data-fr="📊 C’est quoi CizaGestion+ ?"
+ data-en="📊 What is CizaGestion+?"
+ data-rn="📊 CizaGestion+ ni iki?"></h2>
+
+<div class="card">
+<p
+ data-fr="CizaGestion+ est un service professionnel destiné aux entreprises, commerces et particuliers qui souhaitent déléguer leur gestion à une équipe fiable."
+ data-en="CizaGestion+ is a professional service for businesses, shops and individuals wishing to delegate management to a reliable team."
+ data-rn="CizaGestion+ ni serivisi ifasha amashirahamwe n’abantu bashaka gutuma ibikorwa vyabo bicungirwa neza.">
+</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+<h2 class="section-title"
+ data-fr="🗂️ Nos services de gestion"
+ data-en="🗂️ Our management services"
+ data-rn="🗂️ Serivisi dutanga"></h2>
+
+<div class="cards">
+  <div class="card"
+   data-fr="✔ Gestion administrative & dossiers"
+   data-en="✔ Administrative & file management"
+   data-rn="✔ Gucunga inyandiko n’imirimo"></div>
+
+  <div class="card"
+   data-fr="✔ Suivi financier & rapports"
+   data-en="✔ Financial tracking & reports"
+   data-rn="✔ Gukurikirana amafaranga"></div>
+
+  <div class="card"
+   data-fr="✔ Gestion quotidienne des activités"
+   data-en="✔ Daily operations management"
+   data-rn="✔ Gucunga ibikorwa vya buri musi"></div>
+</div>
+</section>
+
+<!-- POURQUOI -->
+<section class="section">
+<h2 class="section-title"
+ data-fr="⭐ Pourquoi CizaGestion+ ?"
+ data-en="⭐ Why CizaGestion+?"
+ data-rn="⭐ Kubera iki CizaGestion+?"></h2>
+
+<div class="cards">
+  <div class="card">✔ Gestion humaine & personnalisée</div>
+  <div class="card">✔ Confidentialité et rigueur</div>
+  <div class="card">✔ Encadrement CIZA GROUP</div>
+</div>
+</section>
+
+<!-- PROCESSUS -->
+<section class="section">
+<h2 class="section-title"
+ data-fr="📋 Comment ça fonctionne ?"
+ data-en="📋 How it works"
+ data-rn="📋 Uko bigenda"></h2>
+
+<div class="cards">
+  <div class="card">1 — Analyse de vos besoins</div>
+  <div class="card">2 — Proposition & validation</div>
+  <div class="card">3 — Mise en place de la gestion</div>
+  <div class="card">4 — Suivi & rapports réguliers</div>
+</div>
+</section>
+
+<!-- FORM -->
+<section class="section">
+<h2 class="section-title"
+ data-fr="📝 Demande de gestion"
+ data-en="📝 Management request"
+ data-rn="📝 Gusaba serivisi"></h2>
+
+<div class="form-box">
+<form id="gestionForm">
+<input name="Service" value="CizaGestion+" hidden>
+
+<input required name="Nom" placeholder="Nom complet">
+<input required name="Téléphone" placeholder="Téléphone / WhatsApp">
+<select name="Besoin" required>
+  <option value="">Type de gestion</option>
+  <option>Gestion administrative</option>
+  <option>Gestion financière</option>
+  <option>Gestion complète</option>
+</select>
+<textarea name="Message" placeholder="Décrivez votre besoin de gestion"></textarea>
+
+<button class="btn">Envoyer la demande</button>
+</form>
+
+<div id="success" class="success">
+<h3 style="color:var(--gold)">Demande envoyée ✅</h3>
+<p>Un conseiller CizaGestion+ vous contactera.</p>
+</div>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 CIZA GROUP
+<span>infos@cizagroup.com</span>
+<span>Sign & Designed by CIZA GROUP</span>
+</footer>
+
+<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<script>
+/* MULTILINGUE */
+function setLang(lang){
+  document.querySelectorAll("[data-fr]").forEach(el=>{
+    el.innerText = el.dataset[lang];
+  });
+  localStorage.setItem("lang",lang);
+}
+setLang(localStorage.getItem("lang") || "fr");
+
+/* FORM SANS PAGE BLANCHE */
+document.getElementById("gestionForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{
+    method:"POST",
+    body:new FormData(e.target)
+  }).then(()=>{
+    e.target.style.display="none";
+    document.getElementById("success").style.display="block";
+  });
+});
+
+/* SCROLL TOP */
+window.addEventListener("scroll",()=>{
+  topBtn.style.display=window.scrollY>300?"flex":"none";
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CIZA GROUP — Services Locaux Officiels</title>
+
+<meta name="description" content="CIZA GROUP — Services locaux officiels : transport, livraison, carwash, assistance, jobs, market, gestion, logistique et services à domicile. Commander via le site ou l’application CIZA GROUP.">
+<meta name="keywords" content="Ciza Group, services Burundi, CizaRide, livraison, carwash, jobs, gestion, logistique, services locaux">
+<meta name="author" content="CIZA GROUP">
+
+<link rel="icon" href="logotransparent.png">
+
+<style>
+:root{
+  --bg:#06142E;
+  --gold:#F2B840;
+  --glass:rgba(255,255,255,.08);
+  --border:rgba(242,184,64,.45);
+  --txt:#fff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--txt);
+}
+
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 20px;
+  background:var(--glass);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--gold);
+}
+header img{height:44px}
+header button{
+  background:none;border:none;
+  color:var(--gold);
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px 80px;
+}
+.hero h1{
+  color:var(--gold);
+  font-size:32px;
+  margin-bottom:12px;
+}
+.hero p{
+  max-width:760px;
+  margin:auto;
+  opacity:.9;
+  line-height:1.6;
+}
+.hero .actions{
+  margin-top:28px;
+}
+.hero .actions button{
+  margin:8px;
+  padding:14px 26px;
+  border:none;
+  border-radius:14px;
+  background:var(--gold);
+  color:#06142E;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* SECTIONS */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+.section{
+  margin-top:60px;
+}
+.section-title{
+  font-size:26px;
+  color:var(--gold);
+  margin-bottom:20px;
+  text-align:center;
+}
+
+/* SERVICES GRID */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px;
+  text-align:center;
+}
+.card h3{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+.card p{
+  font-size:14px;
+  opacity:.9;
+  line-height:1.5;
+}
+
+/* WHY */
+.why{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.why .card{
+  text-align:left;
+}
+
+/* FOOTER */
+footer{
+  margin-top:80px;
+  padding:30px;
+  text-align:center;
+  font-size:14px;
+  opacity:.9;
+  border-top:1px solid var(--border);
+}
+footer span{
+  display:block;
+  margin-top:6px;
+}
+
+/* TOP BTN */
+#topBtn{
+  position:fixed;
+  bottom:20px;right:20px;
+  width:46px;height:46px;
+  border-radius:50%;
+  background:var(--gold);
+  color:#06142E;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logotransparent.png" alt="CIZA GROUP">
+  <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+    Nos services
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>CIZA GROUP — Services Locaux</h1>
+  <p>
+    Plateforme officielle des services CIZA GROUP.  
+    Commandez directement via ce site ou utilisez l’application CIZA GROUP.  
+    Même équipe, même processus, même qualité.
+  </p>
+
+  <div class="actions">
+    <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+      Voir les services
+    </button>
+    <button onclick="location.href='https://cizaimmo.github.io/Cizagroup-app/'">
+      Utiliser l’application
+    </button>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- SERVICES -->
+<section class="section" id="services">
+<h2 class="section-title">Nos 9 Services Officiels</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>CizaRide+</h3>
+<p>Transport urbain, interurbain, réservation et VIP.</p>
+</div>
+
+<div class="card">
+<h3>CizaDelivery</h3>
+<p>Livraison de colis, courses et documents.</p>
+</div>
+
+<div class="card">
+<h3>CizaCarWash+</h3>
+<p>Lavage automobile premium à domicile ou sur site.</p>
+</div>
+
+<div class="card">
+<h3>CizaAssist</h3>
+<p>Assistance locale et aide pratique encadrée.</p>
+</div>
+
+<div class="card">
+<h3>CizaMarket</h3>
+<p>Achats et commandes locales sélectionnées.</p>
+</div>
+
+<div class="card">
+<h3>CizaHome+</h3>
+<p>Services liés au logement et à l’entretien.</p>
+</div>
+
+<div class="card">
+<h3>CizaJobs</h3>
+<p>Offres d’emploi locales validées.</p>
+</div>
+
+<div class="card">
+<h3>CizaGestion+</h3>
+<p>Gestion administrative et opérationnelle.</p>
+</div>
+
+<div class="card">
+<h3>CizaLogistics+</h3>
+<p>Logistique légère pour commerçants et stocks.</p>
+</div>
+
+</div>
+</section>
+
+<!-- WHY -->
+<section class="section">
+<h2 class="section-title">Pourquoi CIZA GROUP ?</h2>
+
+<div class="why">
+  <div class="card">
+    <h3>Présence réelle</h3>
+    <p>Équipe locale + coordination internationale.</p>
+  </div>
+  <div class="card">
+    <h3>Services officiels</h3>
+    <p>Aucun intermédiaire externe non contrôlé.</p>
+  </div>
+  <div class="card">
+    <h3>Même process</h3>
+    <p>Site et application fonctionnent ensemble.</p>
+  </div>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 CIZA GROUP  
+<span>Sign designed by CIZA GROUP</span>
+<span>infos@cizagroup.com</span>
+<span>Burundi : +257 79 94 50 07</span>
+<span>Canada : +1 514 502 9503</span>
+</footer>
+
+<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<script>
+window.addEventListener("scroll",()=>{
+  document.getElementById("topBtn").style.display =
+    window.scrollY>300 ? "flex" : "none";
+});
+</script>
+
+</body>
+</html>

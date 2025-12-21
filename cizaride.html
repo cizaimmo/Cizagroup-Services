@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CizaRide+ — Transport Officiel | CIZA GROUP</title>
+
+<meta name="description" content="CizaRide+ est le service officiel de transport CIZA GROUP : taxi urbain, interurbain et VIP. Commandez via le site ou l’application.">
+<meta name="keywords" content="CizaRide, taxi Burundi, transport VIP, Ciza Group">
+<meta name="author" content="CIZA GROUP">
+
+<link rel="icon" href="logotransparent.png">
+
+<style>
+:root{
+  --bg:#06142E;
+  --gold:#F2B840;
+  --glass:rgba(255,255,255,.08);
+  --border:rgba(242,184,64,.45);
+  --txt:#fff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:var(--bg);
+  color:var(--txt);
+}
+
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 20px;
+  background:var(--glass);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--gold);
+}
+header img{height:44px}
+header button{
+  background:none;border:none;
+  color:var(--gold);
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px 80px;
+}
+.hero h1{
+  color:var(--gold);
+  font-size:32px;
+  margin-bottom:10px;
+}
+.hero p{
+  max-width:760px;
+  margin:auto;
+  opacity:.9;
+  line-height:1.6;
+}
+.hero .actions{
+  margin-top:28px;
+}
+.hero .actions button{
+  margin:8px;
+  padding:14px 26px;
+  border:none;
+  border-radius:14px;
+  background:var(--gold);
+  color:#06142E;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* CONTENT */
+.container{
+  max-width:980px;
+  margin:auto;
+  padding:40px 20px;
+}
+.section{
+  margin-top:60px;
+}
+.section-title{
+  font-size:26px;
+  color:var(--gold);
+  margin-bottom:20px;
+  text-align:center;
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px;
+}
+.card h3{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+/* FORM */
+.form-box{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:26px;
+}
+input,select,textarea{
+  width:100%;
+  margin-top:12px;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  background:#0b1c34;
+  color:#fff;
+}
+textarea{min-height:120px}
+.btn{
+  margin-top:18px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:var(--gold);
+  color:#06142E;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  margin-top:80px;
+  padding:30px;
+  text-align:center;
+  font-size:14px;
+  opacity:.9;
+  border-top:1px solid var(--border);
+}
+footer span{
+  display:block;
+  margin-top:6px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <button onclick="history.back()">← Retour</button>
+  <img src="logotransparent.png" alt="CIZA GROUP">
+  <button onclick="location.href='index.html'">Accueil</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>CizaRide+</h1>
+  <p>
+    Service officiel de transport CIZA GROUP.  
+    Taxi urbain, interurbain et service VIP, avec chauffeurs identifiés et encadrés.
+  </p>
+
+  <div class="actions">
+    <button onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">
+      Réserver maintenant
+    </button>
+    <button onclick="location.href='https://cizaimmo.github.io/Cizagroup-app/'">
+      Utiliser l’application
+    </button>
+  </div>
+</section>
+
+<div class="container">
+
+<!-- C'EST QUOI -->
+<section class="section">
+<h2 class="section-title">🚗 C’est quoi CizaRide+ ?</h2>
+<div class="cards">
+  <div class="card">
+    <h3>Transport sécurisé</h3>
+    <p>Chauffeurs identifiés, trajets suivis et service encadré.</p>
+  </div>
+  <div class="card">
+    <h3>Réservation simple</h3>
+    <p>Via le site ou via l’application CIZA GROUP.</p>
+  </div>
+  <div class="card">
+    <h3>Service VIP</h3>
+    <p>Discrétion, ponctualité et confort premium.</p>
+  </div>
+</div>
+</section>
+
+<!-- COMMENT CA MARCHE -->
+<section class="section">
+<h2 class="section-title">📋 Comment ça fonctionne ?</h2>
+<div class="cards">
+  <div class="card"><h3>1</h3><p>Vous remplissez la demande</p></div>
+  <div class="card"><h3>2</h3><p>Confirmation par l’équipe CIZA</p></div>
+  <div class="card"><h3>3</h3><p>Chauffeur assigné</p></div>
+  <div class="card"><h3>4</h3><p>Service exécuté</p></div>
+</div>
+</section>
+
+<!-- FORMULAIRE -->
+<section class="section" id="form">
+<h2 class="section-title">📝 Demande de transport</h2>
+
+<div class="form-box">
+<form action="mailto:infos@cizagroup.com" method="post" enctype="text/plain">
+  <input name="Nom" required placeholder="Nom complet">
+  <input name="Téléphone" required placeholder="Téléphone / WhatsApp">
+  <input name="Départ" required placeholder="Point de départ">
+  <input name="Destination" required placeholder="Destination">
+  <select name="Type de service" required>
+    <option value="">Type de service</option>
+    <option>Taxi urbain</option>
+    <option>Interurbain</option>
+    <option>VIP / Réservation</option>
+  </select>
+  <textarea name="Message" placeholder="Message (optionnel)"></textarea>
+  <button class="btn">Envoyer la demande</button>
+</form>
+
+<p style="margin-top:14px;font-size:13px;opacity:.7">
+Paiement communiqué après confirmation.  
+Assistance humaine disponible.
+</p>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 CIZA GROUP  
+<span>Sign designed by CIZA GROUP</span>
+<span>infos@cizagroup.com</span>
+<span>Burundi : +257 79 94 50 07</span>
+<span>Canada : +1 514 502 9503</span>
+</footer>
+
+</body>
+</html>

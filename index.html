@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CIZA GROUP Services — Solutions Locales Premium</title>
 
-<title>CIZA GROUP Services — Plateforme de services locaux</title>
-
-<meta name="description" content="CIZA GROUP Services est la plateforme professionnelle de services locaux au Burundi et en Afrique de l’Est.">
-<meta name="keywords" content="Ciza Group, services Burundi, CizaRide, CizaDelivery, CizaCarWash">
+<!-- SEO -->
+<meta name="description" content="CIZA GROUP Services : CarWash+, Delivery+, Logistique, Jobs, Gestion et services locaux premium au Burundi et en Afrique de l'Est.">
+<meta name="keywords" content="Ciza Group, Services Burundi, CarWash, Delivery, Logistique, Jobs, Gestion, Services Premium">
 <meta name="author" content="CIZA GROUP">
 
-<link rel="icon" href="logotransparent.png">
+<link rel="icon" href="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
 
 <style>
 :root{
@@ -20,10 +20,12 @@
   --border:rgba(242,184,64,.45);
   --txt:#fff;
 }
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
-  font-family:Arial,sans-serif;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,Arial,sans-serif;
   background:var(--bg);
   color:var(--txt);
 }
@@ -34,104 +36,118 @@ header{
   top:0;left:0;right:0;
   z-index:1000;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  padding:14px 22px;
-  background:rgba(6,20,46,.8);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
+  align-items:center;
+  padding:14px 18px;
+  background:rgba(6,20,46,.75);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--gold);
 }
 header img{height:42px}
-nav a{
-  margin-left:18px;
-  color:var(--gold);
-  text-decoration:none;
-  font-weight:600;
-}
 .lang button{
-  margin-left:8px;
   background:none;
   border:1px solid var(--gold);
   color:var(--gold);
+  padding:6px 10px;
+  margin-left:6px;
   border-radius:8px;
-  padding:4px 8px;
   cursor:pointer;
+  font-size:13px;
 }
 
 /* HERO */
 .hero{
   min-height:100vh;
-  background:url('199375EE-40C2-40A5-803C-A0B82783A4A3.png') center/cover no-repeat;
-  position:relative;
   display:flex;
   align-items:center;
-  padding:140px 20px 80px;
+  justify-content:center;
+  padding:120px 20px 80px;
+  background:
+    linear-gradient(rgba(6,20,46,.82),rgba(6,20,46,.9)),
+    url('https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/3D34B5E2-A636-48E7-9F9D-6B58060859FB.png')
+    center/cover no-repeat;
 }
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom,rgba(6,20,46,.7),rgba(6,20,46,.95));
-}
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:1100px;
-  margin:auto;
+.hero-inner{
+  max-width:1200px;
+  width:100%;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:40px;
   align-items:center;
 }
-.hero h1{color:var(--gold);font-size:38px}
-.hero p{font-size:17px;line-height:1.6}
-.hero-btn{
+.hero h1{
+  color:var(--gold);
+  font-size:clamp(30px,5vw,54px);
+}
+.hero p{
+  font-size:clamp(15px,2.5vw,18px);
+  line-height:1.7;
+  opacity:.95;
+}
+.hero a{
   display:inline-block;
   margin-top:26px;
-  padding:14px 32px;
+  padding:15px 32px;
   background:var(--gold);
   color:#06142E;
-  font-weight:700;
+  font-weight:bold;
   border-radius:18px;
   text-decoration:none;
 }
-.hero-app img{
+.hero-mockup img{
+  max-width:320px;
   width:100%;
-  max-width:420px;
-  display:block;
-  margin:auto;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
+  100%{transform:translateY(0)}
 }
 
-/* SECTIONS */
-.container{max-width:1100px;margin:auto;padding:80px 20px}
-.section-title{
+/* SERVICES */
+section{padding:70px 20px}
+.container{max-width:1200px;margin:auto}
+h2{
   color:var(--gold);
-  font-size:28px;
   text-align:center;
-  margin-bottom:26px;
+  margin-bottom:40px;
+  font-size:32px;
 }
-.services{
+.grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:22px;
 }
 .card{
   background:var(--glass);
   border:1px solid var(--border);
-  border-radius:18px;
+  border-radius:20px;
   padding:26px;
   text-align:center;
+  transition:.3s;
 }
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.card h3{color:var(--gold);margin-bottom:10px}
+
+/* FOOTER */
 footer{
-  padding:34px 20px;
-  text-align:center;
   border-top:1px solid var(--border);
+  padding:36px 20px;
+  text-align:center;
+  font-size:14px;
+  opacity:.9;
 }
 footer span{display:block;margin-top:6px}
 
+/* MOBILE */
 @media(max-width:900px){
-  .hero-content{grid-template-columns:1fr;text-align:center}
-  .hero h1{font-size:28px}
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-mockup img{margin-top:30px}
 }
 </style>
 </head>
@@ -139,11 +155,7 @@ footer span{display:block;margin-top:6px}
 <body>
 
 <header>
-  <img src="logotransparent.png">
-  <nav>
-    <a href="#services" data-fr="Services" data-en="Services" data-rn="Ibikorwa"></a>
-    <a href="#contact" data-fr="Contact" data-en="Contact" data-rn="Twandikire"></a>
-  </nav>
+  <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
   <div class="lang">
     <button onclick="setLang('fr')">FR</button>
     <button onclick="setLang('en')">EN</button>
@@ -151,65 +163,72 @@ footer span{display:block;margin-top:6px}
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-inner">
     <div>
-      <h1
-        data-fr="Tous vos services sur une seule plateforme"
-        data-en="All your services on one platform"
-        data-rn="Ibikorwa vyose ahantu hamwe">
+      <h1 data-fr="Services locaux premium"
+          data-en="Premium local services"
+          data-rn="Serivisi z’imbere mu gihugu z’akarorero">
+        Services locaux premium
       </h1>
 
-      <p
-        data-fr="Plateforme professionnelle de services locaux au Burundi et en Afrique de l’Est."
-        data-en="Professional local services platform in Burundi and East Africa."
-        data-rn="Urubuga rw'ibikorwa vy'umwuga mu Burundi no mu karere.">
+      <p data-fr="CIZA GROUP Services propose des solutions locales haut de gamme : CarWash+, Delivery+, Logistique, Jobs, Gestion et services essentiels."
+         data-en="CIZA GROUP Services delivers premium local solutions: CarWash+, Delivery+, Logistics, Jobs, Management and essential services."
+         data-rn="CIZA GROUP Services itanga serivisi z’imbere mu gihugu z’akarorero: CarWash+, Delivery+, Logistique, Akazi n’Imicungire.">
+        CIZA GROUP Services propose des solutions locales haut de gamme.
       </p>
 
-      <a href="#services" class="hero-btn"
-        data-fr="Découvrir les services"
-        data-en="Discover services"
-        data-rn="Raba ibikorwa">
+      <a href="#services"
+         data-fr="Découvrir les services"
+         data-en="Explore services"
+         data-rn="Raba serivisi">
+        Découvrir les services
       </a>
     </div>
 
-    <div class="hero-app">
-      <img src="app-mockup.png">
+    <div class="hero-mockup">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/199375EE-40C2-40A5-803C-A0B82783A4A3.png" alt="CIZA GROUP Services">
     </div>
   </div>
 </section>
 
-<section class="container" id="services">
-  <h2 class="section-title"
-    data-fr="Nos services"
-    data-en="Our services"
-    data-rn="Ibikorwa vyacu">
-  </h2>
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <h2 data-fr="Nos services locaux"
+        data-en="Our local services"
+        data-rn="Serivisi zacu z’imbere mu gihugu">
+      Nos services locaux
+    </h2>
 
-  <div class="services">
-    <div class="card"><h3>CizaRide+</h3></div>
-    <div class="card"><h3>CizaDelivery+</h3></div>
-    <div class="card"><h3>CizaCarWash+</h3></div>
-    <div class="card"><h3>CizaLogistique+</h3></div>
-    <div class="card"><h3>CizaGestion+</h3></div>
-    <div class="card"><h3>CizaJobs+</h3></div>
-    <div class="card"><h3>CizaHome+</h3></div>
+    <div class="grid">
+      <div class="card"><h3>🚗 CizaRide+</h3><p>Transport privé & réservation avancée</p></div>
+      <div class="card"><h3>🧼 CizaCarWash+</h3><p>Lavage professionnel & premium</p></div>
+      <div class="card"><h3>📦 CizaDelivery+</h3><p>Livraison rapide & sécurisée</p></div>
+      <div class="card"><h3>🚚 CizaLogistique+</h3><p>Gestion & coordination logistique</p></div>
+      <div class="card"><h3>🏢 CizaGestion+</h3><p>Gestion administrative & opérationnelle</p></div>
+      <div class="card"><h3>💼 CizaJobs</h3><p>Offres d’emploi & recrutement local</p></div>
+      <div class="card"><h3>🏠 CizaHome+</h3><p>Services maison & maintenance</p></div>
+      <div class="card"><h3>🛒 CizaMarket</h3><p>Produits & services locaux</p></div>
+      <div class="card"><h3>🤝 CizaAssist</h3><p>Assistance & services personnalisés</p></div>
+    </div>
   </div>
 </section>
 
-<footer id="contact">
-© 2026 CIZA GROUP
-<span>infos@cizagroup.com</span>
+<footer>
+© 2026 CIZA GROUP  
 <span>Sign & Designed by CIZA GROUP</span>
+<span>infos@cizagroup.com</span>
+<span>Burundi • East Africa • International</span>
 </footer>
 
 <script>
 function setLang(lang){
   document.querySelectorAll("[data-fr]").forEach(el=>{
-    el.textContent = el.dataset[lang];
+    el.innerHTML = el.dataset[lang];
   });
 }
-setLang("fr");
 </script>
 
 </body>

@@ -2,13 +2,11 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CIZA GROUP Services — Solutions locales premium</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIZA GROUP — Services Locaux</title>
 
-<!-- SEO -->
-<meta name="description" content="CIZA GROUP Services — Mobilité, Logistique, Gestion, Immobilier, Assistance, Emploi, Livraison, CarWash et Services à domicile.">
-<meta name="keywords" content="Ciza Group, Burundi, Services locaux, Logistique, Transport, Immobilier, Jobs, Assistance">
-<meta name="author" content="CIZA GROUP">
+<meta name="description" content="CIZA GROUP — Services professionnels au Burundi : transport, livraison, logistique, immobilier, assistance, emploi.">
+<meta name="keywords" content="CIZA GROUP, Burundi, services, transport, livraison, logistique, emploi, immobilier">
 
 <link rel="icon" href="logotransparent.png">
 
@@ -16,8 +14,8 @@
 :root{
   --bg:#06142E;
   --gold:#F2B840;
-  --glass:rgba(255,255,255,.08);
-  --border:rgba(242,184,64,.55);
+  --glass:rgba(255,255,255,.06);
+  --border:rgba(242,184,64,.5);
   --txt:#fff;
 }
 
@@ -25,167 +23,145 @@
 
 body{
   margin:0;
-  font-family:system-ui,Arial,sans-serif;
+  font-family:system-ui, Arial, sans-serif;
   background:var(--bg);
   color:var(--txt);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header{
   position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
+  top:0; left:0; right:0;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   padding:14px 22px;
-  background:rgba(6,20,46,.55);
+  background:rgba(6,20,46,.65);
   backdrop-filter:blur(10px);
-}
-header img{height:42px}
-.lang button{
-  background:none;border:1px solid var(--gold);
-  color:var(--gold);
-  margin-left:6px;
-  padding:6px 10px;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:13px;
+  z-index:1000;
 }
 
-/* HERO */
+header img{height:38px}
+
+.lang-switch button{
+  margin-left:8px;
+  background:none;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  padding:6px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* ================= HERO ================= */
 .hero{
   min-height:100vh;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  padding:120px 8% 60px;
+  grid-template-columns:1.1fr .9fr;
   gap:30px;
+  align-items:center;
+  padding:140px 8% 80px;
   background:
-    linear-gradient(rgba(6,20,46,.85),rgba(6,20,46,.85)),
+    linear-gradient(rgba(6,20,46,.75),rgba(6,20,46,.9)),
     url("3D34B5E2-A636-48E7-9F9D-6B58060859FB.png") center/cover no-repeat;
 }
+
 .hero h1{
   color:var(--gold);
   font-size:42px;
-  margin:0 0 12px;
+  margin-bottom:12px;
 }
+
 .hero p{
   font-size:18px;
-  line-height:1.6;
   max-width:520px;
-}
-.hero .cta{
-  margin-top:22px;
-}
-.hero .cta a{
-  display:inline-block;
-  padding:14px 26px;
-  background:var(--gold);
-  color:#06142E;
-  border-radius:14px;
-  font-weight:700;
-  text-decoration:none;
+  opacity:.95;
 }
 
 .hero-phone{
   text-align:right;
 }
 .hero-phone img{
-  max-width:360px;
-  width:100%;
-  animation:float 6s ease-in-out infinite;
-}
-@keyframes float{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-14px)}
-  100%{transform:translateY(0)}
+  max-width:260px;
+  filter:drop-shadow(0 25px 50px rgba(0,0,0,.6));
 }
 
-/* SECTIONS */
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 22px;
+/* ================= SERVICES ================= */
+.services{
+  padding:90px 8%;
 }
-.section-title{
+
+.services h2{
+  text-align:center;
   color:var(--gold);
   font-size:30px;
-  margin-bottom:26px;
+  margin-bottom:50px;
 }
 
-/* SERVICES */
-.services{
+.services-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
 }
-.service{
+
+.service-card{
+  display:block;
+  text-decoration:none;
   background:var(--glass);
   border:2px solid var(--border);
-  border-radius:18px;
-  padding:26px;
+  border-radius:26px;
+  padding:38px 26px;
   text-align:center;
-  cursor:pointer;
   transition:.35s;
 }
-.service:hover{
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(242,184,64,.35);
+
+.service-card:hover{
+  transform:translateY(-6px) scale(1.01);
+  box-shadow:0 18px 40px rgba(0,0,0,.35);
 }
-.service img{
-  width:68px;
-  margin-bottom:14px;
-}
-.service h3{
+
+.service-card h3{
   color:var(--gold);
-  margin:10px 0 6px;
+  margin-bottom:10px;
+  font-size:22px;
 }
-.service p{
-  font-size:14px;
+
+.service-card p{
+  font-size:15px;
   opacity:.9;
 }
 
-/* WHY */
-.why{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;
-}
-.why .box{
-  background:var(--glass);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:22px;
-}
-
-/* FOOTER */
-footer{
-  border-top:1px solid var(--border);
-  padding:36px 22px;
-  text-align:center;
-  font-size:14px;
-  opacity:.9;
-}
-footer span{display:block;margin-top:6px}
-
-/* MOBILE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:900px){
-  .hero{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
+  .hero{grid-template-columns:1fr}
   .hero-phone{text-align:center}
+  .services-grid{grid-template-columns:1fr}
+}
+
+/* ================= SCROLL TOP ================= */
+#topBtn{
+  position:fixed;
+  bottom:20px; right:20px;
+  width:48px;height:48px;
+  background:var(--gold);
+  color:#06142E;
+  border-radius:50%;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <img src="logotransparent.png">
-  <div class="lang">
+  <img src="logotransparent.png" alt="CIZA GROUP">
+  <div class="lang-switch">
     <button onclick="setLang('fr')">FR</button>
     <button onclick="setLang('en')">EN</button>
     <button onclick="setLang('rn')">RN</button>
@@ -193,118 +169,110 @@ footer span{display:block;margin-top:6px}
 </header>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
   <div>
-    <h1 data-fr="Services locaux premium"
-        data-en="Premium local services"
-        data-rn="Serivisi z’akarorero zo hafi">
+    <h1
+      data-fr="Services locaux professionnels"
+      data-en="Professional local services"
+      data-rn="Serivisi z’umwuga zo mu gihugu">
     </h1>
 
-    <p data-fr="CIZA GROUP centralise les meilleurs services locaux avec une organisation professionnelle, transparente et internationale."
-       data-en="CIZA GROUP centralizes the best local services with a professional, transparent and international approach."
-       data-rn="CIZA GROUP ihuriza hamwe serivisi nziza zo hafi mu buryo bw’umwuga kandi buboneye.">
+    <p
+      data-fr="CIZA GROUP offre des services premium, fiables et encadrés au Burundi et dans la sous-région."
+      data-en="CIZA GROUP delivers premium, reliable and supervised services in Burundi and the region."
+      data-rn="CIZA GROUP itanga serivisi zizewe kandi z’umwuga mu Burundi no mu karere.">
     </p>
-
-    <div class="cta">
-      <a href="#services"
-         data-fr="Découvrir nos services"
-         data-en="Discover our services"
-         data-rn="Raba serivisi zacu">
-      </a>
-    </div>
   </div>
 
   <div class="hero-phone">
-    <img src="199375EE-40C2-40A5-803C-A0B82783A4A3.png" alt="CIZA GROUP Services">
+    <img src="199375EE-40C2-40A5-803C-A0B82783A4A3.png" alt="CIZA GROUP App">
   </div>
-</div>
+</section>
 
 <!-- SERVICES -->
-<section id="services">
-  <h2 class="section-title"
-      data-fr="Nos services"
-      data-en="Our services"
-      data-rn="Serivisi zacu">
-  </h2>
+<section class="services">
+<h2
+  data-fr="Nos services"
+  data-en="Our services"
+  data-rn="Serivisi zacu">
+</h2>
 
-  <div class="services">
-    <a class="service" href="cizaride.html">
-      <img src="icon-ride.png">
-      <h3>CizaRide+</h3><p>Transport & mobilité</p>
-    </a>
+<div class="services-grid">
 
-    <a class="service" href="cizadelivery.html">
-      <img src="icon-delivery.png">
-      <h3>CizaDelivery+</h3><p>Livraison sécurisée</p>
-    </a>
+<a href="cizaride.html" class="service-card">
+<h3>CizaRide+</h3>
+<p data-fr="Transport & mobilité" data-en="Transport & mobility" data-rn="Ubwikorezi & ingendo"></p>
+</a>
 
-    <a class="service" href="cizalogistics.html">
-      <img src="icon-logistics.png">
-      <h3>CizaLogistics+</h3><p>Logistique & stock</p>
-    </a>
+<a href="cizadelivery.html" class="service-card">
+<h3>CizaDelivery+</h3>
+<p data-fr="Livraison sécurisée" data-en="Secure delivery" data-rn="Itangwa ryizewe"></p>
+</a>
 
-    <a class="service" href="cizagestion.html">
-      <img src="icon-gestion.png">
-      <h3>CizaGestion+</h3><p>Gestion & suivi</p>
-    </a>
+<a href="cizalogistics.html" class="service-card">
+<h3>CizaLogistics+</h3>
+<p data-fr="Logistique & stock" data-en="Logistics & storage" data-rn="Ububiko & itangwa"></p>
+</a>
 
-    <a class="service" href="cizaimmo.html">
-      <img src="icon-immo.png">
-      <h3>CizaImmo+</h3><p>Immobilier</p>
-    </a>
+<a href="cizagestion.html" class="service-card">
+<h3>CizaGestion+</h3>
+<p data-fr="Gestion & suivi" data-en="Management & monitoring" data-rn="Ubuyobozi & igenzura"></p>
+</a>
 
-    <a class="service" href="cizahome.html">
-      <img src="icon-home.png">
-      <h3>CizaHome+</h3><p>Services à domicile</p>
-    </a>
+<a href="cizaimmo.html" class="service-card">
+<h3>CizaImmo+</h3>
+<p data-fr="Immobilier" data-en="Real estate" data-rn="Inzu n’itongo"></p>
+</a>
 
-    <a class="service" href="cizassist.html">
-      <img src="icon-assist.png">
-      <h3>CizAssist</h3><p>Assistance & démarches</p>
-    </a>
+<a href="cizahome.html" class="service-card">
+<h3>CizaHome+</h3>
+<p data-fr="Services à domicile" data-en="Home services" data-rn="Serivisi zo mu rugo"></p>
+</a>
 
-    <a class="service" href="cizajobs.html">
-      <img src="icon-jobs.png">
-      <h3>CizaJobs</h3><p>Emploi & recrutement</p>
-    </a>
+<a href="cizassist.html" class="service-card">
+<h3>CizAssist</h3>
+<p data-fr="Assistance & démarches" data-en="Assistance & procedures" data-rn="Ubufasha n’inyandiko"></p>
+</a>
 
-    <a class="service" href="cizacarwash.html">
-      <img src="icon-carwash.png">
-      <h3>CizaCarWash+</h3><p>Lavage automobile</p>
-    </a>
-  </div>
+<a href="cizajobs.html" class="service-card">
+<h3>CizaJobs</h3>
+<p data-fr="Emploi & recrutement" data-en="Jobs & recruitment" data-rn="Akazi n’itorwa"></p>
+</a>
+
+<a href="cizacarwash.html" class="service-card">
+<h3>CizaCarWash+</h3>
+<p data-fr="Lavage automobile" data-en="Car wash" data-rn="Koza imodoka"></p>
+</a>
+
+</div>
 </section>
 
-<!-- WHY -->
-<section>
-  <h2 class="section-title"
-      data-fr="Pourquoi CIZA GROUP"
-      data-en="Why CIZA GROUP"
-      data-rn="Kubera iki CIZA GROUP">
-  </h2>
-
-  <div class="why">
-    <div class="box">Organisation professionnelle</div>
-    <div class="box">Numéro de dossier par client</div>
-    <div class="box">Transparence & traçabilité</div>
-    <div class="box">Vision internationale</div>
-  </div>
-</section>
-
+<!-- FOOTER (INCHANGÉ) -->
 <footer>
-© 2026 CIZA GROUP  
-<span>Services locaux premium</span>
-<span>infos@cizagroup.com</span>
-<span>Sign & Designed by CIZA GROUP</span>
+© 2026 CIZA GROUP — Sign & Designed by CIZA GROUP<br>
+infos@cizagroup.com<br>
+Canada : +1 514 502 9503<br>
+Burundi : +257 79 94 50 07
 </footer>
+
+<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 
 <script>
 function setLang(lang){
   document.querySelectorAll("[data-"+lang+"]").forEach(el=>{
     el.innerText = el.getAttribute("data-"+lang);
   });
+  localStorage.setItem("lang",lang);
 }
-setLang("fr");
+
+document.addEventListener("DOMContentLoaded",()=>{
+  setLang(localStorage.getItem("lang") || "fr");
+});
+
+window.addEventListener("scroll",()=>{
+  document.getElementById("topBtn").style.display =
+    window.scrollY>300 ? "flex":"none";
+});
 </script>
 
 </body>

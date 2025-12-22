@@ -1,0 +1,129 @@
+<!-- =========================
+     FOOTER OFFICIEL — CIZA GROUP
+========================= -->
+<footer class="ciza-footer">
+
+  <div class="footer-grid">
+
+    <!-- COL 1 : MARQUE -->
+    <div>
+      <img src="logotransparent.png" alt="CIZA GROUP" class="footer-logo">
+      <p data-fr="Écosystème de services premium"
+         data-en="Premium service ecosystem"
+         data-rn="Serivisi z’igihe ciza za CIZA GROUP">
+         Écosystème de services premium
+      </p>
+    </div>
+
+    <!-- COL 2 : CONTACT -->
+    <div>
+      <h4 data-fr="Contact"
+          data-en="Contact"
+          data-rn="Tuvugishe">
+          Contact
+      </h4>
+      <p>📧 infos@cizagroup.com</p>
+      <p>🇨🇦 Canada : +1 514 502 9503</p>
+      <p>🇧🇮 Burundi : +257 79 94 50 07</p>
+    </div>
+
+    <!-- COL 3 : LÉGAL -->
+    <div>
+      <h4 data-fr="Informations légales"
+          data-en="Legal information"
+          data-rn="Amategeko">
+          Informations légales
+      </h4>
+      <a href="legal.html" data-fr="Mentions légales"
+         data-en="Legal notice"
+         data-rn="Amategeko ya CIZA">
+         Mentions légales
+      </a><br>
+      <a href="privacy.html" data-fr="Confidentialité"
+         data-en="Privacy policy"
+         data-rn="Ibanga n’umutekano">
+         Confidentialité
+      </a>
+    </div>
+
+    <!-- COL 4 : LANGUES -->
+    <div>
+      <h4 data-fr="Langue"
+          data-en="Language"
+          data-rn="Ururimi">
+          Langue
+      </h4>
+      <button onclick="setLang('fr')">FR</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('rn')">RN</button>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 CIZA GROUP —  
+    <span>Sign & Designed by CIZA GROUP</span>
+  </div>
+
+</footer>
+
+<style>
+.ciza-footer{
+  margin-top:80px;
+  padding:40px 20px;
+  background:#06142E;
+  border-top:1px solid rgba(242,184,64,.4);
+  color:white;
+  font-family:Arial,sans-serif;
+}
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.footer-logo{
+  width:90px;
+  margin-bottom:10px;
+}
+.ciza-footer h4{
+  color:#F2B840;
+  margin-bottom:10px;
+}
+.ciza-footer a{
+  color:#F2B840;
+  text-decoration:none;
+  font-size:14px;
+}
+.ciza-footer button{
+  margin:4px;
+  padding:6px 12px;
+  border:none;
+  border-radius:6px;
+  background:#F2B840;
+  color:#06142E;
+  cursor:pointer;
+  font-weight:bold;
+}
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  font-size:13px;
+  opacity:.8;
+}
+</style>
+
+<script>
+/* 🌍 LANGUE SIMPLE (FR / EN / RN) */
+function setLang(lang){
+  document.querySelectorAll("[data-fr]").forEach(el=>{
+    el.innerText = el.dataset[lang];
+  });
+  localStorage.setItem("ciza_lang",lang);
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  const lang = localStorage.getItem("ciza_lang") || "fr";
+  setLang(lang);
+});
+</script>

@@ -1,300 +1,80 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIZA GROUP — Services Locaux</title>
-
-<meta name="description" content="CIZA GROUP — Services professionnels au Burundi : transport, livraison, logistique, immobilier, assistance, emploi.">
-<meta name="keywords" content="CIZA GROUP, Burundi, services, transport, livraison, logistique, emploi, immobilier">
-
-<link rel="icon" href="logotransparent.png">
-
-<style>
-:root{
-  --bg:#06142E;
-  --gold:#F2B840;
-  --glass:rgba(255,255,255,.06);
-  --border:rgba(242,184,64,.55);
-  --txt:#fff;
-}
-
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:system-ui, Arial, sans-serif;
-  background:var(--bg);
-  color:var(--txt);
-}
-
-/* ================= HEADER ================= */
-header{
-  position:fixed;
-  top:0; left:0; right:0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 22px;
-  background:rgba(6,20,46,.65);
-  backdrop-filter:blur(10px);
-  z-index:1000;
-}
-
-header img{height:36px}
-
-.lang-switch button{
-  margin-left:8px;
-  background:none;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  padding:6px 14px;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:600;
-}
-
-/* ================= HERO ================= */
-.hero{
-  min-height:90vh;
-  display:flex;
-  align-items:center;
-  padding:140px 8% 80px;
-  background:
-    linear-gradient(rgba(6,20,46,.78),rgba(6,20,46,.9)),
-    url("3D34B5E2-A636-48E7-9F9D-6B58060859FB.png") center/cover no-repeat;
-}
-
-.hero h1{
-  color:var(--gold);
-  font-size:44px;
-  margin-bottom:14px;
-}
-
-.hero p{
-  font-size:18px;
-  max-width:620px;
-  opacity:.95;
-}
-
-/* ================= SERVICES ================= */
-.services{
-  padding:90px 8% 40px;
-}
-
-.services h2{
-  text-align:center;
-  color:var(--gold);
-  font-size:32px;
-  margin-bottom:60px;
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:34px;
-}
-
-.service-card{
-  display:block;
-  text-decoration:none;
-  background:var(--glass);
-  border:2px solid var(--border);
-  border-radius:30px;
-  padding:46px 30px;
-  text-align:center;
-  transition:.35s;
-  min-height:260px;
-}
-
-.service-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 22px 45px rgba(0,0,0,.4);
-}
-
-.service-card .icon{
-  font-size:42px;
-  margin-bottom:18px;
-}
-
-.service-card h3{
-  color:var(--gold);
-  margin-bottom:12px;
-  font-size:24px;
-}
-
-.service-card p{
-  font-size:16px;
-  line-height:1.55;
-  opacity:.92;
-}
-
-/* ================= FOOTER ================= */
-footer{
-  padding:60px 8% 40px;
-  text-align:center;
-  font-size:15px;
-  opacity:.9;
-}
-
-/* ================= RESPONSIVE ================= */
-@media(max-width:1000px){
-  .services-grid{grid-template-columns:1fr}
-  .hero h1{font-size:36px}
-}
-
-/* ================= SCROLL TOP ================= */
-#topBtn{
-  position:fixed;
-  bottom:20px; right:20px;
-  width:48px;height:48px;
-  background:var(--gold);
-  color:#06142E;
-  border-radius:50%;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  font-size:20px;
-  cursor:pointer;
-}
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header>
-  <img src="logotransparent.png" alt="CIZA GROUP">
-  <div class="lang-switch">
-    <button onclick="setLang('fr')">FR</button>
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('rn')">RN</button>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1 data-fr="Services locaux professionnels"
-        data-en="Professional local services"
-        data-rn="Serivisi z’umwuga zo mu gihugu"></h1>
-
-    <p data-fr="CIZA GROUP propose des services fiables, encadrés et premium pour les particuliers, entreprises et institutions."
-       data-en="CIZA GROUP delivers reliable, structured and premium services for individuals, businesses and institutions."
-       data-rn="CIZA GROUP itanga serivisi zizewe kandi ziteguye neza ku bantu n’amashirahamwe."></p>
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section class="services">
-<h2 data-fr="Nos services"
-    data-en="Our services"
-    data-rn="Serivisi zacu"></h2>
+<h2 data-fr="Nos services" data-en="Our services" data-rn="Serivisi zacu"></h2>
 
-<div class="services-grid">
+<div class="slider" id="slider">
 
-<a href="cizaride.html" class="service-card">
+<div class="service-card" onclick="openService('cizaride.html')">
   <div class="icon">🚕</div>
   <h3>CizaRide+</h3>
-  <p data-fr="Transport urbain, déplacements professionnels et mobilité sécurisée."
-     data-en="Urban transport, professional travel and secure mobility."
-     data-rn="Ingendo zo mu gisagara n’ubwikorezi bwizewe."></p>
-</a>
+  <p data-fr="Transport urbain et mobilité sécurisée."
+     data-en="Urban transport and secure mobility."
+     data-rn="Ingendo zizewe mu gisagara."></p>
+</div>
 
-<a href="cizadelivery.html" class="service-card">
+<div class="service-card" onclick="openService('cizadelivery.html')">
   <div class="icon">📦</div>
   <h3>CizaDelivery+</h3>
-  <p data-fr="Livraison rapide, sécurisée et suivie de vos colis et documents."
-     data-en="Fast, secure and tracked delivery of parcels and documents."
-     data-rn="Itangwa ryihuse kandi rigenzurwa neza."></p>
-</a>
+  <p data-fr="Livraison rapide et suivie."
+     data-en="Fast and tracked delivery."
+     data-rn="Itangwa ryihuse kandi rigenzurwa."></p>
+</div>
 
-<a href="cizalogistics.html" class="service-card">
+<div class="service-card" onclick="openService('cizalogistics.html')">
   <div class="icon">🚚</div>
   <h3>CizaLogistics+</h3>
-  <p data-fr="Logistique, transport de marchandises et gestion de stock."
-     data-en="Logistics, goods transport and stock management."
+  <p data-fr="Logistique et gestion des marchandises."
+     data-en="Logistics and goods management."
      data-rn="Ubwikorezi n’igenzura ry’ibicuruzwa."></p>
-</a>
+</div>
 
-<a href="cizagestion.html" class="service-card">
-  <div class="icon">📊</div>
-  <h3>CizaGestion+</h3>
-  <p data-fr="Gestion administrative, suivi et organisation professionnelle."
-     data-en="Administrative management, monitoring and organization."
-     data-rn="Ubuyobozi n’igenzura ry’imirimo."></p>
-</a>
-
-<a href="cizaimmo.html" class="service-card">
+<div class="service-card" onclick="openService('cizaimmo.html')">
   <div class="icon">🏠</div>
   <h3>CizaImmo+</h3>
-  <p data-fr="Immobilier : location, vente, gestion et accompagnement."
-     data-en="Real estate: rental, sale, management and support."
-     data-rn="Inzu n’itongo : kugura, gukodesha no kubicunga."></p>
-</a>
+  <p data-fr="Immobilier et accompagnement."
+     data-en="Real estate services."
+     data-rn="Inzu n’itongo."></p>
+</div>
 
-<a href="cizahome.html" class="service-card">
+<div class="service-card" onclick="openService('cizahome.html')">
   <div class="icon">🧹</div>
   <h3>CizaHome+</h3>
-  <p data-fr="Services à domicile : ménage, entretien et assistance."
-     data-en="Home services: cleaning, maintenance and assistance."
-     data-rn="Serivisi zo mu rugo n’isuku."></p>
-</a>
+  <p data-fr="Services à domicile premium."
+     data-en="Premium home services."
+     data-rn="Serivisi zo mu rugo z’umwuga."></p>
+</div>
 
-<a href="cizassist.html" class="service-card">
-  <div class="icon">🤝</div>
+<div class="service-card" onclick="openService('cizagestion.html')">
+  <div class="icon">🧑‍💼</div>
+  <h3>CizaGestion+</h3>
+  <p data-fr="Gestion administrative et suivi."
+     data-en="Administrative management and monitoring."
+     data-rn="Ubuyobozi n’igenzura."></p>
+</div>
+
+<div class="service-card" onclick="openService('cizassist.html')">
+  <div class="icon">🆘</div>
   <h3>CizAssist</h3>
-  <p data-fr="Assistance administrative, sociale et accompagnement."
-     data-en="Administrative and social assistance."
-     data-rn="Ubufasha mu nyandiko n’imibereho."></p>
-</a>
+  <p data-fr="Assistance humaine et démarches."
+     data-en="Human assistance and procedures."
+     data-rn="Ubufasha n’inyandiko."></p>
+</div>
 
-<a href="cizajobs.html" class="service-card">
+<div class="service-card" onclick="openService('cizajobs.html')">
   <div class="icon">💼</div>
   <h3>CizaJobs</h3>
-  <p data-fr="Emploi, recrutement et opportunités professionnelles."
-     data-en="Jobs, recruitment and career opportunities."
-     data-rn="Akazi n’amahirwe y’akazi."></p>
-</a>
+  <p data-fr="Emploi et recrutement."
+     data-en="Jobs and recruitment."
+     data-rn="Akazi n’itorwa."></p>
+</div>
 
-<a href="cizacarwash.html" class="service-card">
+<div class="service-card" onclick="openService('cizacarwash.html')">
   <div class="icon">🚿</div>
   <h3>CizaCarWash+</h3>
-  <p data-fr="Lavage automobile professionnel et entretien."
-     data-en="Professional car wash and vehicle care."
-     data-rn="Koza no kwita ku modoka."></p>
-</a>
+  <p data-fr="Lavage automobile professionnel."
+     data-en="Professional car wash."
+     data-rn="Koza imodoka kinyamwuga."></p>
+</div>
 
 </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-© 2026 CIZA GROUP — Sign & Designed by CIZA GROUP<br>
-infos@cizagroup.com<br>
-Canada : +1 514 502 9503<br>
-Burundi : +257 79 94 50 07
-</footer>
-
-<div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
-
-<script>
-function setLang(lang){
-  document.querySelectorAll("[data-"+lang+"]").forEach(el=>{
-    el.innerText = el.getAttribute("data-"+lang);
-  });
-  localStorage.setItem("lang",lang);
-}
-
-document.addEventListener("DOMContentLoaded",()=>{
-  setLang(localStorage.getItem("lang") || "fr");
-});
-
-window.addEventListener("scroll",()=>{
-  document.getElementById("topBtn").style.display =
-    window.scrollY>300 ? "flex":"none";
-});
-</script>
-
-</body>
-</html>

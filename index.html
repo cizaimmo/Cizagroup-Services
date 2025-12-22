@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CIZA GROUP — Services</title>
+<title>CIZA GROUP — Écosystème de Services</title>
 
 <meta name="description" content="CIZA GROUP — Écosystème de services professionnels au Burundi">
-<meta name="keywords" content="CIZA GROUP, Burundi, services, transport, livraison, logistique, immobilier, emploi, assistance">
-<link rel="icon" href="logotransparent.png">
+<link rel="icon" href="https://cizagroup.com/logotransparent.png">
 
 <style>
 :root{
   --bg:#06142E;
   --gold:#F2B840;
   --glass:rgba(255,255,255,.06);
-  --border:rgba(242,184,64,.6);
-  --txt:#fff;
+  --border:rgba(242,184,64,.65);
+  --txt:#ffffff;
 }
 
 *{box-sizing:border-box}
@@ -35,23 +34,34 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 22px;
-  background:rgba(6,20,46,.7);
+  padding:14px 26px;
+  background:rgba(6,20,46,.85);
   backdrop-filter:blur(12px);
   z-index:1000;
 }
 
-header img{height:36px}
+header img{height:38px}
+
+.header-right{
+  display:flex;
+  align-items:center;
+}
+
+.header-right a{
+  margin-right:18px;
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:600;
+}
 
 .lang-switch button{
-  margin-left:8px;
+  margin-left:6px;
   background:none;
   border:1px solid var(--gold);
   color:var(--gold);
-  padding:6px 14px;
-  border-radius:12px;
+  padding:6px 12px;
+  border-radius:10px;
   cursor:pointer;
-  font-weight:600;
 }
 
 /* ================= HERO ================= */
@@ -59,41 +69,41 @@ header img{height:36px}
   min-height:90vh;
   display:flex;
   align-items:center;
-  padding:140px 8% 80px;
+  padding:150px 8% 80px;
   background:
-    linear-gradient(rgba(6,20,46,.78),rgba(6,20,46,.9)),
-    url("3D34B5E2-A636-48E7-9F9D-6B58060859FB.png") center/cover no-repeat;
+    linear-gradient(rgba(6,20,46,.8),rgba(6,20,46,.92)),
+    url("https://cizagroup.com/3D34B5E2-A636-48E7-9F9D-6B58060859FB.png") center/cover no-repeat;
 }
 
 .hero h1{
   color:var(--gold);
-  font-size:44px;
-  margin-bottom:14px;
+  font-size:46px;
+  margin-bottom:16px;
 }
 
 .hero p{
   font-size:18px;
-  max-width:640px;
-  color:#fff;
+  max-width:620px;
 }
 
 /* ================= SERVICES SLIDER ================= */
 .services{
-  padding:90px 0 60px;
+  padding:90px 0 80px;
 }
 
 .services h2{
   text-align:center;
   color:var(--gold);
-  font-size:32px;
-  margin-bottom:40px;
+  font-size:34px;
+  margin-bottom:50px;
 }
 
 .slider{
   display:flex;
-  gap:28px;
+  gap:30px;
   padding-left:8%;
-  animation:slide 45s linear infinite;
+  animation:slide 40s linear infinite;
+  perspective:1200px;
 }
 
 .slider.paused{
@@ -111,20 +121,21 @@ header img{height:36px}
   background:var(--glass);
   border:2px solid var(--border);
   border-radius:28px;
-  padding:42px 26px;
+  padding:44px 26px;
   text-align:center;
   cursor:pointer;
-  transition:.3s;
+  transition:transform .6s;
+  transform-style:preserve-3d;
 }
 
 .service-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 22px 40px rgba(0,0,0,.45);
+  transform:rotateY(18deg) translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,.5);
 }
 
 .icon{
-  font-size:40px;
-  margin-bottom:16px;
+  font-size:42px;
+  margin-bottom:18px;
 }
 
 .service-card h3{
@@ -141,10 +152,10 @@ header img{height:36px}
 
 /* ================= FOOTER ================= */
 footer{
-  padding:70px 8% 40px;
+  padding:70px 8% 50px;
   text-align:center;
-  font-size:14.5px;
-  opacity:.95;
+  font-size:15px;
+  background:linear-gradient(to top,#050e22,#06142E);
 }
 
 footer a{
@@ -158,14 +169,14 @@ footer a:hover{text-decoration:underline}
 #topBtn{
   position:fixed;
   bottom:22px; right:22px;
-  width:48px;height:48px;
+  width:50px;height:50px;
   background:var(--gold);
   color:#06142E;
   border-radius:50%;
   display:none;
   align-items:center;
   justify-content:center;
-  font-size:20px;
+  font-size:22px;
   cursor:pointer;
 }
 </style>
@@ -174,23 +185,26 @@ footer a:hover{text-decoration:underline}
 <body>
 
 <header>
-  <img src="logotransparent.png" alt="CIZA GROUP">
-  <div class="lang-switch">
-    <button onclick="setLang('fr')">FR</button>
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('rn')">RN</button>
+  <img src="https://cizagroup.com/logotransparent.png" alt="CIZA GROUP">
+  <div class="header-right">
+    <a href="login.html">Connexion</a>
+    <div class="lang-switch">
+      <button onclick="setLang('fr')">FR</button>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('rn')">RN</button>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div>
-    <h1 data-fr="Écosystème de services"
-        data-en="Service ecosystem"
+    <h1 data-fr="Écosystème de Services"
+        data-en="Service Ecosystem"
         data-rn="Urwego rwa serivisi"></h1>
 
     <p data-fr="Tous les services essentiels réunis dans une seule plateforme professionnelle."
        data-en="All essential services unified into one professional platform."
-       data-rn="Serivisi zose zikenewe mu rubuga rumwe."></p>
+       data-rn="Serivisi zose zikenewe mu rubuga rumwe rw’umwuga."></p>
   </div>
 </section>
 
@@ -203,9 +217,9 @@ footer a:hover{text-decoration:underline}
 <div class="service-card" onclick="openService('cizaride.html')">
   <div class="icon">🚕</div>
   <h3>CizaRide+</h3>
-  <p data-fr="Transport urbain et mobilité sécurisée."
-     data-en="Urban transport and secure mobility."
-     data-rn="Ingendo zizewe mu gisagara."></p>
+  <p data-fr="Transport urbain sécurisé."
+     data-en="Secure urban transport."
+     data-rn="Ingendo zizewe."></p>
 </div>
 
 <!-- 2 -->
@@ -213,84 +227,88 @@ footer a:hover{text-decoration:underline}
   <div class="icon">📦</div>
   <h3>CizaDelivery+</h3>
   <p data-fr="Livraison rapide et suivie."
-     data-en="Fast and tracked delivery."
-     data-rn="Itangwa ryihuse kandi rigenzurwa."></p>
+     data-en="Fast tracked delivery."
+     data-rn="Itangwa ryihuse."></p>
 </div>
 
 <!-- 3 -->
 <div class="service-card" onclick="openService('cizalogistics.html')">
   <div class="icon">🚚</div>
   <h3>CizaLogistics+</h3>
-  <p data-fr="Logistique et gestion des marchandises."
-     data-en="Logistics and goods management."
-     data-rn="Ubwikorezi n’igenzura ry’ibicuruzwa."></p>
+  <p data-fr="Gestion logistique complète."
+     data-en="Logistics management."
+     data-rn="Ububiko n’itangwa."></p>
 </div>
 
 <!-- 4 -->
 <div class="service-card" onclick="openService('cizaimmo.html')">
   <div class="icon">🏠</div>
   <h3>CizaImmo+</h3>
-  <p data-fr="Immobilier et accompagnement."
+  <p data-fr="Immobilier & accompagnement."
      data-en="Real estate services."
      data-rn="Inzu n’itongo."></p>
 </div>
 
 <!-- 5 -->
-<div class="service-card" onclick="openService('cizahome.html')">
-  <div class="icon">🧹</div>
-  <h3>CizaHome+</h3>
-  <p data-fr="Services à domicile premium."
-     data-en="Premium home services."
-     data-rn="Serivisi zo mu rugo z’umwuga."></p>
+<div class="service-card" onclick="openService('cizajobs.html')">
+  <div class="icon">💼</div>
+  <h3>CizaJobs</h3>
+  <p data-fr="Emploi & recrutement."
+     data-en="Jobs & recruitment."
+     data-rn="Akazi n’itorwa."></p>
 </div>
 
 <!-- 6 -->
-<div class="service-card" onclick="openService('cizagestion.html')">
-  <div class="icon">🧑‍💼</div>
-  <h3>CizaGestion+</h3>
-  <p data-fr="Gestion administrative et suivi."
-     data-en="Administrative management."
-     data-rn="Ubuyobozi n’igenzura."></p>
+<div class="service-card" onclick="openService('cizacarwash.html')">
+  <div class="icon">🚗</div>
+  <h3>CizaCarWash+</h3>
+  <p data-fr="Lavage automobile."
+     data-en="Car wash service."
+     data-rn="Koza imodoka."></p>
 </div>
 
 <!-- 7 -->
 <div class="service-card" onclick="openService('cizassist.html')">
-  <div class="icon">🆘</div>
+  <div class="icon">🧾</div>
   <h3>CizAssist</h3>
-  <p data-fr="Assistance humaine et démarches."
-     data-en="Human assistance and procedures."
-     data-rn="Ubufasha n’inyandiko."></p>
+  <p data-fr="Assistance administrative."
+     data-en="Administrative assistance."
+     data-rn="Ubufasha."></p>
 </div>
 
 <!-- 8 -->
-<div class="service-card" onclick="openService('cizajobs.html')">
-  <div class="icon">💼</div>
-  <h3>CizaJobs</h3>
-  <p data-fr="Emploi et recrutement."
-     data-en="Jobs and recruitment."
-     data-rn="Akazi n’itorwa."></p>
+<div class="service-card" onclick="openService('cizahome.html')">
+  <div class="icon">🛠️</div>
+  <h3>CizaHome+</h3>
+  <p data-fr="Services à domicile."
+     data-en="Home services."
+     data-rn="Serivisi zo mu rugo."></p>
 </div>
 
 <!-- 9 -->
-<div class="service-card" onclick="openService('cizacarwash.html')">
-  <div class="icon">🚿</div>
-  <h3>CizaCarWash+</h3>
-  <p data-fr="Lavage automobile professionnel."
-     data-en="Professional car wash."
-     data-rn="Koza imodoka kinyamwuga."></p>
+<div class="service-card" onclick="openService('cizagestion.html')">
+  <div class="icon">📊</div>
+  <h3>CizaGestion+</h3>
+  <p data-fr="Gestion & suivi."
+     data-en="Management & monitoring."
+     data-rn="Igenzura."></p>
 </div>
 
 </div>
 </section>
 
 <footer>
-© 2026 CIZA GROUP — Sign & Designed by CIZA GROUP<br>
+<strong>CIZA GROUP — Écosystème de Services</strong><br><br>
+
 <a href="mentions-legales.html">Mentions légales</a> ·
 <a href="confidentialite.html">Confidentialité</a> ·
 <a href="conditions.html">Conditions</a><br><br>
+
 <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a><br>
 Canada : <a href="tel:+15145029503">+1 514 502 9503</a><br>
-Burundi : <a href="tel:+25779945007">+257 79 94 50 07</a>
+Burundi : <a href="tel:+25779945007">+257 79 94 50 07</a><br><br>
+
+© 2026 CIZA GROUP — All Rights Reserved
 </footer>
 
 <div id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
@@ -305,7 +323,7 @@ function setLang(lang){
 
 function openService(url){
   document.getElementById("slider").classList.add("paused");
-  window.location.href = url;
+  setTimeout(()=>{window.location.href=url},400);
 }
 
 document.addEventListener("DOMContentLoaded",()=>{

@@ -15,7 +15,7 @@
   --bg:#06142E;
   --gold:#F2B840;
   --glass:rgba(255,255,255,.06);
-  --border:rgba(242,184,64,.5);
+  --border:rgba(242,184,64,.55);
   --txt:#fff;
 }
 
@@ -41,68 +41,58 @@ header{
   z-index:1000;
 }
 
-header img{height:38px}
+header img{height:36px}
 
 .lang-switch button{
   margin-left:8px;
   background:none;
   border:1px solid var(--gold);
   color:var(--gold);
-  padding:6px 12px;
-  border-radius:10px;
+  padding:6px 14px;
+  border-radius:12px;
   cursor:pointer;
   font-weight:600;
 }
 
 /* ================= HERO ================= */
 .hero{
-  min-height:100vh;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:30px;
+  min-height:90vh;
+  display:flex;
   align-items:center;
   padding:140px 8% 80px;
   background:
-    linear-gradient(rgba(6,20,46,.75),rgba(6,20,46,.9)),
+    linear-gradient(rgba(6,20,46,.78),rgba(6,20,46,.9)),
     url("3D34B5E2-A636-48E7-9F9D-6B58060859FB.png") center/cover no-repeat;
 }
 
 .hero h1{
   color:var(--gold);
-  font-size:42px;
-  margin-bottom:12px;
+  font-size:44px;
+  margin-bottom:14px;
 }
 
 .hero p{
   font-size:18px;
-  max-width:520px;
+  max-width:620px;
   opacity:.95;
-}
-
-.hero-phone{
-  text-align:right;
-}
-.hero-phone img{
-  max-width:260px;
-  filter:drop-shadow(0 25px 50px rgba(0,0,0,.6));
 }
 
 /* ================= SERVICES ================= */
 .services{
-  padding:90px 8%;
+  padding:90px 8% 40px;
 }
 
 .services h2{
   text-align:center;
   color:var(--gold);
-  font-size:30px;
-  margin-bottom:50px;
+  font-size:32px;
+  margin-bottom:60px;
 }
 
 .services-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:28px;
+  gap:34px;
 }
 
 .service-card{
@@ -110,33 +100,47 @@ header img{height:38px}
   text-decoration:none;
   background:var(--glass);
   border:2px solid var(--border);
-  border-radius:26px;
-  padding:38px 26px;
+  border-radius:30px;
+  padding:46px 30px;
   text-align:center;
   transition:.35s;
+  min-height:260px;
 }
 
 .service-card:hover{
-  transform:translateY(-6px) scale(1.01);
-  box-shadow:0 18px 40px rgba(0,0,0,.35);
+  transform:translateY(-8px);
+  box-shadow:0 22px 45px rgba(0,0,0,.4);
+}
+
+.service-card .icon{
+  font-size:42px;
+  margin-bottom:18px;
 }
 
 .service-card h3{
   color:var(--gold);
-  margin-bottom:10px;
-  font-size:22px;
+  margin-bottom:12px;
+  font-size:24px;
 }
 
 .service-card p{
+  font-size:16px;
+  line-height:1.55;
+  opacity:.92;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  padding:60px 8% 40px;
+  text-align:center;
   font-size:15px;
   opacity:.9;
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .hero-phone{text-align:center}
+@media(max-width:1000px){
   .services-grid{grid-template-columns:1fr}
+  .hero h1{font-size:36px}
 }
 
 /* ================= SCROLL TOP ================= */
@@ -171,83 +175,100 @@ header img{height:38px}
 <!-- HERO -->
 <section class="hero">
   <div>
-    <h1
-      data-fr="Services locaux professionnels"
-      data-en="Professional local services"
-      data-rn="Serivisi z’umwuga zo mu gihugu">
-    </h1>
+    <h1 data-fr="Services locaux professionnels"
+        data-en="Professional local services"
+        data-rn="Serivisi z’umwuga zo mu gihugu"></h1>
 
-    <p
-      data-fr="CIZA GROUP offre des services premium, fiables et encadrés au Burundi et dans la sous-région."
-      data-en="CIZA GROUP delivers premium, reliable and supervised services in Burundi and the region."
-      data-rn="CIZA GROUP itanga serivisi zizewe kandi z’umwuga mu Burundi no mu karere.">
-    </p>
-  </div>
-
-  <div class="hero-phone">
-    <img src="199375EE-40C2-40A5-803C-A0B82783A4A3.png" alt="CIZA GROUP App">
+    <p data-fr="CIZA GROUP propose des services fiables, encadrés et premium pour les particuliers, entreprises et institutions."
+       data-en="CIZA GROUP delivers reliable, structured and premium services for individuals, businesses and institutions."
+       data-rn="CIZA GROUP itanga serivisi zizewe kandi ziteguye neza ku bantu n’amashirahamwe."></p>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services">
-<h2
-  data-fr="Nos services"
-  data-en="Our services"
-  data-rn="Serivisi zacu">
-</h2>
+<h2 data-fr="Nos services"
+    data-en="Our services"
+    data-rn="Serivisi zacu"></h2>
 
 <div class="services-grid">
 
 <a href="cizaride.html" class="service-card">
-<h3>CizaRide+</h3>
-<p data-fr="Transport & mobilité" data-en="Transport & mobility" data-rn="Ubwikorezi & ingendo"></p>
+  <div class="icon">🚕</div>
+  <h3>CizaRide+</h3>
+  <p data-fr="Transport urbain, déplacements professionnels et mobilité sécurisée."
+     data-en="Urban transport, professional travel and secure mobility."
+     data-rn="Ingendo zo mu gisagara n’ubwikorezi bwizewe."></p>
 </a>
 
 <a href="cizadelivery.html" class="service-card">
-<h3>CizaDelivery+</h3>
-<p data-fr="Livraison sécurisée" data-en="Secure delivery" data-rn="Itangwa ryizewe"></p>
+  <div class="icon">📦</div>
+  <h3>CizaDelivery+</h3>
+  <p data-fr="Livraison rapide, sécurisée et suivie de vos colis et documents."
+     data-en="Fast, secure and tracked delivery of parcels and documents."
+     data-rn="Itangwa ryihuse kandi rigenzurwa neza."></p>
 </a>
 
 <a href="cizalogistics.html" class="service-card">
-<h3>CizaLogistics+</h3>
-<p data-fr="Logistique & stock" data-en="Logistics & storage" data-rn="Ububiko & itangwa"></p>
+  <div class="icon">🚚</div>
+  <h3>CizaLogistics+</h3>
+  <p data-fr="Logistique, transport de marchandises et gestion de stock."
+     data-en="Logistics, goods transport and stock management."
+     data-rn="Ubwikorezi n’igenzura ry’ibicuruzwa."></p>
 </a>
 
 <a href="cizagestion.html" class="service-card">
-<h3>CizaGestion+</h3>
-<p data-fr="Gestion & suivi" data-en="Management & monitoring" data-rn="Ubuyobozi & igenzura"></p>
+  <div class="icon">📊</div>
+  <h3>CizaGestion+</h3>
+  <p data-fr="Gestion administrative, suivi et organisation professionnelle."
+     data-en="Administrative management, monitoring and organization."
+     data-rn="Ubuyobozi n’igenzura ry’imirimo."></p>
 </a>
 
 <a href="cizaimmo.html" class="service-card">
-<h3>CizaImmo+</h3>
-<p data-fr="Immobilier" data-en="Real estate" data-rn="Inzu n’itongo"></p>
+  <div class="icon">🏠</div>
+  <h3>CizaImmo+</h3>
+  <p data-fr="Immobilier : location, vente, gestion et accompagnement."
+     data-en="Real estate: rental, sale, management and support."
+     data-rn="Inzu n’itongo : kugura, gukodesha no kubicunga."></p>
 </a>
 
 <a href="cizahome.html" class="service-card">
-<h3>CizaHome+</h3>
-<p data-fr="Services à domicile" data-en="Home services" data-rn="Serivisi zo mu rugo"></p>
+  <div class="icon">🧹</div>
+  <h3>CizaHome+</h3>
+  <p data-fr="Services à domicile : ménage, entretien et assistance."
+     data-en="Home services: cleaning, maintenance and assistance."
+     data-rn="Serivisi zo mu rugo n’isuku."></p>
 </a>
 
 <a href="cizassist.html" class="service-card">
-<h3>CizAssist</h3>
-<p data-fr="Assistance & démarches" data-en="Assistance & procedures" data-rn="Ubufasha n’inyandiko"></p>
+  <div class="icon">🤝</div>
+  <h3>CizAssist</h3>
+  <p data-fr="Assistance administrative, sociale et accompagnement."
+     data-en="Administrative and social assistance."
+     data-rn="Ubufasha mu nyandiko n’imibereho."></p>
 </a>
 
 <a href="cizajobs.html" class="service-card">
-<h3>CizaJobs</h3>
-<p data-fr="Emploi & recrutement" data-en="Jobs & recruitment" data-rn="Akazi n’itorwa"></p>
+  <div class="icon">💼</div>
+  <h3>CizaJobs</h3>
+  <p data-fr="Emploi, recrutement et opportunités professionnelles."
+     data-en="Jobs, recruitment and career opportunities."
+     data-rn="Akazi n’amahirwe y’akazi."></p>
 </a>
 
 <a href="cizacarwash.html" class="service-card">
-<h3>CizaCarWash+</h3>
-<p data-fr="Lavage automobile" data-en="Car wash" data-rn="Koza imodoka"></p>
+  <div class="icon">🚿</div>
+  <h3>CizaCarWash+</h3>
+  <p data-fr="Lavage automobile professionnel et entretien."
+     data-en="Professional car wash and vehicle care."
+     data-rn="Koza no kwita ku modoka."></p>
 </a>
 
 </div>
 </section>
 
-<!-- FOOTER (INCHANGÉ) -->
+<!-- FOOTER -->
 <footer>
 © 2026 CIZA GROUP — Sign & Designed by CIZA GROUP<br>
 infos@cizagroup.com<br>

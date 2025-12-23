@@ -24,11 +24,11 @@ body{
   line-height:1.7;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 header{
   position:fixed;
   top:0;left:0;right:0;
-  background:rgba(6,20,46,.96);
+  background:rgba(6,20,46,.97);
   border-bottom:1px solid rgba(242,184,64,.25);
   z-index:10000;
 }
@@ -80,14 +80,14 @@ header{
   .menu-toggle{display:block}
 }
 
-/* ===== HERO (CORRIGÉ) ===== */
+/* ================= HERO ================= */
 .hero{
   margin-top:92px;
   min-height:80vh;
   background:
-    linear-gradient(rgba(6,20,46,.6),rgba(6,20,46,.85)),
+    linear-gradient(rgba(6,20,46,.65),rgba(6,20,46,.9)),
     url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/16EC7E3B-DD97-4F73-AB16-1B45466E2DA9.png")
-    center 22% / 110% no-repeat;
+    center 14% / 112% no-repeat;
   display:flex;
   align-items:flex-end;
 }
@@ -108,7 +108,7 @@ header{
 }
 .hero p{
   font-size:18px;
-  max-width:760px;
+  max-width:780px;
   opacity:.95;
 }
 .actions{
@@ -118,7 +118,7 @@ header{
   flex-wrap:wrap;
 }
 
-/* ===== BUTTONS ===== */
+/* ================= BUTTONS ================= */
 .btn{
   display:inline-block;
   padding:14px 32px;
@@ -134,7 +134,7 @@ header{
   color:var(--gold);
 }
 
-/* ===== SECTIONS ===== */
+/* ================= SECTIONS ================= */
 section{
   padding:90px 24px;
   max-width:1300px;
@@ -147,7 +147,7 @@ h2{
   margin-bottom:40px;
 }
 
-/* ===== GRID / CARDS ===== */
+/* ================= GRID / CARDS ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -175,7 +175,7 @@ h2{
   border:1px solid rgba(242,184,64,.3);
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 footer{
   position:relative;
   background:#020617;
@@ -200,10 +200,7 @@ footer::before{
   gap:40px;
   position:relative;
 }
-footer h4{
-  color:var(--gold);
-  margin-bottom:14px;
-}
+footer h4{color:var(--gold);margin-bottom:14px}
 footer a{
   color:#ffffff;
   text-decoration:none;
@@ -225,6 +222,7 @@ footer p{opacity:.85}
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">
@@ -240,13 +238,14 @@ footer p{opacity:.85}
   </div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <a href="index.html#services">← Retour aux services</a>
     <h1>CizaJobs+</h1>
     <p>
-      Emploi, recrutement et partenariats RH structurés.  
-      Un service humain pour connecter talents et entreprises,
+      Emploi, recrutement, formation et partenariats RH structurés.  
+      Un service humain pour connecter talents et entreprises, avec suivi réel,
       au sein de <strong>CIZA GROUP Services</strong>.
     </p>
     <div class="actions">
@@ -256,33 +255,115 @@ footer p{opacity:.85}
   </div>
 </div>
 
+<!-- POUR QUI -->
 <section>
 <h2>À qui s’adresse CizaJobs+</h2>
 <div class="grid">
   <div class="card">
     <h3>👤 Candidats</h3>
+    <p>
+      CizaJobs+ accompagne les candidats à chaque étape :
+      analyse du profil, orientation professionnelle, validation du dossier
+      et suivi après mise en relation.
+    </p>
     <ul>
       <li>Offres vérifiées</li>
-      <li>Dossier candidat suivi</li>
+      <li>Dossier candidat avec numéro unique</li>
       <li>Accompagnement humain</li>
     </ul>
   </div>
   <div class="card">
-    <h3>🏢 Entreprises</h3>
+    <h3>🏢 Entreprises & Organisations</h3>
+    <p>
+      Nous accompagnons entreprises, ONG et organisations
+      dans le recrutement, la formation et la structuration RH,
+      avec confidentialité et suivi.
+    </p>
     <ul>
       <li>Recrutement ciblé</li>
-      <li>Formation RH</li>
+      <li>Formation du personnel</li>
       <li>Partenariats durables</li>
     </ul>
   </div>
 </div>
 </section>
 
+<!-- SERVICES -->
+<section>
+<h2>Nos services CizaJobs+</h2>
+<div class="grid">
+  <div class="card">
+    <h3>📄 Recrutement & placement</h3>
+    <p>
+      Identification, présélection et mise en relation de profils qualifiés.
+      Chaque recrutement est validé manuellement.
+    </p>
+  </div>
+  <div class="card">
+    <h3>🎓 Formation & accompagnement</h3>
+    <p>
+      Formations professionnelles, remise à niveau et accompagnement
+      selon les besoins du marché.
+    </p>
+  </div>
+  <div class="card">
+    <h3>🤝 Partenariats RH</h3>
+    <p>
+      Collaboration avec entreprises et institutions pour former,
+      recruter et structurer des équipes locales.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- PROCESSUS -->
+<section>
+<h2>Comment ça fonctionne</h2>
+<div class="grid">
+  <div class="info">
+    <h3>1. Dépôt de la demande</h3>
+    <p>Soumission depuis l’espace sécurisé CIZA GROUP Services.</p>
+  </div>
+  <div class="info">
+    <h3>2. Analyse & validation</h3>
+    <p>Chaque demande est analysée par une équipe humaine.</p>
+  </div>
+  <div class="info">
+    <h3>3. Mise en relation & suivi</h3>
+    <p>Mise en relation encadrée avec numéro de dossier.</p>
+  </div>
+</div>
+</section>
+
+<!-- GARANTIES -->
+<section>
+<div class="info" style="max-width:900px;margin:auto;text-align:center">
+<p>
+Les services CizaJobs+ sont fournis après validation de la demande.  
+Selon le service, un paiement peut être requis.  
+Une facture officielle est délivrée par <strong>CIZA GROUP Services</strong>.
+</p>
+</div>
+</section>
+
+<!-- CTA -->
+<section>
+<div style="text-align:center">
+<h2>Prêt à commencer ?</h2>
+<p style="max-width:720px;margin:0 auto 26px">
+Créez votre compte ou connectez-vous pour accéder à votre espace CizaJobs+.
+</p>
+<a href="login.html" class="btn">Accéder à mon espace</a>
+</div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div>
       <h4>CIZA GROUP Services</h4>
       <a href="https://cizagroup.com" target="_blank">🌐 Site officiel : cizagroup.com</a>
+      <p>Plateforme de services structurés pour particuliers, entreprises et diaspora.</p>
     </div>
     <div>
       <h4>Légal</h4>

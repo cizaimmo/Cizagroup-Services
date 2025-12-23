@@ -5,201 +5,246 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CizaJobs+ | Emploi & Partenariats RH – CIZA GROUP Services</title>
-
-<meta name="description" content="CizaJobs+ – Service de recrutement, formation et partenariats RH pour candidats et entreprises. Plateforme CIZA GROUP Services.">
+<meta name="description" content="CizaJobs+ – Recrutement, formation et partenariats RH pour candidats et entreprises. Service officiel CIZA GROUP Services.">
 <meta name="robots" content="index, follow">
 
 <style>
 :root{
---blue:#06142E;
---gold:#F2B840;
---dark:#020617;
---card:#0b1738;
---text:#ffffff;
+  --blue:#06142E;
+  --gold:#F2B840;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-font-family:system-ui,-apple-system,Segoe UI,Roboto;
-background:var(--dark);
-color:var(--text);
-line-height:1.7;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(6,20,46,.96);
+  border-bottom:1px solid rgba(242,184,64,.25);
+  z-index:10000;
+}
+.header-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo img{height:52px}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+.nav a:hover{color:var(--gold)}
+.btn-header{
+  background:var(--gold);
+  color:#000 !important;
+  padding:10px 22px;
+  border-radius:30px;
+  font-weight:700;
+}
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#fff;
+}
+@media(max-width:900px){
+  .nav{
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#06142E;
+    flex-direction:column;
+    width:100%;
+    padding:20px;
+    display:none;
+  }
+  .nav.show{display:flex}
+  .menu-toggle{display:block}
 }
 
 /* ===== HERO ===== */
 .hero{
-margin-top:110px;
-min-height:85vh;
-background:
-linear-gradient(rgba(6,20,46,.6),rgba(6,20,46,.85)),
-url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/16EC7E3B-DD97-4F73-AB16-1B45466E2DA9.png")
-center/cover no-repeat;
-display:flex;
-align-items:flex-end;
+  margin-top:92px;
+  min-height:80vh;
+  background-image:
+    linear-gradient(rgba(6,20,46,.55),rgba(6,20,46,.85)),
+    url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/16EC7E3B-DD97-4F73-AB16-1B45466E2DA9.png");
+  background-repeat:no-repeat;
+  background-size:92%;
+  background-position:center top;
+  display:flex;
+  align-items:flex-end;
 }
-
 .hero-inner{
-max-width:1300px;
-margin:auto;
-padding:40px 24px;
+  max-width:1300px;
+  margin:auto;
+  padding:40px 24px;
 }
-
-.hero a{
-color:#fff;
-text-decoration:none;
-opacity:.85;
+.hero-inner a{
+  color:#fff;
+  text-decoration:none;
+  opacity:.85;
 }
-
 .hero h1{
-font-size:44px;
-color:var(--gold);
-margin:14px 0;
+  font-size:44px;
+  color:var(--gold);
+  margin:14px 0;
 }
-
 .hero p{
-font-size:18px;
-max-width:760px;
-opacity:.95;
+  font-size:18px;
+  max-width:760px;
+  opacity:.95;
 }
-
 .actions{
-margin-top:28px;
-display:flex;
-gap:18px;
-flex-wrap:wrap;
+  margin-top:28px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
 /* ===== BUTTONS ===== */
 .btn{
-display:inline-block;
-padding:14px 32px;
-border-radius:40px;
-background:var(--gold);
-color:#000;
-font-weight:600;
-text-decoration:none;
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:40px;
+  background:var(--gold);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
 }
-
 .btn.secondary{
-background:transparent;
-border:2px solid var(--gold);
-color:var(--gold);
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);
 }
 
 /* ===== SECTIONS ===== */
 section{
-padding:90px 24px;
-max-width:1300px;
-margin:auto;
+  padding:90px 24px;
+  max-width:1300px;
+  margin:auto;
 }
-
 h2{
-text-align:center;
-color:var(--gold);
-font-size:36px;
-margin-bottom:40px;
+  text-align:center;
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:40px;
 }
 
 /* ===== GRID / CARDS ===== */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
 }
-
 .card{
-background:var(--card);
-padding:34px;
-border-radius:22px;
-border:1px solid rgba(242,184,64,.25);
-transition:.3s;
+  background:var(--card);
+  padding:34px;
+  border-radius:22px;
+  border:1px solid rgba(242,184,64,.25);
+  transition:.3s;
 }
-
 .card:hover{
-transform:translateY(-6px);
-border-color:var(--gold);
+  transform:translateY(-6px);
+  border-color:var(--gold);
 }
-
 .card h3{
-color:var(--gold);
-margin-bottom:14px;
+  color:var(--gold);
+  margin-bottom:14px;
 }
-
 .info{
-background:#0b1738;
-padding:36px;
-border-radius:26px;
-border:1px solid rgba(242,184,64,.3);
+  background:#0b1738;
+  padding:36px;
+  border-radius:26px;
+  border:1px solid rgba(242,184,64,.3);
 }
 
-/* ===== FOOTER PREMIUM (IDENTIQUE PARTOUT) ===== */
+/* ===== FOOTER ===== */
 footer{
-position:relative;
-background:#020617;
-border-top:2px solid var(--gold);
-margin-top:120px;
+  position:relative;
+  background:#020617;
+  border-top:2px solid var(--gold);
+  margin-top:120px;
 }
-
 footer::before{
-content:"";
-position:absolute;
-inset:0;
-background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
-center/520px no-repeat;
-opacity:.035;
-pointer-events:none;
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
+  center/520px no-repeat;
+  opacity:.035;
+  pointer-events:none;
 }
-
 .footer-inner{
-max-width:1300px;
-margin:auto;
-padding:70px 24px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:40px;
-position:relative;
+  max-width:1300px;
+  margin:auto;
+  padding:70px 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+  position:relative;
 }
-
 footer h4{
-color:var(--gold);
-margin-bottom:14px;
-font-size:18px;
+  color:var(--gold);
+  margin-bottom:14px;
 }
-
 footer a{
-color:#ffffff;
-text-decoration:none;
-display:block;
-margin-bottom:10px;
-opacity:.9;
+  color:#ffffff;
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
+  opacity:.9;
 }
-
-footer a:hover{
-color:var(--gold);
-opacity:1;
-}
-
-footer p{
-opacity:.85;
-}
-
+footer a:hover{color:var(--gold)}
+footer p{opacity:.85}
 .copy{
-text-align:center;
-padding:20px;
-font-size:14px;
-opacity:.7;
-border-top:1px solid rgba(255,255,255,.1);
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-.hero h1{font-size:32px}
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:.7;
+  border-top:1px solid rgba(255,255,255,.1);
 }
 </style>
 </head>
 
 <body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png"
+           alt="CIZA GROUP Services">
+    </a>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#services">Services</a>
+      <a href="https://cizagroup.com" target="_blank">Site officiel</a>
+      <a href="login.html" class="btn-header">Connexion</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
 
 <!-- HERO -->
 <div class="hero">
@@ -208,9 +253,9 @@ border-top:1px solid rgba(255,255,255,.1);
     <h1>CizaJobs+</h1>
     <p>
       Emploi, recrutement et partenariats RH structurés.  
-      Un service humain pour connecter talents et entreprises, avec suivi réel.
+      Un service humain pour connecter talents et entreprises, avec suivi réel,
+      au sein de <strong>CIZA GROUP Services</strong>.
     </p>
-
     <div class="actions">
       <a href="login.html" class="btn">Je suis candidat</a>
       <a href="login.html" class="btn secondary">Je suis une entreprise</a>
@@ -222,33 +267,24 @@ border-top:1px solid rgba(255,255,255,.1);
 <section>
 <h2>À qui s’adresse CizaJobs+</h2>
 <div class="grid">
-
-<div class="card">
-<h3>👤 Candidats</h3>
-<p>
-Vous recherchez un emploi, une formation ou une opportunité professionnelle ?
-CizaJobs+ vous accompagne dans un cadre structuré, sérieux et humain.
-</p>
-<ul>
-<li>Offres vérifiées</li>
-<li>Dossier candidat suivi</li>
-<li>Accompagnement réel</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>🏢 Entreprises & Organisations</h3>
-<p>
-Vous souhaitez recruter, former vos employés ou établir un partenariat RH ?
-CIZA GROUP vous propose une solution professionnelle encadrée.
-</p>
-<ul>
-<li>Recrutement ciblé</li>
-<li>Formation du personnel</li>
-<li>Partenariats durables</li>
-</ul>
-</div>
-
+  <div class="card">
+    <h3>👤 Candidats</h3>
+    <p>Emploi, formation et opportunités professionnelles encadrées.</p>
+    <ul>
+      <li>Offres vérifiées</li>
+      <li>Dossier candidat suivi</li>
+      <li>Accompagnement humain</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>🏢 Entreprises & Organisations</h3>
+    <p>Recrutement, formation et partenariats RH structurés.</p>
+    <ul>
+      <li>Recrutement ciblé</li>
+      <li>Formation du personnel</li>
+      <li>Partenariats durables</li>
+    </ul>
+  </div>
 </div>
 </section>
 
@@ -256,30 +292,18 @@ CIZA GROUP vous propose une solution professionnelle encadrée.
 <section>
 <h2>Comment ça fonctionne</h2>
 <div class="grid">
-
-<div class="info">
-<h3>1. Dépôt de la demande</h3>
-<p>
-Le candidat ou l’entreprise soumet sa demande via son espace sécurisé CIZA GROUP Services.
-</p>
-</div>
-
-<div class="info">
-<h3>2. Analyse & validation</h3>
-<p>
-Chaque demande est étudiée par notre équipe.
-Aucune mise en relation automatique.
-</p>
-</div>
-
-<div class="info">
-<h3>3. Mise en relation & suivi</h3>
-<p>
-Après validation, la mise en relation est organisée
-avec attribution d’un numéro de dossier.
-</p>
-</div>
-
+  <div class="info">
+    <h3>1. Dépôt de la demande</h3>
+    <p>Soumission depuis l’espace sécurisé CIZA GROUP Services.</p>
+  </div>
+  <div class="info">
+    <h3>2. Analyse & validation</h3>
+    <p>Étude humaine de chaque demande, sans automatisation.</p>
+  </div>
+  <div class="info">
+    <h3>3. Mise en relation & suivi</h3>
+    <p>Mise en relation encadrée avec numéro de dossier.</p>
+  </div>
 </div>
 </section>
 
@@ -287,63 +311,46 @@ avec attribution d’un numéro de dossier.
 <section>
 <h2>Nos engagements</h2>
 <div class="grid">
-
-<div class="card">
-<h3>Sérieux & transparence</h3>
-<p>
-Aucune fausse offre, aucun profil non vérifié.
-Chaque demande est réelle et encadrée.
-</p>
-</div>
-
-<div class="card">
-<h3>Service humain</h3>
-<p>
-Chez CIZA GROUP, l’humain reste au centre.
-Vous êtes accompagné, jamais automatisé.
-</p>
-</div>
-
-<div class="card">
-<h3>Cadre professionnel</h3>
-<p>
-Les services sont fournis après validation.
-Une facture est délivrée lorsque applicable.
-</p>
-</div>
-
+  <div class="card">
+    <h3>Sérieux & transparence</h3>
+    <p>Aucune fausse offre, aucun profil non vérifié.</p>
+  </div>
+  <div class="card">
+    <h3>Service humain</h3>
+    <p>Accompagnement réel, pas d’automatisation aveugle.</p>
+  </div>
+  <div class="card">
+    <h3>Cadre professionnel</h3>
+    <p>Service fourni après validation, facture si applicable.</p>
+  </div>
 </div>
 </section>
 
 <!-- CTA FINAL -->
 <section>
 <div style="text-align:center">
-<h2>Prêt à commencer ?</h2>
-<p style="max-width:720px;margin:0 auto 26px">
-Créez votre compte ou connectez-vous pour accéder aux services CizaJobs+.
-</p>
-<a href="login.html" class="btn">Accéder à mon espace</a>
+  <h2>Prêt à commencer ?</h2>
+  <p style="max-width:720px;margin:0 auto 26px">
+    Créez votre compte ou connectez-vous pour accéder aux services CizaJobs+.
+  </p>
+  <a href="login.html" class="btn">Accéder à mon espace</a>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-
     <div>
-      <h4>CIZA GROUP</h4>
+      <h4>CIZA GROUP Services</h4>
       <a href="https://cizagroup.com" target="_blank">🌐 Site officiel : cizagroup.com</a>
-      <a href="index.html#about">À propos</a>
-      <a href="index.html#contact">Contact</a>
+      <p>Plateforme de services structurés pour particuliers, entreprises et diaspora.</p>
     </div>
-
     <div>
       <h4>Légal</h4>
       <a href="mentions-legales.html">Mentions légales</a>
       <a href="confidentialite.html">Confidentialité</a>
       <a href="conditions.html">Conditions générales</a>
     </div>
-
     <div>
       <h4>Contact</h4>
       <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
@@ -351,10 +358,15 @@ Créez votre compte ou connectez-vous pour accéder aux services CizaJobs+.
       <a href="https://wa.me/25779945007">WhatsApp Burundi</a>
       <p>📍 Bujumbura – Burundi</p>
     </div>
-
   </div>
-  <div class="copy">© 2026 CIZA GROUP — Tous droits réservés</div>
+  <div class="copy">© 2026 CIZA GROUP Services — Tous droits réservés</div>
 </footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
 
 </body>
 </html>

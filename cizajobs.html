@@ -16,9 +16,7 @@
   --card:#0b1738;
   --text:#ffffff;
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
-
 body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto;
   background:var(--dark);
@@ -82,16 +80,14 @@ header{
   .menu-toggle{display:block}
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (CORRIGÉ) ===== */
 .hero{
   margin-top:92px;
   min-height:80vh;
-  background-image:
-    linear-gradient(rgba(6,20,46,.55),rgba(6,20,46,.85)),
-    url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/16EC7E3B-DD97-4F73-AB16-1B45466E2DA9.png");
-  background-repeat:no-repeat;
-  background-size:92%;
-  background-position:center top;
+  background:
+    linear-gradient(rgba(6,20,46,.6),rgba(6,20,46,.85)),
+    url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/16EC7E3B-DD97-4F73-AB16-1B45466E2DA9.png")
+    center 22% / 110% no-repeat;
   display:flex;
   align-items:flex-end;
 }
@@ -229,12 +225,10 @@ footer p{opacity:.85}
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png"
-           alt="CIZA GROUP Services">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png" alt="CIZA GROUP Services">
     </a>
     <nav class="nav" id="navMenu">
       <a href="index.html">Accueil</a>
@@ -246,14 +240,13 @@ footer p{opacity:.85}
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <a href="index.html#services">← Retour aux services</a>
     <h1>CizaJobs+</h1>
     <p>
       Emploi, recrutement et partenariats RH structurés.  
-      Un service humain pour connecter talents et entreprises, avec suivi réel,
+      Un service humain pour connecter talents et entreprises,
       au sein de <strong>CIZA GROUP Services</strong>.
     </p>
     <div class="actions">
@@ -263,13 +256,11 @@ footer p{opacity:.85}
   </div>
 </div>
 
-<!-- POUR QUI -->
 <section>
 <h2>À qui s’adresse CizaJobs+</h2>
 <div class="grid">
   <div class="card">
     <h3>👤 Candidats</h3>
-    <p>Emploi, formation et opportunités professionnelles encadrées.</p>
     <ul>
       <li>Offres vérifiées</li>
       <li>Dossier candidat suivi</li>
@@ -277,73 +268,21 @@ footer p{opacity:.85}
     </ul>
   </div>
   <div class="card">
-    <h3>🏢 Entreprises & Organisations</h3>
-    <p>Recrutement, formation et partenariats RH structurés.</p>
+    <h3>🏢 Entreprises</h3>
     <ul>
       <li>Recrutement ciblé</li>
-      <li>Formation du personnel</li>
+      <li>Formation RH</li>
       <li>Partenariats durables</li>
     </ul>
   </div>
 </div>
 </section>
 
-<!-- PROCESSUS -->
-<section>
-<h2>Comment ça fonctionne</h2>
-<div class="grid">
-  <div class="info">
-    <h3>1. Dépôt de la demande</h3>
-    <p>Soumission depuis l’espace sécurisé CIZA GROUP Services.</p>
-  </div>
-  <div class="info">
-    <h3>2. Analyse & validation</h3>
-    <p>Étude humaine de chaque demande, sans automatisation.</p>
-  </div>
-  <div class="info">
-    <h3>3. Mise en relation & suivi</h3>
-    <p>Mise en relation encadrée avec numéro de dossier.</p>
-  </div>
-</div>
-</section>
-
-<!-- ENGAGEMENTS -->
-<section>
-<h2>Nos engagements</h2>
-<div class="grid">
-  <div class="card">
-    <h3>Sérieux & transparence</h3>
-    <p>Aucune fausse offre, aucun profil non vérifié.</p>
-  </div>
-  <div class="card">
-    <h3>Service humain</h3>
-    <p>Accompagnement réel, pas d’automatisation aveugle.</p>
-  </div>
-  <div class="card">
-    <h3>Cadre professionnel</h3>
-    <p>Service fourni après validation, facture si applicable.</p>
-  </div>
-</div>
-</section>
-
-<!-- CTA FINAL -->
-<section>
-<div style="text-align:center">
-  <h2>Prêt à commencer ?</h2>
-  <p style="max-width:720px;margin:0 auto 26px">
-    Créez votre compte ou connectez-vous pour accéder aux services CizaJobs+.
-  </p>
-  <a href="login.html" class="btn">Accéder à mon espace</a>
-</div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div>
       <h4>CIZA GROUP Services</h4>
       <a href="https://cizagroup.com" target="_blank">🌐 Site officiel : cizagroup.com</a>
-      <p>Plateforme de services structurés pour particuliers, entreprises et diaspora.</p>
     </div>
     <div>
       <h4>Légal</h4>
@@ -354,8 +293,6 @@ footer p{opacity:.85}
     <div>
       <h4>Contact</h4>
       <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
-      <a href="https://wa.me/15145029503">WhatsApp International</a>
-      <a href="https://wa.me/25779945007">WhatsApp Burundi</a>
       <p>📍 Bujumbura – Burundi</p>
     </div>
   </div>

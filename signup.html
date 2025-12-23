@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créer un compte | CIZA GROUP Services</title>
+
+<style>
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle at top,#06142E,#020617);
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+color:white;
+}
+
+.card{
+width:100%;
+max-width:420px;
+background:linear-gradient(180deg,#0b1738,#071126);
+border-radius:26px;
+padding:34px 28px;
+box-shadow:0 30px 80px rgba(0,0,0,.6);
+border:1px solid rgba(242,184,64,.35);
+}
+
+.logo{
+text-align:center;
+margin-bottom:18px;
+}
+.logo img{height:70px}
+
+h1{
+text-align:center;
+color:#F2B840;
+margin-bottom:6px;
+}
+.subtitle{
+text-align:center;
+opacity:.9;
+margin-bottom:26px;
+}
+
+label{
+display:block;
+margin-top:14px;
+font-size:14px;
+opacity:.9;
+}
+input{
+width:100%;
+padding:14px;
+margin-top:6px;
+border-radius:14px;
+border:none;
+background:#020617;
+color:white;
+font-size:15px;
+}
+
+button{
+margin-top:26px;
+width:100%;
+padding:16px;
+border:none;
+border-radius:30px;
+background:#F2B840;
+color:#000;
+font-weight:700;
+font-size:16px;
+cursor:pointer;
+}
+button:hover{opacity:.92}
+
+.link{
+text-align:center;
+margin-top:16px;
+}
+.link a{color:#F2B840;text-decoration:none}
+
+.support{
+margin-top:26px;
+font-size:13px;
+text-align:center;
+opacity:.9;
+}
+.support span{color:#F2B840}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png">
+  </div>
+
+  <h1>Créer un compte</h1>
+  <p class="subtitle">Rejoignez l’écosystème CIZA GROUP Services</p>
+
+  <form>
+    <label>Nom complet</label>
+    <input type="text" required>
+
+    <label>Numéro de téléphone</label>
+    <input type="tel" required>
+
+    <label>Adresse email</label>
+    <input type="email" required>
+
+    <label>Mot de passe (min. 6 caractères)</label>
+    <input type="password" minlength="6" required>
+
+    <button type="submit">Créer mon compte</button>
+  </form>
+
+  <div class="link">
+    Déjà un compte ? <a href="login.html">Se connecter</a>
+  </div>
+
+  <div class="support">
+    Mot de passe oublié ou problème ?<br>
+    Contactez le support technique :<br>
+    📱 <span>WhatsApp Canada : +1 514 502 9503</span>
+  </div>
+</div>
+
+</body>
+</html>

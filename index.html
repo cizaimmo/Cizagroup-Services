@@ -152,10 +152,14 @@ border-radius:22px;
 border:1px solid rgba(242,184,64,.2);
 cursor:pointer;
 transition:.3s;
+text-decoration:none;
+color:white;
+display:block;
 }
 
 .card:hover{transform:translateY(-6px);border-color:var(--gold)}
 .card h3{color:var(--gold);margin-bottom:10px}
+.card p{opacity:.85}
 
 /* ===== FOOTER ===== */
 footer{
@@ -217,7 +221,7 @@ border-top:1px solid rgba(255,255,255,.1);
 <a onclick="goTo('about')">À propos</a>
 <a onclick="goTo('services')">Services</a>
 <a onclick="goTo('contact')">Contact</a>
-<a onclick="goTo('login')">Connexion</a>
+<a href="login.html">Connexion</a>
 </div>
 <div class="menu-btn" onclick="openMenu()">☰</div>
 </div>
@@ -229,7 +233,7 @@ border-top:1px solid rgba(255,255,255,.1);
 <a onclick="goTo('about')">À propos</a>
 <a onclick="goTo('services')">Services</a>
 <a onclick="goTo('contact')">Contact</a>
-<a onclick="goTo('login')">Connexion</a>
+<a href="login.html">Connexion</a>
 </div>
 
 <div id="home" class="hero">
@@ -239,7 +243,7 @@ border-top:1px solid rgba(255,255,255,.1);
 <p>Des solutions concrètes, organisées et fiables pour les particuliers, les entreprises et la diaspora.</p>
 <div class="cta">
 <a class="primary" onclick="goTo('services')">Découvrir nos services</a>
-<a class="secondary" onclick="goTo('login')">Connexion</a>
+<a class="secondary" href="login.html">Connexion</a>
 </div>
 </div>
 <div class="phone-frame">
@@ -258,15 +262,52 @@ CIZA GROUP est une plateforme de services premium, pensée pour répondre à des
 <section id="services">
 <h2>Nos services</h2>
 <div class="grid">
-<div class="card">CizaRide+</div>
-<div class="card">CizaCarWash</div>
-<div class="card">CizaDelivery</div>
-<div class="card">CizaImmo</div>
-<div class="card">CizaHome+</div>
-<div class="card">CizaLogistics</div>
-<div class="card">CizaMarket</div>
-<div class="card">CizaAssist+</div>
-<div class="card">CizaJobs</div>
+
+<a class="card" href="cizaride.html">
+<h3>CizaRide+</h3>
+<p>Transport urbain fiable et organisé.</p>
+</a>
+
+<a class="card" href="cizacarwash.html">
+<h3>CizaCarWash+</h3>
+<p>Lavage automobile professionnel, station & mobile.</p>
+</a>
+
+<a class="card" href="cizadelivery.html">
+<h3>CizaDelivery</h3>
+<p>Livraison sécurisée de colis et marchandises.</p>
+</a>
+
+<a class="card" href="cizaimmo.html">
+<h3>CizaImmo</h3>
+<p>Solutions immobilières locales & diaspora.</p>
+</a>
+
+<a class="card" href="cizahome.html">
+<h3>CizaHome+</h3>
+<p>Services organisés pour la maison.</p>
+</a>
+
+<a class="card" href="cizalogistics.html">
+<h3>CizaLogistics</h3>
+<p>Stock, logistique et accompagnement commercial.</p>
+</a>
+
+<a class="card" href="cizamarket.html">
+<h3>CizaMarket</h3>
+<p>Marketplace fiable pour commerçants.</p>
+</a>
+
+<a class="card" href="cizaassist.html">
+<h3>CizaAssist+</h3>
+<p>Assistance administrative & professionnelle.</p>
+</a>
+
+<a class="card" href="cizajobs.html">
+<h3>CizaJobs</h3>
+<p>Emploi, recrutement & partenariats.</p>
+</a>
+
 </div>
 </section>
 
@@ -274,14 +315,14 @@ CIZA GROUP est une plateforme de services premium, pensée pour répondre à des
 <div class="footer-inner">
 <div>
 <h4>CIZA GROUP</h4>
-<a>À propos</a>
-<a>Contact</a>
+<a href="about.html">À propos</a>
+<a href="contact.html">Contact</a>
 </div>
 <div>
 <h4>Légal</h4>
-<a>Mentions légales</a>
-<a>Confidentialité</a>
-<a>Conditions générales</a>
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="confidentialite.html">Confidentialité</a>
+<a href="conditions.html">Conditions générales</a>
 </div>
 <div>
 <h4>Contact</h4>

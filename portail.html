@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portail Client | CIZA GROUP</title>
+<style>
+body{background:#020617;color:#fff;font-family:system-ui}
+.box{max-width:600px;margin:10vh auto;padding:28px;background:#0b1738;border-radius:18px;border:1px solid rgba(242,184,64,.3)}
+h2{color:#F2B840}
+label{display:block;margin-top:12px}
+input,textarea{width:100%;padding:12px;border-radius:10px;border:none;margin-top:6px}
+.btn{margin-top:18px;background:#F2B840;color:#000;padding:12px;border-radius:30px;text-align:center;cursor:pointer}
+.note{margin-top:14px;color:#F2B840}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Bienvenue dans votre portail client CIZA GROUP</h2>
+  <p>Finalisez votre demande de service.</p>
+
+  <form action="https://formsubmit.co/infos@cizagroup.com" method="POST">
+    <input type="hidden" name="_subject" value="Nouvelle demande CIZA GROUP">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="Dossier" value="CIZA-CW-2026-{{random}}">
+
+    <label>Nom</label>
+    <input name="Nom" required>
+
+    <label>Email</label>
+    <input type="email" name="Email" required>
+
+    <label>Service</label>
+    <input name="Service" value="CizaCarWash+" readonly>
+
+    <label>Message</label>
+    <textarea name="Message"></textarea>
+
+    <button class="btn" type="submit">Envoyer la demande</button>
+  </form>
+
+  <div class="note">
+    Après envoi, un numéro de dossier vous sera communiqué.
+  </div>
+</div>
+
+</body>
+</html>

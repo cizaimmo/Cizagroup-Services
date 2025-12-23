@@ -4,330 +4,292 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CizaDelivery+ | Livraison fiable & encadrée – CIZA GROUP Services</title>
-<meta name="description" content="CizaDelivery+ – Livraison de colis, documents et courses avec suivi humain, numéro de dossier et validation professionnelle.">
+<title>CizaDelivery+ | Livraison & Courses – CIZA GROUP Services</title>
+<meta name="description" content="CizaDelivery+ – Livraison de colis, documents et courses avec suivi humain. Service officiel CIZA GROUP Services.">
 <meta name="robots" content="index, follow">
 
 <style>
 :root{
---gold:#F2B840;
---dark:#020617;
---card:#0b1738;
---text:#ffffff;
+  --gold:#F2B840;
+  --blue:#06142E;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-font-family:system-ui,-apple-system,Segoe UI,Roboto;
-background:var(--dark);
-color:var(--text);
-line-height:1.7;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* ===== HEADER ===== */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(6,20,46,.96);
+  border-bottom:1px solid rgba(242,184,64,.25);
+  z-index:10000;
+}
+.header-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo img{height:52px}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+.nav a:hover{color:var(--gold)}
+.btn-header{
+  background:var(--gold);
+  color:#000 !important;
+  padding:10px 22px;
+  border-radius:30px;
+  font-weight:700;
+}
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#fff;
+}
+@media(max-width:900px){
+  .nav{
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#06142E;
+    flex-direction:column;
+    width:100%;
+    padding:20px;
+    display:none;
+  }
+  .nav.show{display:flex}
+  .menu-toggle{display:block}
 }
 
 /* ===== HERO ===== */
 .hero{
-margin-top:110px;
-min-height:85vh;
-background:
-linear-gradient(rgba(6,20,46,.6),rgba(6,20,46,.9)),
-url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/F4363B70-994F-481B-9F0B-24BD11656BD9.png")
-center/cover no-repeat;
-display:flex;
-align-items:flex-end;
+  margin-top:92px;
+  min-height:80vh;
+  background:
+    linear-gradient(rgba(6,20,46,.55),rgba(6,20,46,.85)),
+    url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/F4363B70-994F-481B-9F0B-24BD11656BD9.png")
+    center/contain no-repeat;
+  display:flex;
+  align-items:flex-end;
 }
-
 .hero-inner{
-max-width:1200px;
-margin:auto;
-padding:48px 24px;
+  max-width:1300px;
+  margin:auto;
+  padding:40px 24px;
 }
-
 .hero h1{
-color:var(--gold);
-font-size:46px;
-margin-bottom:14px;
+  font-size:44px;
+  color:var(--gold);
+  margin-bottom:12px;
 }
-
 .hero p{
-max-width:760px;
-font-size:19px;
-opacity:.95;
+  max-width:720px;
+  font-size:18px;
 }
-
+.hero-actions{
+  margin-top:28px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
 .btn{
-display:inline-block;
-margin-top:28px;
-padding:14px 34px;
-border-radius:40px;
-background:var(--gold);
-color:#000;
-font-weight:600;
-text-decoration:none;
+  background:var(--gold);
+  color:#000;
+  padding:14px 30px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn.secondary{
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);
 }
 
 /* ===== SECTIONS ===== */
 section{
-padding:90px 24px;
-max-width:1200px;
-margin:auto;
+  padding:90px 24px;
+  max-width:1300px;
+  margin:auto;
 }
-
 h2{
-text-align:center;
-color:var(--gold);
-font-size:36px;
-margin-bottom:40px;
+  text-align:center;
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:40px;
 }
-
-/* ===== GRID / CARDS ===== */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
 }
-
 .card{
-background:var(--card);
-padding:36px;
-border-radius:24px;
-border:1px solid rgba(242,184,64,.25);
+  background:var(--card);
+  padding:34px;
+  border-radius:22px;
+  border:1px solid rgba(242,184,64,.25);
 }
-
 .card h3{
-color:var(--gold);
-margin-bottom:14px;
-}
-
-.card p{opacity:.9}
-
-/* ===== NOTES ===== */
-.note{
-max-width:920px;
-margin:auto;
-text-align:center;
-opacity:.85;
-font-size:15px;
+  color:var(--gold);
+  margin-bottom:12px;
 }
 
 /* ===== FOOTER ===== */
 footer{
-position:relative;
-background:#020617;
-border-top:2px solid #F2B840;
-margin-top:120px;
+  background:#020617;
+  border-top:2px solid var(--gold);
 }
-
-footer::before{
-content:"";
-position:absolute;
-inset:0;
-background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
-center/520px no-repeat;
-opacity:0.035;
-pointer-events:none;
-}
-
 .footer-inner{
-max-width:1300px;
-margin:auto;
-padding:70px 24px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:40px;
-position:relative;
-color:#fff;
+  max-width:1300px;
+  margin:auto;
+  padding:60px 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
 }
-
-.footer-inner h4{
-color:#F2B840;
-margin-bottom:14px;
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{
+  color:white;
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
 }
-
-.footer-inner a{
-color:#fff;
-text-decoration:none;
-display:block;
-margin-bottom:10px;
-opacity:.9;
-}
-
-.footer-inner a:hover{opacity:1}
-
+footer a:hover{color:var(--gold)}
 .copy{
-text-align:center;
-padding:22px;
-font-size:14px;
-opacity:.7;
-border-top:1px solid rgba(255,255,255,.1);
-color:#fff;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:.7;
+  border-top:1px solid rgba(255,255,255,.1);
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
+    </a>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#services">Services</a>
+      <a href="https://cizagroup.com" target="_blank">Site officiel</a>
+      <a href="login.html" class="btn-header">Connexion</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <h1>On s’occupe de la livraison,<br>vous gardez la tranquillité.</h1>
+    <a href="index.html#services" style="color:#fff;opacity:.85;text-decoration:none">← Retour aux services</a>
+    <h1>CizaDelivery+</h1>
     <p>
-      <strong>CizaDelivery+</strong> est un service de livraison structuré pour particuliers,
-      entreprises et diaspora.  
-      Chaque demande est suivie humainement, validée et exécutée avec sérieux
+      On s’occupe de la livraison, vous gardez la tranquillité.  
+      Un service structuré, humain et fiable pour particuliers, entreprises et diaspora,
       au sein de <strong>CIZA GROUP Services</strong>.
     </p>
-    <a href="login.html" class="btn">Commander une livraison</a>
+    <div class="hero-actions">
+      <a href="login.html" class="btn">Commander une livraison</a>
+      <a href="login.html" class="btn secondary">Accéder à mon espace</a>
+    </div>
   </div>
 </div>
 
-<!-- PROBLÈMES -->
-<section>
-<h2>Des solutions à des problèmes réels</h2>
-<div class="grid">
-
-<div class="card">
-<h3>⏱️ Manque de temps</h3>
-<p>Nous livrons pour vous pendant que vous vous concentrez sur l’essentiel.</p>
-</div>
-
-<div class="card">
-<h3>🌍 À distance (diaspora)</h3>
-<p>Vous êtes à l’étranger ? Nous livrons pour vos proches au Burundi.</p>
-</div>
-
-<div class="card">
-<h3>🤝 Besoin de confiance</h3>
-<p>Service encadré, validation humaine et numéro de dossier.</p>
-</div>
-
-</div>
-</section>
-
-<!-- CE QUE NOUS LIVRONS -->
+<!-- SERVICES -->
 <section>
 <h2>Ce que nous livrons</h2>
 <div class="grid">
-
-<div class="card">
-<h3>📦 Colis & marchandises</h3>
-<p>Colis personnels ou commerciaux livrés avec suivi.</p>
-</div>
-
-<div class="card">
-<h3>📄 Documents importants</h3>
-<p>Transport sécurisé de documents administratifs.</p>
-</div>
-
-<div class="card">
-<h3>🛒 Courses & achats</h3>
-<p>Courses livrées à domicile, au bureau ou à un proche.</p>
-</div>
-
+  <div class="card">
+    <h3>📦 Colis & marchandises</h3>
+    <p>Livraison sécurisée de colis personnels ou commerciaux.</p>
+  </div>
+  <div class="card">
+    <h3>📄 Documents</h3>
+    <p>Transport de documents administratifs et professionnels.</p>
+  </div>
+  <div class="card">
+    <h3>🛒 Courses & achats</h3>
+    <p>Courses du quotidien livrées à domicile ou au bureau.</p>
+  </div>
 </div>
 </section>
 
-<!-- POURQUOI -->
+<!-- ENGAGEMENT -->
 <section>
-<h2>Pourquoi choisir CizaDelivery+</h2>
+<h2>Notre engagement</h2>
 <div class="grid">
-
-<div class="card">
-<h3>Suivi humain</h3>
-<p>Chaque demande est traitée par notre équipe.</p>
-</div>
-
-<div class="card">
-<h3>Traçabilité claire</h3>
-<p>Numéro de dossier attribué après validation.</p>
-</div>
-
-<div class="card">
-<h3>Cadre professionnel</h3>
-<p>Paiement validé avant exécution. Facture fournie.</p>
-</div>
-
+  <div class="card">
+    <h3>Suivi humain</h3>
+    <p>Chaque demande est suivie manuellement par notre équipe.</p>
+  </div>
+  <div class="card">
+    <h3>Validation & paiement</h3>
+    <p>Le service est fourni après validation de la demande et paiement confirmé.</p>
+  </div>
+  <div class="card">
+    <h3>Facturation</h3>
+    <p>Une facture est fournie pour chaque prestation validée.</p>
+  </div>
 </div>
 </section>
 
-<!-- ENTREPRISES -->
-<section>
-<h2>Entreprises & commerces</h2>
-<div class="grid">
-
-<div class="card">
-<h3>Livraisons régulières</h3>
-<p>Nous devenons votre service de livraison officiel.</p>
-</div>
-
-<div class="card">
-<h3>Dépôts & documents</h3>
-<p>Livraison de plis et documents professionnels.</p>
-</div>
-
-<div class="card">
-<h3>Solutions sur mesure</h3>
-<p>Offres adaptées selon votre volume et vos besoins.</p>
-</div>
-
-</div>
-</section>
-
-<!-- NOTE + CTA -->
-<section>
-<div class="note">
-<strong>Important :</strong><br>
-Les services CizaDelivery+ sont fournis après validation de la demande.
-Le paiement est requis avant exécution, et une facture officielle est fournie.
-</div>
-
-<div style="text-align:center;margin-top:40px">
-<a href="login.html" class="btn">Accéder à mon espace client</a>
-</div>
-</section>
-
-<!-- FOOTER OFFICIEL -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-
     <div>
-      <h4>CIZA GROUP Services</h4>
+      <h4>CIZA GROUP</h4>
       <a href="https://cizagroup.com" target="_blank">🌐 Site officiel : cizagroup.com</a>
-      <p style="opacity:.85">
-        Plateforme de services structurés et encadrés<br>
-        pour particuliers, entreprises et diaspora.
-      </p>
+      <a href="index.html#about">À propos</a>
+      <a href="index.html#contact">Contact</a>
     </div>
-
-    <div>
-      <h4>Navigation</h4>
-      <a href="index.html">Accueil</a>
-      <a href="index.html#services">Services</a>
-      <a href="login.html">Connexion</a>
-      <a href="portal.html">Espace client</a>
-    </div>
-
     <div>
       <h4>Légal</h4>
       <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="confidentialite.html">Confidentialité</a>
       <a href="conditions.html">Conditions générales</a>
     </div>
-
     <div>
       <h4>Contact</h4>
-      <a href="mailto:infos@cizagroup.com">📧 infos@cizagroup.com</a>
-      <a href="https://wa.me/15145029503">💬 WhatsApp International</a>
-      <a href="https://wa.me/25779945007">💬 WhatsApp Burundi</a>
-      <p style="opacity:.85">📍 Bujumbura – Burundi</p>
+      <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
+      <a href="https://wa.me/15145029503">WhatsApp International</a>
+      <a href="https://wa.me/25779945007">WhatsApp Burundi</a>
+      <p>📍 Bujumbura – Burundi</p>
     </div>
-
   </div>
-
-  <div class="copy">
-    © 2026 <strong>CIZA GROUP Services</strong> — Tous droits réservés
-  </div>
+  <div class="copy">© 2026 CIZA GROUP Services — Tous droits réservés</div>
 </footer>
+
+<script>
+function toggleMenu(){
+  document.querySelector('.nav').classList.toggle('show');
+}
+</script>
 
 </body>
 </html>

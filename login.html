@@ -13,35 +13,31 @@ display:flex;
 align-items:center;
 justify-content:center;
 background:radial-gradient(circle at top,#06142E,#020617);
-font-family:system-ui,-apple-system,Segoe UI,Roboto;
+font-family:system-ui;
 color:white;
 }
 .card{
-width:100%;
 max-width:420px;
+width:100%;
 background:linear-gradient(180deg,#0b1738,#071126);
 border-radius:26px;
-padding:34px 28px;
-box-shadow:0 30px 80px rgba(0,0,0,.6);
+padding:34px;
 border:1px solid rgba(242,184,64,.35);
+box-shadow:0 30px 80px rgba(0,0,0,.6);
 }
 .logo{text-align:center;margin-bottom:18px}
 .logo img{height:70px}
-h1{text-align:center;color:#F2B840;margin-bottom:6px}
-.subtitle{text-align:center;opacity:.9;margin-bottom:26px}
-label{display:block;margin-top:14px;font-size:14px}
+h1{text-align:center;color:#F2B840}
 input{
 width:100%;
 padding:14px;
-margin-top:6px;
+margin:10px 0;
 border-radius:14px;
 border:none;
 background:#020617;
 color:white;
-font-size:15px;
 }
 button{
-margin-top:26px;
 width:100%;
 padding:16px;
 border:none;
@@ -49,10 +45,12 @@ border-radius:30px;
 background:#F2B840;
 color:#000;
 font-weight:700;
-font-size:16px;
 cursor:pointer;
 }
-#msg{text-align:center;margin-top:14px;font-size:14px}
+#msg{text-align:center;margin-top:12px}
+.links{text-align:center;margin-top:16px;font-size:14px}
+.links a{color:#F2B840;text-decoration:none}
+.support{text-align:center;margin-top:18px;font-size:13px;opacity:.9}
 </style>
 </head>
 
@@ -64,24 +62,28 @@ cursor:pointer;
   </div>
 
   <h1>Connexion sécurisée</h1>
-  <p class="subtitle">Accédez à votre espace CIZA GROUP Services</p>
 
-  <label>Email</label>
-  <input id="email" type="email" required>
-
-  <label>Mot de passe</label>
-  <input id="password" type="password" required>
+  <input id="email" type="email" placeholder="Adresse email">
+  <input id="password" type="password" placeholder="Mot de passe">
 
   <button onclick="login()">Se connecter</button>
-
   <div id="msg"></div>
+
+  <div class="links">
+    <a href="index.html">← Retour au site</a>
+  </div>
+
+  <div class="support">
+    Besoin d’aide ?<br>
+    WhatsApp : +257 79 94 50 07 · +257 79 64 48 93<br>
+    International : +1 514 502 9503
+  </div>
 </div>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
-/* 🔥 FIREBASE CONFIG — NE PAS TOUCHER */
 const firebaseConfig = {
   apiKey: "AIzaSyBAiJHbBvRO6cDFpm6C-5mQk6SiTtzcI8o",
   authDomain: "cizagroup-app.firebaseapp.com",
@@ -92,10 +94,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-/* 🔐 LOGIN + REDIRECTION INTELLIGENTE */
 window.login = async () => {
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
+  const email = email.value.trim();
+  const password = password.value.trim();
   const msg = document.getElementById("msg");
 
   if(!email || !password){
@@ -108,18 +109,14 @@ window.login = async () => {
   try{
     await signInWithEmailAndPassword(auth, email, password);
 
-    // ✅ MARQUE UTILISATEUR CONNECTÉ (WEB SEULEMENT)
+    // ✅ UTILISATEUR CONNECTÉ (WEB)
     localStorage.setItem("ciza_user_logged", "true");
 
-    // 🔁 REDIRECTION VERS SERVICE DEMANDÉ
-    const service = localStorage.getItem("ciza_redirect_service");
+    // 🔁 REDIRECTION CORRECTE
+    const target = localStorage.getItem("ciza_redirect_service") || "portal.html";
+    localStorage.removeItem("ciza_redirect_service");
 
-    if(service){
-      localStorage.removeItem("ciza_redirect_service");
-      window.location.replace(service);
-    }else{
-      window.location.replace("portal.html");
-    }
+    window.location.replace(target);
 
   }catch(e){
     msg.innerText = "Email ou mot de passe incorrect ❌";

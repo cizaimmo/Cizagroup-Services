@@ -81,7 +81,7 @@ cursor:pointer;
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
-/* 🔥 FIREBASE CONFIG — NE PAS MODIFIER */
+/* 🔥 FIREBASE CONFIG — NE PAS TOUCHER */
 const firebaseConfig = {
   apiKey: "AIzaSyBAiJHbBvRO6cDFpm6C-5mQk6SiTtzcI8o",
   authDomain: "cizagroup-app.firebaseapp.com",
@@ -92,7 +92,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-/* 🔐 LOGIN AVEC REDIRECTION INTELLIGENTE */
+/* 🔐 LOGIN + REDIRECTION INTELLIGENTE */
 window.login = async () => {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
@@ -108,11 +108,18 @@ window.login = async () => {
   try{
     await signInWithEmailAndPassword(auth, email, password);
 
-    // 🔁 LECTURE DU REDIRECT
-    const params = new URLSearchParams(window.location.search);
-    const redirectTo = params.get("redirect") || "portal.html";
+    // ✅ MARQUE UTILISATEUR CONNECTÉ (WEB SEULEMENT)
+    localStorage.setItem("ciza_user_logged", "true");
 
-    window.location.replace(redirectTo);
+    // 🔁 REDIRECTION VERS SERVICE DEMANDÉ
+    const service = localStorage.getItem("ciza_redirect_service");
+
+    if(service){
+      localStorage.removeItem("ciza_redirect_service");
+      window.location.replace(service);
+    }else{
+      window.location.replace("portal.html");
+    }
 
   }catch(e){
     msg.innerText = "Email ou mot de passe incorrect ❌";

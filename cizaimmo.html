@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CizaImmo+ | Accompagnement immobilier structuré – CIZA GROUP Services</title>
+
+<meta name="description" content="CizaImmo+ – Accompagnement immobilier structuré pour particuliers, entreprises et diaspora. Service humain au sein de CIZA GROUP Services.">
+<meta name="robots" content="index, follow">
+
+<style>
+:root{
+  --blue:#06142E;
+  --gold:#F2B840;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(6,20,46,.97);
+  border-bottom:1px solid rgba(242,184,64,.25);
+  z-index:10000;
+}
+.header-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo img{height:52px}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+.nav a:hover{color:var(--gold)}
+.btn-header{
+  background:var(--gold);
+  color:#000 !important;
+  padding:10px 22px;
+  border-radius:30px;
+  font-weight:700;
+}
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#fff;
+}
+@media(max-width:900px){
+  .nav{
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#06142E;
+    flex-direction:column;
+    width:100%;
+    padding:20px;
+    display:none;
+  }
+  .nav.show{display:flex}
+  .menu-toggle{display:block}
+}
+
+/* ================= HERO ================= */
+.hero{
+  margin-top:92px;
+  min-height:82vh;
+  background:
+    linear-gradient(rgba(6,20,46,.65),rgba(6,20,46,.9)),
+    url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/D25BF0B4-978A-47DF-865F-4190E881B83E.png")
+    center 35% / cover no-repeat;
+  display:flex;
+  align-items:flex-end;
+}
+.hero-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:40px 24px;
+}
+.hero-inner a{
+  color:#fff;
+  text-decoration:none;
+  opacity:.85;
+}
+.hero h1{
+  font-size:44px;
+  color:var(--gold);
+  margin:14px 0;
+}
+.hero p{
+  font-size:18px;
+  max-width:820px;
+  opacity:.95;
+}
+.actions{
+  margin-top:28px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:40px;
+  background:var(--gold);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn.secondary{
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);
+}
+
+/* ================= SECTIONS ================= */
+section{
+  padding:90px 24px;
+  max-width:1300px;
+  margin:auto;
+}
+h2{
+  text-align:center;
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:40px;
+}
+
+/* ================= GRID / CARDS ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  background:var(--card);
+  padding:34px;
+  border-radius:22px;
+  border:1px solid rgba(242,184,64,.25);
+}
+.card h3{color:var(--gold);margin-bottom:14px}
+.info{
+  background:#0b1738;
+  padding:36px;
+  border-radius:26px;
+  border:1px solid rgba(242,184,64,.3);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  position:relative;
+  background:#020617;
+  border-top:2px solid var(--gold);
+  margin-top:120px;
+}
+footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
+  center/520px no-repeat;
+  opacity:.035;
+  pointer-events:none;
+}
+.footer-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:70px 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{color:#fff;text-decoration:none;display:block;margin-bottom:10px}
+footer a:hover{color:var(--gold)}
+.copy{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:.7;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png">
+    </a>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#services">Services</a>
+      <a href="https://cizagroup.com" target="_blank">Site officiel</a>
+      <a href="login.html" class="btn-header">Connexion</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <a href="index.html#services">← Retour aux services</a>
+    <h1>CizaImmo+</h1>
+    <p>
+      Accompagnement immobilier structuré pour particuliers, entreprises et diaspora.  
+      Conseil, gestion et suivi professionnel au sein de <strong>CIZA GROUP Services</strong>.
+    </p>
+    <div class="actions">
+      <a href="login.html" class="btn">Accéder à mon espace</a>
+      <a href="login.html" class="btn secondary">Faire une demande</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section>
+<h2>Comment fonctionne CizaImmo+</h2>
+<div class="grid">
+  <div class="info"><h3>1. Dépôt de la demande</h3><p>Soumission depuis l’espace sécurisé CIZA GROUP Services.</p></div>
+  <div class="info"><h3>2. Analyse humaine</h3><p>Étude réelle de chaque projet immobilier.</p></div>
+  <div class="info"><h3>3. Validation & cadrage</h3><p>Numéro de dossier et périmètre clair.</p></div>
+  <div class="info"><h3>4. Accompagnement</h3><p>Suivi structuré avec interlocuteur identifié.</p></div>
+  <div class="info"><h3>5. Clôture</h3><p>Retour final et facture si applicable.</p></div>
+</div>
+</section>
+
+<!-- GARANTIES -->
+<section>
+<h2>Nos garanties</h2>
+<div class="grid">
+  <div class="card"><h3>🤝 Humain</h3><p>Aucun traitement automatique.</p></div>
+  <div class="card"><h3>🔍 Transparence</h3><p>Aucun frais caché.</p></div>
+  <div class="card"><h3>📄 Cadre pro</h3><p>Service validé et facturé.</p></div>
+  <div class="card"><h3>🔐 Confidentialité</h3><p>Données protégées.</p></div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section>
+<h2>Questions fréquentes</h2>
+<div class="grid">
+  <div class="card"><h3>CizaImmo est-il une agence ?</h3><p>Non. C’est un service d’accompagnement.</p></div>
+  <div class="card"><h3>Pour qui ?</h3><p>Locaux, diaspora, entreprises.</p></div>
+  <div class="card"><h3>Quand le dossier est créé ?</h3><p>Après validation.</p></div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>CIZA GROUP Services</h4>
+      <a href="https://cizagroup.com">🌐 cizagroup.com</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
+      <p>📍 Bujumbura – Burundi</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 CIZA GROUP Services</div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

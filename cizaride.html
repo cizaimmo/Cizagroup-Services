@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CizaRide+ | Transport privé VIP sur réservation – CIZA GROUP Services</title>
+<meta name="description" content="CizaRide+ – Transport privé VIP sur réservation. Service discret, sécurisé et personnalisé pour clients exigeants. CIZA GROUP Services.">
+<meta name="robots" content="index, follow">
+
+<style>
+:root{
+  --blue:#06142E;
+  --gold:#F2B840;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(6,20,46,.97);
+  border-bottom:1px solid rgba(242,184,64,.25);
+  z-index:10000;
+}
+.header-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo img{height:48px}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+.nav a:hover{color:var(--gold)}
+.btn-header{
+  background:var(--gold);
+  color:#000 !important;
+  padding:10px 22px;
+  border-radius:30px;
+  font-weight:700;
+}
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#fff;
+}
+@media(max-width:900px){
+  .nav{
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#06142E;
+    flex-direction:column;
+    width:100%;
+    padding:20px;
+    display:none;
+  }
+  .nav.show{display:flex}
+  .menu-toggle{display:block}
+}
+
+/* ================= HERO ================= */
+.hero{
+  margin-top:92px;
+  min-height:85vh;
+  background:
+    linear-gradient(rgba(2,6,23,.45),rgba(2,6,23,.92)),
+    url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/9FDC7BDB-1499-4379-A9E3-18FDC022579E.png")
+    center 10% / 115% no-repeat;
+  display:flex;
+  align-items:flex-end;
+}
+.hero-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:40px 24px 60px;
+}
+.hero-inner a{
+  color:#fff;
+  text-decoration:none;
+  opacity:.85;
+}
+.hero h1{
+  font-size:44px;
+  color:var(--gold);
+  margin:16px 0;
+}
+.hero p{
+  font-size:18px;
+  max-width:820px;
+  opacity:.95;
+}
+.actions{
+  margin-top:28px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn{
+  display:inline-block;
+  padding:14px 34px;
+  border-radius:40px;
+  background:var(--gold);
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn.secondary{
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);
+}
+
+/* ================= SECTIONS ================= */
+section{
+  padding:90px 24px;
+  max-width:1300px;
+  margin:auto;
+}
+h2{
+  text-align:center;
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:40px;
+}
+
+/* ================= GRID / CARDS ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  background:var(--card);
+  padding:36px;
+  border-radius:22px;
+  border:1px solid rgba(242,184,64,.25);
+}
+.card h3{
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+/* ================= INFO ================= */
+.info{
+  background:#0b1738;
+  padding:40px;
+  border-radius:26px;
+  border:1px solid rgba(242,184,64,.35);
+}
+
+/* ================= FOOTER ================= */
+footer{
+  position:relative;
+  background:#020617;
+  border-top:2px solid var(--gold);
+  margin-top:120px;
+}
+footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png")
+  center/520px no-repeat;
+  opacity:.035;
+  pointer-events:none;
+}
+.footer-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:70px 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+  position:relative;
+}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{
+  color:#ffffff;
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
+  opacity:.9;
+}
+footer a:hover{color:var(--gold)}
+footer p{opacity:.85}
+.copy{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:.7;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png" alt="CIZA GROUP Services">
+    </a>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#services">Services</a>
+      <a href="https://cizagroup.com" target="_blank">Site officiel</a>
+      <a href="login.html" class="btn-header">Connexion</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <a href="index.html#services">← Retour aux services</a>
+    <h1>CizaRide+</h1>
+    <p>
+      Transport privé <strong>VIP sur réservation uniquement</strong>.  
+      Un service discret et sécurisé destiné aux personnes
+      qui refusent les taxis ordinaires et exigent
+      <strong>confort, confidentialité et maîtrise du temps</strong>.
+    </p>
+    <p style="opacity:.9">
+      Chaque trajet est préparé à l’avance, validé humainement
+      et exécuté avec rigueur par <strong>CIZA GROUP Services</strong>.
+    </p>
+    <div class="actions">
+      <a href="login.html" class="btn">Réserver un trajet VIP</a>
+      <a href="https://wa.me/25779945007" class="btn secondary">WhatsApp direct</a>
+    </div>
+  </div>
+</div>
+
+<!-- POURQUOI PAS PUBLIC -->
+<section>
+<h2>Pourquoi CizaRide+ n’est pas un service public</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Discrétion absolue</h3>
+    <p>Pas de course à la demande. Pas d’affichage public. Chaque client est connu et validé.</p>
+  </div>
+  <div class="card">
+    <h3>Préparation à l’avance</h3>
+    <p>Les trajets sont planifiés, sécurisés et exécutés avec précision, sans improvisation.</p>
+  </div>
+  <div class="card">
+    <h3>Clientèle sélective</h3>
+    <p>CizaRide+ est réservé aux clients qui privilégient sérénité, sécurité et confidentialité.</p>
+  </div>
+</div>
+</section>
+
+<!-- FAQ VIP -->
+<section>
+<h2>Questions fréquentes – CizaRide+</h2>
+<div class="grid">
+  <div class="info">
+    <h3>Est-ce un taxi classique ?</h3>
+    <p>Non. CizaRide+ n’est pas un taxi mais un service privé sur réservation.</p>
+  </div>
+  <div class="info">
+    <h3>Peut-on commander immédiatement ?</h3>
+    <p>Non. Toute demande est faite à l’avance et validée humainement.</p>
+  </div>
+  <div class="info">
+    <h3>Les chauffeurs sont-ils vérifiés ?</h3>
+    <p>Oui. Chauffeurs sélectionnés, formés et suivis par CIZA GROUP Services.</p>
+  </div>
+  <div class="info">
+    <h3>Le paiement est-il sécurisé ?</h3>
+    <p>Oui. Paiement validé avant exécution, avec facture officielle.</p>
+  </div>
+  <div class="info">
+    <h3>Pour quels profils est destiné ce service ?</h3>
+    <p>Dirigeants, VIP, diaspora, personnes discrètes et clients exigeants.</p>
+  </div>
+</div>
+</section>
+
+<!-- GARANTIE -->
+<section>
+<div class="info" style="max-width:900px;margin:auto;text-align:center">
+<p>
+Les services CizaRide+ sont fournis après validation de la demande.  
+Le paiement est requis avant exécution.  
+Une facture officielle est délivrée par <strong>CIZA GROUP Services</strong>.
+</p>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>CIZA GROUP Services</h4>
+      <a href="https://cizagroup.com" target="_blank">🌐 Site officiel : cizagroup.com</a>
+      <p>Plateforme de services structurés pour particuliers, entreprises et diaspora.</p>
+    </div>
+    <div>
+      <h4>Légal</h4>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="conditions.html">Conditions générales</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
+      <a href="https://wa.me/25779945007">WhatsApp Burundi</a>
+      <p>📍 Bujumbura – Burundi</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 CIZA GROUP Services — Tous droits réservés</div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CizaHome+ | Entretien ménager professionnel – CIZA GROUP Services</title>
+<meta name="description" content="CizaHome+ – Entretien ménager professionnel, discret et fiable. Service CIZA GROUP Services.">
+<meta name="robots" content="index, follow">
+
+<style>
+:root{
+  --blue:#06142E;
+  --gold:#F2B840;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(6,20,46,.97);
+  border-bottom:1px solid rgba(242,184,64,.25);
+  z-index:10000;
+}
+.header-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo img{height:52px}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+.nav a:hover{color:var(--gold)}
+.btn-header{
+  background:var(--gold);
+  color:#000 !important;
+  padding:10px 22px;
+  border-radius:30px;
+  font-weight:700;
+}
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#fff;
+}
+@media(max-width:900px){
+  .nav{
+    position:absolute;
+    top:100%;
+    right:0;
+    background:#06142E;
+    flex-direction:column;
+    width:100%;
+    padding:20px;
+    display:none;
+  }
+  .nav.show{display:flex}
+  .menu-toggle{display:block}
+}
+
+/* ===== HERO ===== */
+.hero{
+  margin-top:92px;
+  min-height:85vh;
+  background:
+    linear-gradient(rgba(6,20,46,.65),rgba(6,20,46,.9)),
+    url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/06194747-EE07-427D-8D77-EF046727C560.png")
+    center/cover no-repeat;
+  display:flex;
+  align-items:flex-end;
+}
+.hero-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:40px 24px;
+}
+.hero-inner a{
+  color:#fff;
+  text-decoration:none;
+  opacity:.85;
+}
+.hero h1{
+  font-size:44px;
+  color:var(--gold);
+  margin:14px 0;
+}
+.hero p{
+  font-size:18px;
+  max-width:780px;
+  opacity:.95;
+}
+.actions{
+  margin-top:28px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:40px;
+  background:var(--gold);
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn.secondary{
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:90px 24px;
+  max-width:1300px;
+  margin:auto;
+}
+h2{
+  text-align:center;
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:40px;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  background:var(--card);
+  padding:34px;
+  border-radius:22px;
+  border:1px solid rgba(242,184,64,.25);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+}
+.card h3{
+  color:var(--gold);
+  margin-bottom:14px;
+}
+.info{
+  background:#0b1738;
+  padding:36px;
+  border-radius:26px;
+  border:1px solid rgba(242,184,64,.3);
+}
+
+/* ===== FOOTER ===== */
+footer{
+  position:relative;
+  background:#020617;
+  border-top:2px solid var(--gold);
+  margin-top:120px;
+}
+footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png")
+  center/520px no-repeat;
+  opacity:.035;
+  pointer-events:none;
+}
+.footer-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:70px 24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+  position:relative;
+}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{
+  color:#ffffff;
+  text-decoration:none;
+  display:block;
+  margin-bottom:10px;
+  opacity:.9;
+}
+footer a:hover{color:var(--gold)}
+footer p{opacity:.85}
+.copy{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:.7;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png" alt="CIZA GROUP Services">
+    </a>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#services">Services</a>
+      <a href="https://cizagroup.com" target="_blank">Site officiel</a>
+      <a href="login.html" class="btn-header">Connexion</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <a href="index.html#services">← Retour aux services</a>
+    <h1>CizaHome+</h1>
+    <p>
+      Entretien ménager professionnel, discret et fiable.  
+      Des agents formés, un service structuré et un suivi humain,
+      au sein de <strong>CIZA GROUP Services</strong>.
+    </p>
+    <div class="actions">
+      <a href="login.html" class="btn">Réserver un entretien</a>
+      <a href="https://wa.me/25779945007" class="btn secondary">WhatsApp direct</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section>
+<h2>Nos services CizaHome+</h2>
+<div class="grid">
+  <div class="card"><h3>🏠 Nettoyage résidentiel</h3><p>Maisons, appartements, studios.</p></div>
+  <div class="card"><h3>🏢 Bureaux & commerces</h3><p>Espaces professionnels propres et sains.</p></div>
+  <div class="card"><h3>🔁 Entretien régulier</h3><p>Hebdomadaire ou mensuel.</p></div>
+  <div class="card"><h3>🚚 Après déménagement</h3><p>Nettoyage complet avant ou après.</p></div>
+  <div class="card"><h3>🧼 Désinfection ciblée</h3><p>Zones sensibles et surfaces critiques.</p></div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section>
+<h2>Comment ça fonctionne</h2>
+<div class="grid">
+  <div class="info"><h3>1. Demande</h3><p>Via espace client ou WhatsApp.</p></div>
+  <div class="info"><h3>2. Validation</h3><p>Analyse humaine et planification.</p></div>
+  <div class="info"><h3>3. Intervention</h3><p>Agent qualifié, matériel adapté.</p></div>
+</div>
+</section>
+
+<!-- GARANTIE -->
+<section>
+<div class="info" style="max-width:900px;margin:auto;text-align:center">
+<p>
+Service fourni après validation.  
+Agents encadrés, planning clair, confidentialité respectée.  
+Facture délivrée par <strong>CIZA GROUP Services</strong>.
+</p>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>CIZA GROUP Services</h4>
+      <a href="https://cizagroup.com" target="_blank">🌐 cizagroup.com</a>
+      <p>Plateforme de services structurés pour particuliers, entreprises et diaspora.</p>
+    </div>
+    <div>
+      <h4>Légal</h4>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="conditions.html">Conditions générales</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
+      <a href="https://wa.me/25779945007">WhatsApp Burundi</a>
+      <p>📍 Bujumbura – Burundi</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 CIZA GROUP Services — Tous droits réservés</div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

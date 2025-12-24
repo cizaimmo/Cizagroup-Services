@@ -17,7 +17,6 @@
 --card:#0b1738;
 --text:#ffffff;
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
 body{
 font-family:system-ui,-apple-system,Segoe UI,Roboto;
@@ -26,7 +25,7 @@ color:var(--text);
 line-height:1.7;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
 position:fixed;
 top:0;left:0;right:0;
@@ -34,7 +33,6 @@ background:rgba(6,20,46,.97);
 z-index:10000;
 border-bottom:1px solid rgba(242,184,64,.25);
 }
-
 .nav{
 max-width:1300px;
 margin:auto;
@@ -43,31 +41,26 @@ align-items:center;
 justify-content:space-between;
 padding:14px 22px;
 }
-
 .logo img{height:60px}
-
 .menu{
 display:flex;
 gap:26px;
 align-items:center;
 }
-
 .menu a{
 color:white;
 text-decoration:none;
-cursor:pointer;
 font-weight:500;
+cursor:pointer;
 }
-
 .menu a:hover{color:var(--gold)}
-
 .menu-btn{
 display:none;
 font-size:30px;
 cursor:pointer;
 }
 
-/* ===== MOBILE MENU ===== */
+/* MOBILE MENU */
 .mobile-menu{
 display:none;
 position:fixed;
@@ -78,7 +71,6 @@ background:#020617;
 z-index:20000;
 padding:28px;
 }
-
 .mobile-menu a{
 display:block;
 padding:18px 0;
@@ -88,7 +80,7 @@ text-decoration:none;
 border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
 margin-top:110px;
 min-height:85vh;
@@ -99,7 +91,6 @@ center/cover no-repeat;
 display:flex;
 align-items:center;
 }
-
 .hero-inner{
 max-width:1300px;
 margin:auto;
@@ -108,22 +99,17 @@ grid-template-columns:1.2fr .8fr;
 gap:40px;
 padding:40px 24px;
 }
-
 .hero h1{font-size:44px;color:var(--gold)}
 .hero p{font-size:18px;opacity:.9;margin:20px 0 30px}
-
 .cta a{
 display:inline-block;
 padding:14px 28px;
 border-radius:40px;
 font-weight:600;
-cursor:pointer;
 text-decoration:none;
 }
-
 .primary{background:var(--gold);color:#000}
 .secondary{border:2px solid var(--gold);color:var(--gold)}
-
 .phone-frame{
 max-width:340px;
 border-radius:38px;
@@ -131,53 +117,47 @@ border:3px solid var(--gold);
 overflow:hidden;
 box-shadow:0 40px 80px rgba(0,0,0,.6);
 }
-
 .phone-frame img{width:100%}
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section{padding:90px 24px;max-width:1300px;margin:auto}
 section h2{text-align:center;color:var(--gold);font-size:36px;margin-bottom:50px}
 
-/* ===== SERVICES ===== */
+/* SERVICES */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:28px;
 }
-
 .card{
 background:var(--card);
 padding:34px;
 border-radius:22px;
 border:1px solid rgba(242,184,64,.2);
-cursor:pointer;
-transition:.3s;
 text-decoration:none;
 color:white;
 display:block;
+transition:.3s;
 }
-
 .card:hover{transform:translateY(-6px);border-color:var(--gold)}
 .card h3{color:var(--gold);margin-bottom:10px}
 .card p{opacity:.85}
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
 position:relative;
 background:#020617;
 border-top:2px solid var(--gold);
 }
-
 footer::before{
 content:"";
 position:absolute;
 inset:0;
 background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
 center/500px no-repeat;
-opacity:0.04;
+opacity:.04;
 pointer-events:none;
 }
-
 .footer-inner{
 max-width:1300px;
 margin:auto;
@@ -187,11 +167,9 @@ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:40px;
 position:relative;
 }
-
 footer h4{color:var(--gold);margin-bottom:14px}
 footer a{color:white;text-decoration:none;display:block;margin-bottom:10px}
 footer a:hover{color:var(--gold)}
-
 .copy{
 text-align:center;
 padding:20px;
@@ -200,7 +178,7 @@ opacity:.7;
 border-top:1px solid rgba(255,255,255,.1);
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:900px){
 .hero-inner{grid-template-columns:1fr;text-align:center}
 .menu{display:none}
@@ -210,13 +188,6 @@ border-top:1px solid rgba(255,255,255,.1);
 </head>
 
 <body>
-
-<!-- 🔐 AUTH GUARD (AJOUT UNIQUE) -->
-<script>
-  if (localStorage.getItem("ciza_user_logged") !== "true") {
-    window.location.replace("login.html");
-  }
-</script>
 
 <header>
 <div class="nav">
@@ -269,17 +240,15 @@ CIZA GROUP est une plateforme de services premium, pensée pour répondre à des
 <section id="services">
 <h2>Nos services</h2>
 <div class="grid">
-
-<a class="card" href="cizaride.html"><h3>CizaRide+</h3><p>Transport urbain fiable et organisé.</p></a>
+<a class="card" href="cizaride.html"><h3>CizaRide+</h3><p>Transport urbain premium.</p></a>
 <a class="card" href="cizacarwash.html"><h3>CizaCarWash+</h3><p>Lavage automobile professionnel.</p></a>
 <a class="card" href="cizadelivery.html"><h3>CizaDelivery</h3><p>Livraison sécurisée.</p></a>
 <a class="card" href="cizaimmo.html"><h3>CizaImmo</h3><p>Solutions immobilières.</p></a>
-<a class="card" href="cizahome.html"><h3>CizaHome+</h3><p>Services pour la maison.</p></a>
+<a class="card" href="cizahome.html"><h3>CizaHome+</h3><p>Entretien & services ménagers.</p></a>
 <a class="card" href="cizalogistics.html"><h3>CizaLogistics</h3><p>Logistique & stock.</p></a>
 <a class="card" href="cizamarket.html"><h3>CizaMarket</h3><p>Marketplace.</p></a>
 <a class="card" href="cizaassist.html"><h3>CizaAssist+</h3><p>Assistance professionnelle.</p></a>
 <a class="card" href="cizajobs.html"><h3>CizaJobs</h3><p>Emploi & recrutement.</p></a>
-
 </div>
 </section>
 
@@ -287,8 +256,7 @@ CIZA GROUP est une plateforme de services premium, pensée pour répondre à des
 <div class="footer-inner">
 <div>
 <h4>CIZA GROUP</h4>
-<a href="about.html">À propos</a>
-<a href="contact.html">Contact</a>
+<a href="https://cizagroup.com" target="_blank">Site officiel</a>
 </div>
 <div>
 <h4>Légal</h4>

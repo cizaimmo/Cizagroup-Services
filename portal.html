@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portail Client — CIZA GROUP Services</title>
+
+<style>
+:root{
+--blue:#06142E;
+--gold:#F2B840;
+--dark:#020617;
+--card:#0b1738;
+--text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+background:radial-gradient(circle at top,#06142E,#020617);
+color:var(--text);
+min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+header{
+position:fixed;
+top:0;left:0;right:0;
+background:rgba(6,20,46,.97);
+border-bottom:1px solid rgba(242,184,64,.25);
+z-index:10000;
+}
+.header-inner{
+max-width:1300px;
+margin:auto;
+padding:14px 22px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+.logo img{height:56px}
+.user-actions button{
+background:transparent;
+border:2px solid var(--gold);
+color:var(--gold);
+padding:10px 22px;
+border-radius:30px;
+cursor:pointer;
+font-weight:700;
+}
+.user-actions button:hover{
+background:var(--gold);
+color:#000;
+}
+
+/* ===== HERO ===== */
+.hero{
+margin-top:110px;
+padding:90px 24px 60px;
+text-align:center;
+}
+.hero h1{
+font-size:42px;
+color:var(--gold);
+margin-bottom:12px;
+}
+.hero p{
+max-width:860px;
+margin:auto;
+font-size:18px;
+opacity:.92;
+}
+
+/* ===== SERVICES ===== */
+section{
+max-width:1300px;
+margin:auto;
+padding:60px 24px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+.card{
+background:linear-gradient(180deg,#0b1738,#071126);
+border-radius:24px;
+padding:34px;
+border:1px solid rgba(242,184,64,.28);
+transition:.4s;
+cursor:pointer;
+}
+.card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+.card h3{
+color:var(--gold);
+margin-bottom:10px;
+font-size:20px;
+}
+.card p{
+opacity:.88;
+font-size:15px;
+}
+
+/* ===== OVERLAY ===== */
+.overlay{
+position:fixed;
+inset:0;
+background:rgba(2,6,23,.94);
+display:none;
+z-index:20000;
+}
+.overlay-content{
+max-width:880px;
+margin:90px auto;
+background:#0b1738;
+border-radius:28px;
+padding:40px;
+border:1px solid rgba(242,184,64,.45);
+}
+.overlay h2{color:var(--gold)}
+.overlay button{
+margin-top:28px;
+padding:14px 32px;
+border-radius:30px;
+border:none;
+background:var(--gold);
+font-weight:700;
+cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+margin-top:120px;
+border-top:2px solid var(--gold);
+position:relative;
+background:#020617;
+}
+footer::before{
+content:"";
+position:absolute;
+inset:0;
+background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
+center/520px no-repeat;
+opacity:.035;
+pointer-events:none;
+}
+.footer-inner{
+max-width:1300px;
+margin:auto;
+padding:60px 24px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+position:relative;
+}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{
+color:white;
+text-decoration:none;
+display:block;
+margin-bottom:10px;
+opacity:.9;
+}
+footer a:hover{color:var(--gold)}
+.copy{
+text-align:center;
+padding:18px;
+font-size:14px;
+opacity:.7;
+border-top:1px solid rgba(255,255,255,.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="header-inner">
+<div class="logo">
+<img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png">
+</div>
+<div class="user-actions">
+<button onclick="logout()">Déconnexion</button>
+</div>
+</div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Bienvenue dans votre espace CIZA GROUP Services</h1>
+<p>
+Vous accédez à une plateforme de services premium,
+conçue pour offrir organisation, discrétion, suivi humain
+et qualité d’exécution à chaque étape.
+</p>
+</div>
+
+<!-- SERVICES -->
+<section>
+<div class="grid">
+
+<div class="card" onclick="openService('CizaRide+','Transport VIP discret, sur réservation. Chauffeurs sélectionnés, demandes planifiées, confidentialité garantie.')">
+<h3>CizaRide+</h3>
+<p>Transport VIP & discret</p>
+</div>
+
+<div class="card" onclick="openService('CizaCarWash+','Lavage automobile professionnel en station ou à domicile, avec contrôle qualité.')">
+<h3>CizaCarWash+</h3>
+<p>Lavage premium</p>
+</div>
+
+<div class="card" onclick="openService('CizaDelivery','Livraison sécurisée de colis, documents et marchandises avec suivi humain.')">
+<h3>CizaDelivery</h3>
+<p>Livraison encadrée</p>
+</div>
+
+<div class="card" onclick="openService('CizaImmo+','Accompagnement immobilier structuré pour clients locaux et diaspora.')">
+<h3>CizaImmo+</h3>
+<p>Accompagnement immobilier</p>
+</div>
+
+<div class="card" onclick="openService('CizaHome+','Services organisés pour l’entretien et l’assistance à domicile.')">
+<h3>CizaHome+</h3>
+<p>Services à domicile</p>
+</div>
+
+<div class="card" onclick="openService('CizaLogistics','Solutions de stockage, logistique et accompagnement commercial.')">
+<h3>CizaLogistics</h3>
+<p>Logistique & stock</p>
+</div>
+
+<div class="card" onclick="openService('CizaMarket','Marketplace structurée pour commerçants sérieux et clients vérifiés.')">
+<h3>CizaMarket</h3>
+<p>Marketplace fiable</p>
+</div>
+
+<div class="card" onclick="openService('CizaAssist+','Assistance administrative et professionnelle personnalisée.')">
+<h3>CizaAssist+</h3>
+<p>Assistance premium</p>
+</div>
+
+<div class="card" onclick="openService('CizaJobs','Recrutement, formation et partenariats RH encadrés.')">
+<h3>CizaJobs</h3>
+<p>Emploi & partenariats</p>
+</div>
+
+</div>
+</section>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay">
+<div class="overlay-content">
+<h2 id="serviceTitle"></h2>
+<p id="serviceDesc" style="margin-top:14px;opacity:.9"></p>
+
+<p style="margin-top:24px;font-size:14px;opacity:.85">
+✔ Service fourni après validation<br>
+✔ Paiement requis avant exécution<br>
+✔ Facture officielle fournie<br>
+✔ Numéro de dossier généré automatiquement
+</p>
+
+<button onclick="closeService()">Fermer</button>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-inner">
+
+<div>
+<h4>CIZA GROUP Services</h4>
+<a href="https://cizagroup.com" target="_blank">🌐 Site officiel</a>
+</div>
+
+<div>
+<h4>Légal</h4>
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="confidentialite.html">Confidentialité</a>
+<a href="conditions.html">Conditions</a>
+</div>
+
+<div>
+<h4>Contact</h4>
+<a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
+<a href="https://wa.me/15145029503">WhatsApp International</a>
+<a href="https://wa.me/25779644893">WhatsApp Burundi : +257 79 64 48 93</a>
+<p>📍 Bujumbura – Burundi</p>
+</div>
+
+</div>
+<div class="copy">© 2026 CIZA GROUP — Tous droits réservés</div>
+</footer>
+
+<script>
+/* AUTH */
+if(localStorage.getItem("ciza_user_logged")!=="true"){
+  window.location.replace("login.html");
+}
+
+/* SERVICES */
+function openService(title,desc){
+document.getElementById("serviceTitle").innerText=title;
+document.getElementById("serviceDesc").innerText=desc;
+document.getElementById("overlay").style.display="block";
+}
+function closeService(){
+document.getElementById("overlay").style.display="none";
+}
+
+/* LOGOUT */
+function logout(){
+localStorage.removeItem("ciza_user_logged");
+window.location.replace("index.html");
+}
+</script>
+
+</body>
+</html>

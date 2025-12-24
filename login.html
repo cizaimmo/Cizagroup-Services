@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion | CIZA GROUP Services</title>
+
+<style>
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle at top,#06142E,#020617);
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+color:white;
+}
+.card{
+width:100%;
+max-width:420px;
+background:linear-gradient(180deg,#0b1738,#071126);
+border-radius:26px;
+padding:34px 28px;
+box-shadow:0 30px 80px rgba(0,0,0,.6);
+border:1px solid rgba(242,184,64,.35);
+}
+.logo{text-align:center;margin-bottom:18px}
+.logo img{height:70px}
+h1{text-align:center;color:#F2B840}
+.subtitle{text-align:center;opacity:.9;margin-bottom:26px}
+label{display:block;margin-top:14px;font-size:14px}
+input{
+width:100%;
+padding:14px;
+margin-top:6px;
+border-radius:14px;
+border:none;
+background:#020617;
+color:white;
+font-size:15px;
+}
+button{
+margin-top:26px;
+width:100%;
+padding:16px;
+border:none;
+border-radius:30px;
+background:#F2B840;
+color:#000;
+font-weight:700;
+font-size:16px;
+cursor:pointer;
+}
+.error{margin-top:16px;color:#ff6b6b;text-align:center}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
+  </div>
+
+  <h1>Connexion sécurisée</h1>
+  <p class="subtitle">Accédez à votre espace CIZA GROUP Services</p>
+
+  <form id="loginForm">
+    <label>Adresse email</label>
+    <input type="email" id="email" required>
+
+    <label>Mot de passe</label>
+    <input type="password" id="password" required>
+
+    <button type="submit">Se connecter</button>
+  </form>
+
+  <div class="error" id="error"></div>
+</div>
+
+<!-- 🔥 FIREBASE -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDvgPNjUM6tF3LzTLnhTpnw06xwiPcuxdw",
+  authDomain: "ciza-group-services.firebaseapp.com",
+  projectId: "ciza-group-services",
+  storageBucket: "ciza-group-services.appspot.com",
+  messagingSenderId: "147992871638",
+  appId: "1:147992871638:web:7fcd6575b61f4ede153f77"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = email.value;
+  const password = document.getElementById("password").value;
+  const errorBox = document.getElementById("error");
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    window.location.href = "dashboard.html";
+  } catch (err) {
+    errorBox.textContent = err.message;
+  }
+});
+</script>
+
+</body>
+</html>

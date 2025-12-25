@@ -25,7 +25,7 @@ color:var(--text);
 line-height:1.7;
 }
 
-/* ===== WATERMARK DISCRET ===== */
+/* WATERMARK */
 body::before{
 content:"CizaDelivery+";
 position:fixed;
@@ -40,7 +40,7 @@ pointer-events:none;
 z-index:0;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
 position:fixed;
 top:0;left:0;right:0;
@@ -53,10 +53,10 @@ max-width:1300px;
 margin:auto;
 padding:14px 22px;
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 }
-.logo img{height:52px}
+.logo img{height:56px}
 .header-actions a{
 color:var(--gold);
 border:2px solid var(--gold);
@@ -66,7 +66,7 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
 margin-top:90px;
 padding:80px 24px 60px;
@@ -74,28 +74,15 @@ text-align:center;
 position:relative;
 z-index:1;
 }
-.hero h1{
-font-size:42px;
-color:var(--gold);
-}
+.hero h1{font-size:42px;color:var(--gold)}
 .hero p{
 max-width:900px;
 margin:16px auto 30px;
 font-size:18px;
 opacity:.9;
 }
-.hero .btn{
-display:inline-block;
-margin:8px;
-padding:14px 28px;
-border-radius:40px;
-font-weight:700;
-text-decoration:none;
-}
-.primary{background:var(--gold);color:#000}
-.secondary{border:2px solid var(--gold);color:var(--gold)}
 
-/* ===== SECTIONS ===== */
+/* SECTION */
 section{
 padding:90px 24px;
 max-width:1300px;
@@ -110,7 +97,7 @@ font-size:36px;
 margin-bottom:40px;
 }
 
-/* ===== PROCESS ===== */
+/* PROCESS */
 .process{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -124,7 +111,7 @@ border:1px solid rgba(242,184,64,.25);
 }
 .step h3{color:var(--gold);margin-bottom:10px}
 
-/* ===== FORM ===== */
+/* FORM */
 .form-box{
 max-width:900px;
 margin:auto;
@@ -144,12 +131,14 @@ background:#020617;
 color:white;
 }
 textarea{min-height:120px}
+
 .checkbox{
 margin-top:18px;
 display:flex;
 gap:10px;
 align-items:flex-start;
 }
+
 button{
 margin-top:26px;
 width:100%;
@@ -163,7 +152,18 @@ font-weight:800;
 cursor:pointer;
 }
 
-/* ===== FOOTER ===== */
+/* MESSAGE */
+#result{
+margin-top:24px;
+padding:22px;
+border-radius:18px;
+background:#06142E;
+border:1px solid rgba(242,184,64,.4);
+display:none;
+text-align:center;
+}
+
+/* FOOTER */
 footer{
 margin-top:120px;
 border-top:2px solid var(--gold);
@@ -186,16 +186,11 @@ font-size:14px;
 opacity:.7;
 border-top:1px solid rgba(255,255,255,.1);
 }
-
-@media(max-width:800px){
-.hero h1{font-size:32px}
-}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo">
@@ -207,81 +202,49 @@ border-top:1px solid rgba(255,255,255,.1);
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <h1>CizaDelivery+</h1>
   <p>
-    Livraison premium sécurisée, humaine et suivie de bout en bout.<br>
-    Colis, documents et courses traités avec rigueur et confidentialité.
+    Livraison premium, sécurisée et suivie humainement.<br>
+    Chaque colis est traité comme une mission de confiance.
   </p>
-  <a href="#form" class="btn primary">Demander une livraison</a>
 </div>
 
-<!-- PROCESS -->
 <section>
-<h2>Comment se déroule la livraison</h2>
+<h2>Processus de livraison</h2>
 <div class="process">
-
-<div class="step">
-<h3>1️⃣ Demande</h3>
-<p>Le client soumet une demande détaillée via le formulaire sécurisé.</p>
-</div>
-
-<div class="step">
-<h3>2️⃣ Validation humaine</h3>
-<p>Notre équipe vérifie la faisabilité. Aucune livraison automatique.</p>
-</div>
-
-<div class="step">
-<h3>3️⃣ Ramassage</h3>
-<p>Ramassage organisé. Preuve possible (photo / confirmation).</p>
-</div>
-
-<div class="step">
-<h3>4️⃣ Transport sécurisé</h3>
-<p>Transport contrôlé selon la nature du colis.</p>
-</div>
-
-<div class="step">
-<h3>5️⃣ Livraison finale</h3>
-<p>Remise au destinataire avec confirmation.</p>
-</div>
-
-<div class="step">
-<h3>6️⃣ Clôture & suivi</h3>
-<p>Numéro de dossier confirmé et clôturé après livraison.</p>
-</div>
-
+<div class="step"><h3>1️⃣ Demande</h3><p>Formulaire sécurisé et détaillé.</p></div>
+<div class="step"><h3>2️⃣ Validation humaine</h3><p>Analyse manuelle par notre équipe.</p></div>
+<div class="step"><h3>3️⃣ Ramassage</h3><p>Organisation + preuve si nécessaire.</p></div>
+<div class="step"><h3>4️⃣ Transport</h3><p>Trajet contrôlé et sécurisé.</p></div>
+<div class="step"><h3>5️⃣ Livraison</h3><p>Confirmation de remise.</p></div>
+<div class="step"><h3>6️⃣ Clôture</h3><p>Dossier archivé avec suivi.</p></div>
 </div>
 </section>
 
-<!-- FORM -->
 <section id="form">
-<h2>Formulaire de livraison</h2>
+<h2>Demande de livraison</h2>
 
 <div class="form-box">
-<form action="https://formsubmit.co/infos@cizagroup.com" method="POST">
-
-<input type="hidden" name="_cc" value="">
-<input type="hidden" name="_subject" value="Nouvelle demande CizaDelivery+">
+<form id="deliveryForm">
 
 <label>Nom complet *</label>
-<input type="text" name="Nom" required>
+<input required>
 
 <label>Email *</label>
-<input type="email" name="Email" required>
+<input type="email" required>
 
 <label>Téléphone *</label>
-<input type="text" name="Téléphone" required>
+<input required>
 
 <label>Adresse de ramassage *</label>
-<textarea name="Ramassage" required></textarea>
+<textarea required></textarea>
 
 <label>Adresse de livraison *</label>
-<textarea name="Livraison" required></textarea>
+<textarea required></textarea>
 
 <label>Type de colis *</label>
-<select name="Type de colis" required>
+<select required>
 <option value="">-- Sélectionner --</option>
 <option>Documents</option>
 <option>Colis personnel</option>
@@ -289,28 +252,21 @@ border-top:1px solid rgba(255,255,255,.1);
 <option>Marchandises</option>
 </select>
 
-<label>Détails supplémentaires *</label>
-<textarea name="Détails" required></textarea>
+<label>Détails *</label>
+<textarea required></textarea>
 
 <div class="checkbox">
-<input type="checkbox" required>
-<span>
-J’accepte la <a href="confidentialite.html" target="_blank" style="color:#F2B840">politique de confidentialité</a>.
-</span>
+<input type="checkbox" id="privacy" required>
+<span>J’accepte la <a href="confidentialite.html" target="_blank" style="color:#F2B840">politique de confidentialité</a></span>
 </div>
 
 <button type="submit">Envoyer la demande</button>
-
 </form>
 
-<p style="margin-top:20px;text-align:center;opacity:.85">
-Après validation, un numéro de dossier vous sera attribué.<br>
-Une copie sera envoyée à votre email et à <strong>infos@cizagroup.com</strong>.
-</p>
+<div id="result"></div>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
 <div class="footer-inner">
 <div>
@@ -324,13 +280,38 @@ Une copie sera envoyée à votre email et à <strong>infos@cizagroup.com</strong
 <a href="https://wa.me/25779644893">🇧🇮 +257 79 64 48 93</a>
 <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
 </div>
-<div>
-<h4>Suivez-nous</h4>
-<a href="https://instagram.com/cizagroup_official">@cizagroup_official</a>
 </div>
-</div>
-<div class="copy">Sign & Designed by © 2026 CIZA GROUP Services — CizaDelivery+</div>
+<div class="copy">© 2026 CIZA GROUP Services — CizaDelivery+</div>
 </footer>
+
+<script>
+document.getElementById("deliveryForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const dossier = "CD-" + Date.now();
+  const result = document.getElementById("result");
+
+  const data = new FormData(this);
+  data.append("_subject","Nouvelle demande CizaDelivery+ | " + dossier);
+  data.append("Numéro de dossier", dossier);
+  data.append("_cc", data.get("Email"));
+
+  const res = await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{
+    method:"POST",
+    body:data
+  });
+
+  if(res.ok){
+    result.style.display="block";
+    result.innerHTML = `
+      <h3 style="color:#F2B840">Demande envoyée avec succès</h3>
+      <p>Numéro de dossier : <strong>${dossier}</strong></p>
+      <p>Un agent CIZA GROUP vous contactera rapidement.</p>
+    `;
+    this.reset();
+  }
+});
+</script>
 
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portail Client | CIZA GROUP Services</title>
 
-<meta name="description" content="Accès client VVVIP CIZA GROUP Services — Transport, logistique, immobilier et services premium avec suivi et confidentialité.">
+<meta name="description" content="Accès Client VVVIP CIZA GROUP Services — Transport, logistique, immobilier et services premium.">
 
 <style>
 :root{
@@ -44,7 +44,7 @@ header{
 }
 
 .logo img{
-  height:72px; /* LOGO AGRANDI */
+  height:76px; /* LOGO PLUS VISIBLE */
 }
 
 .logout{
@@ -59,7 +59,7 @@ header{
 
 /* ================= HERO SLIDER ================= */
 .hero{
-  margin-top:104px;
+  margin-top:110px;
   position:relative;
   height:520px;
   overflow:hidden;
@@ -71,27 +71,47 @@ header{
   background-size:cover;
   background-position:center;
   opacity:0;
-  animation:fade 40s infinite;
+  animation:fade 45s infinite;
 }
 
 .slide::after{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(180deg,rgba(2,6,23,.55),rgba(2,6,23,.85));
+  background:linear-gradient(
+    180deg,
+    rgba(2,6,23,.55),
+    rgba(2,6,23,.88)
+  );
 }
 
-.slide:nth-child(1){background-image:url("assets/hero/slide1.png");animation-delay:0s}
-.slide:nth-child(2){background-image:url("assets/hero/slide2.png");animation-delay:8s}
-.slide:nth-child(3){background-image:url("assets/hero/slide3.png");animation-delay:16s}
-.slide:nth-child(4){background-image:url("assets/hero/slide4.png");animation-delay:24s}
-.slide:nth-child(5){background-image:url("assets/hero/slide5.png");animation-delay:32s}
+/* IMAGES À LA RACINE */
+.slide:nth-child(1){
+  background-image:url("06194747-EE07-427D-8D77-EF046727C560.png");
+  animation-delay:0s
+}
+.slide:nth-child(2){
+  background-image:url("0C9993AD-5BCC-4EA9-AF43-E1F4E5845D8C.png");
+  animation-delay:9s
+}
+.slide:nth-child(3){
+  background-image:url("6BD49367-AA8A-45DD-8655-EE6ABC4348A9.png");
+  animation-delay:18s
+}
+.slide:nth-child(4){
+  background-image:url("F4363B70-994F-481B-9F0B-24BD11656BD9.png");
+  animation-delay:27s
+}
+.slide:nth-child(5){
+  background-image:url("D2307CF2-A56B-4D64-8396-D1E75C110DFD.png");
+  animation-delay:36s
+}
 
 @keyframes fade{
   0%{opacity:0}
-  5%{opacity:1}
-  20%{opacity:1}
-  25%{opacity:0}
+  6%{opacity:1}
+  22%{opacity:1}
+  28%{opacity:0}
   100%{opacity:0}
 }
 
@@ -115,7 +135,7 @@ header{
 
 .hero p{
   max-width:900px;
-  margin-top:16px;
+  margin-top:18px;
   font-size:18px;
   opacity:.95;
 }
@@ -146,11 +166,7 @@ section{
   border-color:var(--gold);
 }
 
-.card h3{
-  color:var(--gold);
-  margin-bottom:12px;
-}
-
+.card h3{color:var(--gold);margin-bottom:12px}
 .card p{opacity:.9}
 
 .card a{
@@ -164,7 +180,7 @@ section{
   text-decoration:none;
 }
 
-/* ================= FOOTER (INCHANGÉ) ================= */
+/* ================= FOOTER (IDENTIQUE) ================= */
 footer{
   border-top:1px solid rgba(255,255,255,.15);
   padding:40px 24px;
@@ -188,7 +204,6 @@ footer a{color:var(--gold);text-decoration:none}
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
   <div class="slide"></div>
   <div class="slide"></div>

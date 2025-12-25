@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portail Client | CIZA GROUP Services</title>
 
-<meta name="description" content="Accès Client VVVIP CIZA GROUP Services — Transport, logistique, immobilier et services premium.">
+<meta name="description" content="Portail Client VVVIP CIZA GROUP Services — Accès sécurisé aux services premium.">
 
 <style>
 :root{
@@ -44,14 +44,14 @@ header{
 }
 
 .logo img{
-  height:76px; /* LOGO PLUS VISIBLE */
+  height:78px;
 }
 
 .logout{
   background:transparent;
   border:2px solid var(--gold);
   color:var(--gold);
-  padding:10px 26px;
+  padding:10px 28px;
   border-radius:30px;
   cursor:pointer;
   font-weight:700;
@@ -59,7 +59,7 @@ header{
 
 /* ================= HERO SLIDER ================= */
 .hero{
-  margin-top:110px;
+  margin-top:120px;
   position:relative;
   height:520px;
   overflow:hidden;
@@ -71,7 +71,7 @@ header{
   background-size:cover;
   background-position:center;
   opacity:0;
-  animation:fade 45s infinite;
+  animation:fade 30s infinite;
 }
 
 .slide::after{
@@ -81,29 +81,29 @@ header{
   background:linear-gradient(
     180deg,
     rgba(2,6,23,.55),
-    rgba(2,6,23,.88)
+    rgba(2,6,23,.9)
   );
 }
 
-/* IMAGES À LA RACINE */
+/* === 3 IMAGES UNIQUEMENT (RACINE) === */
 .slide:nth-child(1){
   background-image:url("06194747-EE07-427D-8D77-EF046727C560.png");
-  animation-delay:0s
+  animation-delay:0s;
 }
 .slide:nth-child(2){
   background-image:url("0C9993AD-5BCC-4EA9-AF43-E1F4E5845D8C.png");
-  animation-delay:9s
+  animation-delay:10s;
 }
 .slide:nth-child(3){
   background-image:url("6BD49367-AA8A-45DD-8655-EE6ABC4348A9.png");
-  animation-delay:18s
+  animation-delay:20s;
 }
 
 @keyframes fade{
   0%{opacity:0}
-  6%{opacity:1}
-  22%{opacity:1}
-  28%{opacity:0}
+  8%{opacity:1}
+  30%{opacity:1}
+  38%{opacity:0}
   100%{opacity:0}
 }
 
@@ -121,13 +121,14 @@ header{
 
 .hero h1{
   color:var(--gold);
-  font-size:42px;
+  font-size:44px;
   letter-spacing:.6px;
+  text-shadow:0 0 22px rgba(242,184,64,.25);
 }
 
 .hero p{
   max-width:900px;
-  margin-top:18px;
+  margin-top:22px;
   font-size:18px;
   opacity:.95;
 }
@@ -146,16 +147,18 @@ section{
 }
 
 .card{
-  background:var(--card);
+  background:linear-gradient(180deg,#0e1d42,#071126);
   padding:34px;
-  border-radius:26px;
+  border-radius:28px;
   border:1px solid rgba(242,184,64,.25);
   transition:.35s;
+  box-shadow:0 20px 60px rgba(0,0,0,.55);
 }
 
 .card:hover{
   transform:translateY(-8px);
   border-color:var(--gold);
+  box-shadow:0 30px 80px rgba(242,184,64,.15);
 }
 
 .card h3{color:var(--gold);margin-bottom:12px}
@@ -164,7 +167,7 @@ section{
 .card a{
   display:inline-block;
   margin-top:18px;
-  padding:12px 28px;
+  padding:12px 30px;
   background:var(--gold);
   color:#000;
   border-radius:30px;
@@ -200,20 +203,18 @@ footer a{color:var(--gold);text-decoration:none}
   <div class="slide"></div>
   <div class="slide"></div>
   <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
 
   <div class="hero-content">
-    <h1>Accès Client VVVIP — CIZA GROUP Services</h1>
+    <h1>Espace Client VVVIP — CIZA GROUP</h1>
     <p>
-      Une plateforme exclusive réunissant transport, logistique, immobilier,
-      assistance et services premium — avec suivi personnalisé,
-      confidentialité absolue et excellence opérationnelle.
+      Une plateforme privée réunissant transport, logistique, immobilier
+      et services premium.  
+      Chaque demande est suivie, sécurisée et traitée avec un niveau
+      d’exigence international.
     </p>
   </div>
 </div>
 
-<!-- SERVICES (LIENS INCHANGÉS) -->
 <section>
 <div class="grid">
 

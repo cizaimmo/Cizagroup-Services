@@ -40,11 +40,6 @@ align-items:center;
 justify-content:space-between;
 }
 .logo img{height:56px}
-.user-actions{
-display:flex;
-gap:16px;
-align-items:center;
-}
 .user-actions button{
 background:transparent;
 border:2px solid var(--gold);
@@ -52,7 +47,7 @@ color:var(--gold);
 padding:10px 22px;
 border-radius:30px;
 cursor:pointer;
-font-weight:600;
+font-weight:700;
 }
 .user-actions button:hover{
 background:var(--gold);
@@ -62,22 +57,22 @@ color:#000;
 /* ===== HERO ===== */
 .hero{
 margin-top:110px;
-padding:80px 24px;
+padding:90px 24px 60px;
 text-align:center;
 }
 .hero h1{
-font-size:40px;
+font-size:42px;
 color:var(--gold);
 margin-bottom:12px;
 }
 .hero p{
-max-width:820px;
+max-width:860px;
 margin:auto;
 font-size:18px;
-opacity:.9;
+opacity:.92;
 }
 
-/* ===== SERVICES GRID ===== */
+/* ===== SERVICES ===== */
 section{
 max-width:1300px;
 margin:auto;
@@ -86,47 +81,51 @@ padding:60px 24px;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+gap:30px;
 }
 .card{
-background:var(--card);
-border-radius:22px;
-padding:32px;
-border:1px solid rgba(242,184,64,.25);
-transition:.35s;
+background:linear-gradient(180deg,#0b1738,#071126);
+border-radius:24px;
+padding:34px;
+border:1px solid rgba(242,184,64,.28);
+transition:.4s;
 cursor:pointer;
 }
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 border-color:var(--gold);
+box-shadow:0 30px 80px rgba(0,0,0,.55);
 }
 .card h3{
 color:var(--gold);
-margin-bottom:12px;
+margin-bottom:10px;
+font-size:20px;
 }
-.card p{opacity:.85}
+.card p{
+opacity:.88;
+font-size:15px;
+}
 
-/* ===== MODULE OVERLAY ===== */
+/* ===== OVERLAY ===== */
 .overlay{
 position:fixed;
 inset:0;
-background:rgba(2,6,23,.92);
+background:rgba(2,6,23,.94);
 display:none;
 z-index:20000;
-overflow:auto;
 }
 .overlay-content{
-max-width:820px;
-margin:80px auto;
+max-width:880px;
+margin:90px auto;
 background:#0b1738;
-border-radius:26px;
-padding:36px;
-border:1px solid rgba(242,184,64,.4);
+border-radius:28px;
+padding:40px;
+border:1px solid rgba(242,184,64,.45);
 }
 .overlay h2{color:var(--gold)}
 .overlay button{
-margin-top:24px;
-padding:14px 28px;
+margin-top:28px;
+padding:14px 32px;
 border-radius:30px;
 border:none;
 background:var(--gold);
@@ -136,7 +135,7 @@ cursor:pointer;
 
 /* ===== FOOTER ===== */
 footer{
-margin-top:100px;
+margin-top:120px;
 border-top:2px solid var(--gold);
 position:relative;
 background:#020617;
@@ -159,8 +158,15 @@ grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:40px;
 position:relative;
 }
-footer h4{color:var(--gold)}
-footer a{color:white;text-decoration:none;display:block;margin-bottom:10px}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{
+color:white;
+text-decoration:none;
+display:block;
+margin-bottom:10px;
+opacity:.9;
+}
+footer a:hover{color:var(--gold)}
 .copy{
 text-align:center;
 padding:18px;
@@ -173,7 +179,7 @@ border-top:1px solid rgba(255,255,255,.1);
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <header>
 <div class="header-inner">
 <div class="logo">
@@ -185,61 +191,61 @@ border-top:1px solid rgba(255,255,255,.1);
 </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <div class="hero">
 <h1>Bienvenue dans votre espace CIZA GROUP Services</h1>
 <p>
-Accédez à l’ensemble de nos services premium.
-Chaque demande est suivie humainement, avec validation,
-numéro de dossier et facture lorsque applicable.
+Vous accédez à une plateforme de services premium,
+conçue pour offrir organisation, discrétion, suivi humain
+et qualité d’exécution à chaque étape.
 </p>
 </div>
 
-<!-- ===== SERVICES ===== -->
+<!-- SERVICES -->
 <section>
 <div class="grid">
 
-<div class="card" onclick="openService('CizaRide+','Transport VIP sur réservation. Service discret, planifié à l’avance, chauffeur sélectionné.')">
+<div class="card" onclick="openService('CizaRide+','Transport VIP discret, sur réservation. Chauffeurs sélectionnés, demandes planifiées, confidentialité garantie.')">
 <h3>CizaRide+</h3>
 <p>Transport VIP & discret</p>
 </div>
 
-<div class="card" onclick="openService('CizaCarWash+','Lavage automobile station & mobile, avec contrôle qualité.')">
+<div class="card" onclick="openService('CizaCarWash+','Lavage automobile professionnel en station ou à domicile, avec contrôle qualité.')">
 <h3>CizaCarWash+</h3>
 <p>Lavage premium</p>
 </div>
 
-<div class="card" onclick="openService('CizaDelivery','Livraison sécurisée de colis, documents et marchandises.')">
+<div class="card" onclick="openService('CizaDelivery','Livraison sécurisée de colis, documents et marchandises avec suivi humain.')">
 <h3>CizaDelivery</h3>
 <p>Livraison encadrée</p>
 </div>
 
-<div class="card" onclick="openService('CizaImmo+','Accompagnement immobilier structuré pour local & diaspora.')">
+<div class="card" onclick="openService('CizaImmo+','Accompagnement immobilier structuré pour clients locaux et diaspora.')">
 <h3>CizaImmo+</h3>
 <p>Accompagnement immobilier</p>
 </div>
 
-<div class="card" onclick="openService('CizaHome+','Entretien ménager et services organisés à domicile.')">
+<div class="card" onclick="openService('CizaHome+','Services organisés pour l’entretien et l’assistance à domicile.')">
 <h3>CizaHome+</h3>
 <p>Services à domicile</p>
 </div>
 
-<div class="card" onclick="openService('CizaLogistics','Stockage, logistique et accompagnement commercial.')">
+<div class="card" onclick="openService('CizaLogistics','Solutions de stockage, logistique et accompagnement commercial.')">
 <h3>CizaLogistics</h3>
 <p>Logistique & stock</p>
 </div>
 
-<div class="card" onclick="openService('CizaMarket','Marketplace structurée pour commerçants sérieux.')">
+<div class="card" onclick="openService('CizaMarket','Marketplace structurée pour commerçants sérieux et clients vérifiés.')">
 <h3>CizaMarket</h3>
 <p>Marketplace fiable</p>
 </div>
 
-<div class="card" onclick="openService('CizaAssist+','Assistance administrative & professionnelle.')">
+<div class="card" onclick="openService('CizaAssist+','Assistance administrative et professionnelle personnalisée.')">
 <h3>CizaAssist+</h3>
 <p>Assistance premium</p>
 </div>
 
-<div class="card" onclick="openService('CizaJobs','Recrutement, formation et partenariats RH.')">
+<div class="card" onclick="openService('CizaJobs','Recrutement, formation et partenariats RH encadrés.')">
 <h3>CizaJobs</h3>
 <p>Emploi & partenariats</p>
 </div>
@@ -247,13 +253,13 @@ numéro de dossier et facture lorsque applicable.
 </div>
 </section>
 
-<!-- ===== SERVICE MODULE ===== -->
+<!-- OVERLAY -->
 <div class="overlay" id="overlay">
 <div class="overlay-content">
 <h2 id="serviceTitle"></h2>
 <p id="serviceDesc" style="margin-top:14px;opacity:.9"></p>
 
-<p style="margin-top:22px;font-size:14px;opacity:.85">
+<p style="margin-top:24px;font-size:14px;opacity:.85">
 ✔ Service fourni après validation<br>
 ✔ Paiement requis avant exécution<br>
 ✔ Facture officielle fournie<br>
@@ -264,31 +270,36 @@ numéro de dossier et facture lorsque applicable.
 </div>
 </div>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
 <div class="footer-inner">
+
 <div>
 <h4>CIZA GROUP Services</h4>
 <a href="https://cizagroup.com" target="_blank">🌐 Site officiel</a>
 </div>
+
 <div>
 <h4>Légal</h4>
 <a href="mentions-legales.html">Mentions légales</a>
 <a href="confidentialite.html">Confidentialité</a>
 <a href="conditions.html">Conditions</a>
 </div>
+
 <div>
 <h4>Contact</h4>
 <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
 <a href="https://wa.me/15145029503">WhatsApp International</a>
-<a href="https://wa.me/25779945007">WhatsApp Burundi</a>
+<a href="https://wa.me/25779644893">WhatsApp Burundi : +257 79 64 48 93</a>
+<p>📍 Bujumbura – Burundi</p>
 </div>
+
 </div>
 <div class="copy">© 2026 CIZA GROUP — Tous droits réservés</div>
 </footer>
 
 <script>
-/* 🔐 SECURITY */
+/* AUTH */
 if(localStorage.getItem("ciza_user_logged")!=="true"){
   window.location.replace("login.html");
 }

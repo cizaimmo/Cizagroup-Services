@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CizaDelivery+ | Portail Livraison Premium — CIZA GROUP Services</title>
 
-<meta name="description" content="CizaDelivery+ – Livraison sécurisée, suivie et humaine. Service premium CIZA GROUP Services.">
+<title>CizaDelivery+ | Livraison Premium — CIZA GROUP Services</title>
+
+<meta name="description" content="CizaDelivery+ – Livraison premium sécurisée, suivie et humaine. Service CIZA GROUP Services.">
 
 <style>
 :root{
@@ -25,7 +26,7 @@ color:var(--text);
 line-height:1.7;
 }
 
-/* WATERMARK */
+/* ===== WATERMARK ULTRA DISCRET ===== */
 body::before{
 content:"CizaDelivery+";
 position:fixed;
@@ -33,14 +34,14 @@ inset:0;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:160px;
-font-weight:800;
-color:rgba(255,255,255,.025);
+font-size:200px;
+font-weight:900;
+color:rgba(255,255,255,.015);
 pointer-events:none;
 z-index:0;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header{
 position:fixed;
 top:0;left:0;right:0;
@@ -53,36 +54,51 @@ max-width:1300px;
 margin:auto;
 padding:14px 22px;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 }
-.logo img{height:56px}
+.logo img{
+height:64px; /* logo plus visible */
+}
 .header-actions a{
 color:var(--gold);
 border:2px solid var(--gold);
-padding:8px 18px;
+padding:8px 20px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
-margin-top:90px;
-padding:80px 24px 60px;
+margin-top:95px;
+padding:90px 24px 60px;
 text-align:center;
 position:relative;
 z-index:1;
 }
-.hero h1{font-size:42px;color:var(--gold)}
-.hero p{
-max-width:900px;
-margin:16px auto 30px;
-font-size:18px;
-opacity:.9;
+.hero h1{
+font-size:44px;
+color:var(--gold);
 }
+.hero p{
+max-width:920px;
+margin:18px auto 30px;
+font-size:19px;
+opacity:.92;
+}
+.hero .btn{
+display:inline-block;
+margin:8px;
+padding:14px 30px;
+border-radius:40px;
+font-weight:800;
+text-decoration:none;
+}
+.primary{background:var(--gold);color:#000}
+.secondary{border:2px solid var(--gold);color:var(--gold)}
 
-/* SECTION */
+/* ===== SECTIONS ===== */
 section{
 padding:90px 24px;
 max-width:1300px;
@@ -97,7 +113,7 @@ font-size:36px;
 margin-bottom:40px;
 }
 
-/* PROCESS */
+/* ===== PROCESS ===== */
 .process{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -111,16 +127,16 @@ border:1px solid rgba(242,184,64,.25);
 }
 .step h3{color:var(--gold);margin-bottom:10px}
 
-/* FORM */
+/* ===== FORM ===== */
 .form-box{
 max-width:900px;
 margin:auto;
 background:linear-gradient(180deg,#0b1738,#071126);
 border-radius:30px;
-padding:40px;
-border:1px solid rgba(242,184,64,.35);
+padding:44px;
+border:1px solid rgba(242,184,64,.4);
 }
-label{display:block;margin-top:16px;font-weight:600}
+label{display:block;margin-top:18px;font-weight:700}
 input,textarea,select{
 width:100%;
 padding:14px;
@@ -131,39 +147,27 @@ background:#020617;
 color:white;
 }
 textarea{min-height:120px}
-
 .checkbox{
-margin-top:18px;
+margin-top:22px;
 display:flex;
-gap:10px;
+gap:12px;
 align-items:flex-start;
+font-size:14px;
 }
-
 button{
-margin-top:26px;
+margin-top:30px;
 width:100%;
-padding:16px;
+padding:18px;
 border:none;
 border-radius:40px;
 background:var(--gold);
 color:#000;
-font-size:16px;
-font-weight:800;
+font-size:17px;
+font-weight:900;
 cursor:pointer;
 }
 
-/* MESSAGE */
-#result{
-margin-top:24px;
-padding:22px;
-border-radius:18px;
-background:#06142E;
-border:1px solid rgba(242,184,64,.4);
-display:none;
-text-align:center;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
 margin-top:120px;
 border-top:2px solid var(--gold);
@@ -186,15 +190,20 @@ font-size:14px;
 opacity:.7;
 border-top:1px solid rgba(255,255,255,.1);
 }
+
+@media(max-width:800px){
+.hero h1{font-size:32px}
+}
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
     </div>
     <div class="header-actions">
       <a href="portal.html">← Retour portail</a>
@@ -202,76 +211,108 @@ border-top:1px solid rgba(255,255,255,.1);
   </div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
   <h1>CizaDelivery+</h1>
   <p>
-    Livraison premium, sécurisée et suivie humainement.<br>
-    Chaque colis est traité comme une mission de confiance.
+    Livraison premium sécurisée, humaine et suivie de bout en bout.<br>
+    Particuliers & entreprises — confidentialité, rigueur et preuve de livraison.
   </p>
+  <a href="#form" class="btn primary">Demander une livraison</a>
 </div>
 
+<!-- PROCESS -->
 <section>
 <h2>Processus de livraison</h2>
 <div class="process">
-<div class="step"><h3>1️⃣ Demande</h3><p>Formulaire sécurisé et détaillé.</p></div>
-<div class="step"><h3>2️⃣ Validation humaine</h3><p>Analyse manuelle par notre équipe.</p></div>
-<div class="step"><h3>3️⃣ Ramassage</h3><p>Organisation + preuve si nécessaire.</p></div>
-<div class="step"><h3>4️⃣ Transport</h3><p>Trajet contrôlé et sécurisé.</p></div>
-<div class="step"><h3>5️⃣ Livraison</h3><p>Confirmation de remise.</p></div>
-<div class="step"><h3>6️⃣ Clôture</h3><p>Dossier archivé avec suivi.</p></div>
+
+<div class="step"><h3>1️⃣ Demande</h3><p>Formulaire sécurisé complété par le client.</p></div>
+<div class="step"><h3>2️⃣ Analyse humaine</h3><p>Validation par un agent CIZA GROUP.</p></div>
+<div class="step"><h3>3️⃣ Ramassage</h3><p>Organisation du ramassage avec confirmation.</p></div>
+<div class="step"><h3>4️⃣ Transport sécurisé</h3><p>Suivi selon la nature du colis.</p></div>
+<div class="step"><h3>5️⃣ Livraison</h3><p>Remise avec preuve si nécessaire.</p></div>
+<div class="step"><h3>6️⃣ Dossier clôturé</h3><p>Numéro de dossier confirmé par email.</p></div>
+
 </div>
 </section>
 
+<!-- FORM -->
 <section id="form">
-<h2>Demande de livraison</h2>
+<h2>Formulaire CizaDelivery+</h2>
 
 <div class="form-box">
-<form id="deliveryForm">
+<form action="https://formsubmit.co/infos@cizagroup.com" method="POST">
 
-<label>Nom complet *</label>
-<input required>
+<!-- COPIE CLIENT -->
+<input type="hidden" name="_cc" value="{{Email}}">
+<input type="hidden" name="_subject" value="Nouvelle demande CizaDelivery+">
+<input type="hidden" name="_captcha" value="false">
+
+<label>Type de client *</label>
+<select name="Type de client" required>
+<option value="">— Sélectionner —</option>
+<option>Particulier</option>
+<option>Entreprise / Organisation</option>
+</select>
+
+<label>Nom complet / Responsable *</label>
+<input type="text" name="Nom" required>
+
+<label>Nom de l’entreprise (si applicable)</label>
+<input type="text" name="Entreprise">
 
 <label>Email *</label>
-<input type="email" required>
+<input type="email" name="Email" required>
 
 <label>Téléphone *</label>
-<input required>
+<input type="text" name="Téléphone" required>
 
 <label>Adresse de ramassage *</label>
-<textarea required></textarea>
+<textarea name="Ramassage" required></textarea>
 
 <label>Adresse de livraison *</label>
-<textarea required></textarea>
+<textarea name="Livraison" required></textarea>
 
 <label>Type de colis *</label>
-<select required>
-<option value="">-- Sélectionner --</option>
+<select name="Type de colis" required>
+<option value="">— Sélectionner —</option>
 <option>Documents</option>
 <option>Colis personnel</option>
 <option>Courses</option>
 <option>Marchandises</option>
 </select>
 
-<label>Détails *</label>
-<textarea required></textarea>
+<label>Détails & instructions *</label>
+<textarea name="Détails" required></textarea>
 
 <div class="checkbox">
-<input type="checkbox" id="privacy" required>
-<span>J’accepte la <a href="confidentialite.html" target="_blank" style="color:#F2B840">politique de confidentialité</a></span>
+<input type="checkbox" required>
+<span>
+J’accepte la <a href="confidentialite.html" target="_blank" style="color:#F2B840">politique de confidentialité</a>.
+</span>
 </div>
 
 <button type="submit">Envoyer la demande</button>
+
 </form>
 
-<div id="result"></div>
+<p style="margin-top:22px;text-align:center;opacity:.88">
+✔️ Tous les champs sont obligatoires<br>
+✔️ Copie envoyée au client et à <strong>infos@cizagroup.com</strong><br>
+✔️ Numéro de dossier généré après validation humaine
+</p>
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <div class="footer-inner">
 <div>
 <h4>CIZA GROUP Services</h4>
 <a href="https://cizagroup.com" target="_blank">🌐 cizagroup.com</a>
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="confidentialite.html">Confidentialité</a>
+<a href="conditions.html">Conditions générales</a>
 </div>
 <div>
 <h4>Contact</h4>
@@ -280,38 +321,13 @@ border-top:1px solid rgba(255,255,255,.1);
 <a href="https://wa.me/25779644893">🇧🇮 +257 79 64 48 93</a>
 <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
 </div>
+<div>
+<h4>Suivez-nous</h4>
+<a href="https://instagram.com/cizagroup_official">@cizagroup_official</a>
+</div>
 </div>
 <div class="copy">© 2026 CIZA GROUP Services — CizaDelivery+</div>
 </footer>
-
-<script>
-document.getElementById("deliveryForm").addEventListener("submit", async function(e){
-  e.preventDefault();
-
-  const dossier = "CD-" + Date.now();
-  const result = document.getElementById("result");
-
-  const data = new FormData(this);
-  data.append("_subject","Nouvelle demande CizaDelivery+ | " + dossier);
-  data.append("Numéro de dossier", dossier);
-  data.append("_cc", data.get("Email"));
-
-  const res = await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{
-    method:"POST",
-    body:data
-  });
-
-  if(res.ok){
-    result.style.display="block";
-    result.innerHTML = `
-      <h3 style="color:#F2B840">Demande envoyée avec succès</h3>
-      <p>Numéro de dossier : <strong>${dossier}</strong></p>
-      <p>Un agent CIZA GROUP vous contactera rapidement.</p>
-    `;
-    this.reset();
-  }
-});
-</script>
 
 </body>
 </html>

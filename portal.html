@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portail Client VVIP | CIZA GROUP Services</title>
+
+<meta name="description" content="Portail client premium CIZA GROUP Services. Accédez à des services VVIP organisés, discrets et sécurisés.">
+
+<style>
+:root{
+  --gold:#F2B840;
+  --blue:#06142E;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* ===== WATERMARK ===== */
+.watermark{
+  position:fixed;
+  inset:0;
+  background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
+    center/600px no-repeat;
+  opacity:.03;
+  pointer-events:none;
+  animation:wm 40s linear infinite;
+}
+@keyframes wm{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-40px)}
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(6,20,46,.97);
+  border-bottom:1px solid rgba(242,184,64,.3);
+  z-index:10000;
+}
+.header-inner{
+  max-width:1300px;
+  margin:auto;
+  padding:16px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo img{height:72px}
+.logout{
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);
+  padding:10px 26px;
+  border-radius:30px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* ===== HERO SLIDER ===== */
+.hero{
+  margin-top:110px;
+  min-height:70vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  text-align:center;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(6,20,46,.75),rgba(6,20,46,.9));
+  z-index:2;
+}
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:slide 36s infinite;
+}
+.slide:nth-child(1){background-image:url("06194747-EE07-427D-8D77-EF046727C560.png")}
+.slide:nth-child(2){background-image:url("0C9993AD-5BCC-4EA9-AF43-E1F4E5845D8C.png")}
+.slide:nth-child(3){background-image:url("6BD49367-AA8A-45DD-8655-EE6ABC4348A9.png")}
+.slide:nth-child(4){background-image:url("F4363B70-994F-481B-9F0B-24BD11656BD9.png")}
+.slide:nth-child(5){background-image:url("D2307CF2-A56B-4D64-8396-D1E75C110DFD.png")}
+.slide:nth-child(6){background-image:url("7A0C3670-1518-49B7-8E00-1A290F4277FF.png")}
+.slide:nth-child(7){background-image:url("E55D4834-99C0-437B-9CE7-7AA4197037FF.png")}
+
+@keyframes slide{
+  0%{opacity:0}
+  8%{opacity:1}
+  20%{opacity:1}
+  28%{opacity:0}
+  100%{opacity:0}
+}
+
+.hero-content{
+  position:relative;
+  z-index:3;
+  max-width:900px;
+  margin:auto;
+  padding:40px 24px;
+}
+.hero h1{
+  color:var(--gold);
+  font-size:44px;
+  margin-bottom:14px;
+}
+.hero p{
+  font-size:18px;
+  opacity:.95;
+}
+
+/* ===== SERVICES GRID ===== */
+section{padding:90px 24px;max-width:1300px;margin:auto}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  background:linear-gradient(180deg,#0e1d42,#071126);
+  padding:36px;
+  border-radius:26px;
+  border:1px solid rgba(242,184,64,.25);
+  transition:.35s;
+  position:relative;
+}
+.card::after{
+  content:"VVIP";
+  position:absolute;
+  top:18px;right:18px;
+  background:var(--gold);
+  color:#000;
+  padding:4px 12px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:800;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 40px 90px rgba(242,184,64,.25);
+}
+.card h3{color:var(--gold);margin-bottom:12px}
+.card p{opacity:.9}
+.card a{
+  display:inline-block;
+  margin-top:18px;
+  padding:14px 28px;
+  background:var(--gold);
+  color:#000;
+  border-radius:30px;
+  font-weight:800;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  border-top:1px solid rgba(255,255,255,.15);
+  padding:40px 24px;
+  text-align:center;
+  font-size:14px;
+  opacity:.85;
+}
+footer a{color:var(--gold);text-decoration:none}
+</style>
+</head>
+
+<body>
+
+<div class="watermark"></div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png">
+    </div>
+    <button class="logout" onclick="logout()">Déconnexion</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="slide"></div><div class="slide"></div><div class="slide"></div>
+  <div class="slide"></div><div class="slide"></div><div class="slide"></div><div class="slide"></div>
+  <div class="hero-content">
+    <h1>Portail Client VVIP</h1>
+    <p>
+      Un accès confidentiel à des services d’excellence.  
+      Organisation, discrétion, suivi humain et standards internationaux.
+    </p>
+  </div>
+</div>
+
+<section>
+<div class="grid">
+
+<div class="card"><h3>🚘 CizaRide+</h3><p>Transport VIP discret et planifié.</p><a href="portal-cizaride.html">Accéder</a></div>
+<div class="card"><h3>📦 CizaDelivery+</h3><p>Livraison sécurisée avec preuve.</p><a href="portal-cizadelivery.html">Accéder</a></div>
+<div class="card"><h3>🧽 CizaCarWash+</h3><p>Lavage automobile premium.</p><a href="portal-cizacarwash.html">Accéder</a></div>
+<div class="card"><h3>🏠 CizaHome+</h3><p>Services organisés pour la maison.</p><a href="portal-cizahome.html">Accéder</a></div>
+<div class="card"><h3>🧑‍💼 CizaAssist+</h3><p>Assistance administrative & pro.</p><a href="portal-cizaassist.html">Accéder</a></div>
+<div class="card"><h3>💼 CizaJobs+</h3><p>Emploi et recrutement.</p><a href="portal-cizajobs.html">Accéder</a></div>
+<div class="card"><h3>🚚 CizaLogistics+</h3><p>Logistique & transport structuré.</p><a href="portal-cizalogistics.html">Accéder</a></div>
+<div class="card"><h3>🏢 CizaImmo+</h3><p>Immobilier diaspora & local.</p><a href="portal-cizaimmo.html">Accéder</a></div>
+<div class="card"><h3>🛒 CizaMarket+</h3><p>Marketplace professionnelle.</p><a href="portal-cizamarket.html">Accéder</a></div>
+
+</div>
+</section>
+
+<footer>
+📱 WhatsApp : +1 514 502 9503 · +257 79 94 50 07 · +257 79 64 48 93<br>
+📧 infos@cizagroup.com · 📸 Instagram <a href="https://instagram.com/cizagroup_official">@cizagroup_official</a><br>
+© 2026 CIZA GROUP Services
+</footer>
+
+<script>
+function logout(){
+  localStorage.removeItem("ciza_user_status");
+  window.location.replace("login.html");
+}
+</script>
+
+</body>
+</html>

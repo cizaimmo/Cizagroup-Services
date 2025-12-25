@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portail Client — CIZA GROUP Services</title>
+
+<style>
+:root{
+--gold:#F2B840;
+--blue:#06142E;
+--dark:#020617;
+--card:#0b1738;
+--text:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+background:var(--dark);
+color:var(--text);
+}
+
+/* ===== HEADER ===== */
+header{
+background:#06142E;
+border-bottom:1px solid rgba(242,184,64,.3);
+}
+.header-inner{
+max-width:1300px;
+margin:auto;
+padding:16px 22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo img{height:54px}
+.nav a{
+margin-left:22px;
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+.nav a:hover{color:var(--gold)}
+.logout{
+background:var(--gold);
+color:#000 !important;
+padding:8px 20px;
+border-radius:30px;
+font-weight:700;
+}
+
+/* ===== MAIN ===== */
+main{
+max-width:1300px;
+margin:auto;
+padding:70px 24px;
+}
+.welcome{
+background:linear-gradient(135deg,#0b1738,#071126);
+border:1px solid rgba(242,184,64,.35);
+border-radius:26px;
+padding:40px;
+margin-bottom:50px;
+}
+.welcome h1{color:var(--gold);font-size:36px}
+.welcome p{opacity:.9}
+
+/* ===== SERVICES GRID ===== */
+.grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:26px;
+}
+.card{
+background:var(--card);
+border-radius:22px;
+padding:28px;
+border:1px solid rgba(242,184,64,.25);
+cursor:pointer;
+transition:.3s;
+}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card h3{color:var(--gold);margin-bottom:10px}
+.card p{opacity:.85}
+
+/* ===== INFO ===== */
+.info{
+margin-top:70px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:26px;
+}
+.info-box{
+background:#020617;
+border-radius:22px;
+padding:28px;
+border:1px solid rgba(242,184,64,.25);
+}
+.info-box h3{color:var(--gold);margin-bottom:10px}
+
+/* ===== FOOTER ===== */
+footer{
+margin-top:120px;
+border-top:2px solid var(--gold);
+background:#020617;
+position:relative;
+}
+footer::before{
+content:"";
+position:absolute;
+inset:0;
+background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
+center/520px no-repeat;
+opacity:.04;
+pointer-events:none;
+}
+.footer-inner{
+max-width:1300px;
+margin:auto;
+padding:70px 24px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+position:relative;
+}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{
+color:white;
+text-decoration:none;
+display:block;
+margin-bottom:10px;
+opacity:.9;
+}
+footer a:hover{color:var(--gold)}
+.copy{
+text-align:center;
+padding:20px;
+font-size:14px;
+opacity:.7;
+border-top:1px solid rgba(255,255,255,.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔐 PROTECTION -->
+<script>
+if(localStorage.getItem("ciza_user_status") !== "active"){
+  window.location.replace("login.html");
+}
+</script>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png">
+    </div>
+    <div class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="#" class="logout" onclick="logout()">Déconnexion</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<div class="welcome">
+  <h1>Bienvenue dans votre espace CIZA GROUP Services</h1>
+  <p>Choisissez un service pour continuer. Toutes les demandes sont traitées de manière humaine et confidentielle.</p>
+</div>
+
+<h2 style="color:var(--gold)">Nos services</h2>
+
+<div class="grid">
+  <div class="card" onclick="go('cizaride')"><h3>CizaRide+</h3><p>Transport privé VIP sur réservation.</p></div>
+  <div class="card" onclick="go('cizacarwash')"><h3>CizaCarWash+</h3><p>Lavage automobile premium.</p></div>
+  <div class="card" onclick="go('cizadelivery')"><h3>CizaDelivery+</h3><p>Livraison sécurisée.</p></div>
+  <div class="card" onclick="go('cizaimmo')"><h3>CizaImmo+</h3><p>Solutions immobilières.</p></div>
+  <div class="card" onclick="go('cizahome')"><h3>CizaHome+</h3><p>Entretien ménager organisé.</p></div>
+  <div class="card" onclick="go('cizalogistics')"><h3>CizaLogistics+</h3><p>Logistique & stock.</p></div>
+  <div class="card" onclick="go('cizamarket')"><h3>CizaMarket+</h3><p>Marketplace contrôlée.</p></div>
+  <div class="card" onclick="go('cizaassist')"><h3>CizaAssist+</h3><p>Assistance administrative.</p></div>
+  <div class="card" onclick="go('cizajobs')"><h3>CizaJobs+</h3><p>Emploi & recrutement.</p></div>
+</div>
+
+<div class="info">
+  <div class="info-box">
+    <h3>Processus</h3>
+    <p>Chaque demande est analysée, validée et suivie par notre équipe.</p>
+  </div>
+  <div class="info-box">
+    <h3>Garanties</h3>
+    <p>Données sécurisées, numéro de dossier unique, facture si applicable.</p>
+  </div>
+  <div class="info-box">
+    <h3>Pourquoi nous</h3>
+    <p>Approche humaine, organisation premium, services fiables.</p>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4>CIZA GROUP Services</h4>
+      <a href="https://cizagroup.com" target="_blank">🌐 cizagroup.com</a>
+      <a href="https://instagram.com/cizagroup_official" target="_blank">📸 @cizagroup_official</a>
+    </div>
+    <div>
+      <h4>Contact direct</h4>
+      <a>📱 +1 514 502 9503</a>
+      <a>📱 +257 79 945 007</a>
+      <a>📱 +257 79 64 48 93</a>
+      <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
+    </div>
+    <div>
+      <h4>Légal</h4>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="conditions.html">Conditions générales</a>
+    </div>
+  </div>
+  <div class="copy">© 2026 CIZA GROUP Services</div>
+</footer>
+
+<script>
+function go(service){
+  window.location.href = "service-detail.html?service=" + service;
+}
+function logout(){
+  localStorage.removeItem("ciza_user_status");
+  window.location.replace("login.html");
+}
+</script>
+
+</body>
+</html>

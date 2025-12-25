@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CizaDelivery+ | Livraison Premium — CIZA GROUP Services</title>
 
+<meta name="description" content="CizaDelivery+ – Livraison premium sécurisée, suivie et humaine. Service CIZA GROUP.">
+
 <style>
 :root{
 --gold:#F2B840;
@@ -21,7 +23,7 @@ color:var(--text);
 line-height:1.7;
 }
 
-/* WATERMARK ULTRA DISCRET */
+/* WATERMARK TRÈS DISCRET */
 body::before{
 content:"CizaDelivery+";
 position:fixed;
@@ -29,8 +31,8 @@ inset:0;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:200px;
-font-weight:800;
+font-size:180px;
+font-weight:900;
 color:rgba(255,255,255,.015);
 pointer-events:none;
 z-index:0;
@@ -46,29 +48,47 @@ z-index:10000;
 .header-inner{
 max-width:1300px;margin:auto;
 padding:14px 22px;
-display:flex;justify-content:space-between;align-items:center;
+display:flex;align-items:center;justify-content:space-between;
 }
-.logo img{height:60px}
+.logo img{height:64px}
 .header-actions a{
-color:var(--gold);
 border:2px solid var(--gold);
+color:var(--gold);
 padding:8px 20px;
 border-radius:30px;
 text-decoration:none;
-font-weight:600;
+font-weight:700;
 }
 
 /* HERO */
 .hero{
 margin-top:100px;
-padding:90px 24px;
+padding:90px 24px 60px;
 text-align:center;
+position:relative;z-index:1;
 }
-.hero h1{color:var(--gold);font-size:44px}
-.hero p{max-width:900px;margin:16px auto;font-size:18px;opacity:.9}
+.hero h1{font-size:44px;color:var(--gold)}
+.hero p{
+max-width:900px;
+margin:18px auto 30px;
+font-size:18px;opacity:.9;
+}
+.hero .btn{
+display:inline-block;
+padding:14px 32px;
+border-radius:40px;
+font-weight:800;
+text-decoration:none;
+background:var(--gold);color:#000;
+}
 
-/* SECTION */
-section{padding:90px 24px;max-width:1300px;margin:auto}
+/* SECTIONS */
+section{
+padding:90px 24px;
+max-width:1300px;
+margin:auto;
+position:relative;z-index:1;
+}
 h2{text-align:center;color:var(--gold);font-size:36px;margin-bottom:40px}
 
 /* PROCESS */
@@ -79,18 +99,20 @@ gap:26px;
 }
 .step{
 background:var(--card);
-padding:30px;
-border-radius:24px;
+padding:32px;
+border-radius:26px;
 border:1px solid rgba(242,184,64,.25);
+transition:.3s;
 }
-.step h3{color:var(--gold)}
+.step:hover{transform:translateY(-4px);border-color:var(--gold)}
+.step h3{color:var(--gold);margin-bottom:10px}
 
 /* FORM */
 .form-box{
 max-width:900px;margin:auto;
 background:linear-gradient(180deg,#0b1738,#071126);
 border-radius:30px;
-padding:40px;
+padding:42px;
 border:1px solid rgba(242,184,64,.35);
 }
 label{display:block;margin-top:16px;font-weight:600}
@@ -100,29 +122,25 @@ border-radius:14px;border:none;
 background:#020617;color:white;
 }
 textarea{min-height:120px}
+
 .checkbox{
-margin-top:18px;display:flex;gap:10px;
-}
-button{
-margin-top:30px;width:100%;
-padding:18px;border:none;border-radius:40px;
-background:var(--gold);color:#000;
-font-size:17px;font-weight:800;cursor:pointer;
+margin-top:18px;
+display:flex;gap:10px;align-items:flex-start;
 }
 
-/* CONFIRMATION */
-#confirmation{
-display:none;
-max-width:800px;margin:40px auto;
-padding:30px;border-radius:24px;
-background:linear-gradient(180deg,#0b1738,#071126);
-border:1px solid rgba(242,184,64,.35);
-text-align:center;
+button{
+margin-top:28px;width:100%;
+padding:18px;border:none;
+border-radius:40px;
+background:var(--gold);color:#000;
+font-size:16px;font-weight:900;
+cursor:pointer;
 }
 
 /* FOOTER */
 footer{
-margin-top:120px;border-top:2px solid var(--gold);
+margin-top:120px;
+border-top:2px solid var(--gold);
 background:#020617;
 }
 .footer-inner{
@@ -132,9 +150,13 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:40px;
 }
-footer h4{color:var(--gold)}
+footer h4{color:var(--gold);margin-bottom:14px}
 footer a{color:white;text-decoration:none;display:block;margin-bottom:8px}
-.copy{text-align:center;padding:20px;font-size:14px;opacity:.7}
+.copy{
+text-align:center;padding:20px;
+font-size:14px;opacity:.7;
+border-top:1px solid rgba(255,255,255,.1);
+}
 </style>
 </head>
 
@@ -153,101 +175,108 @@ footer a{color:white;text-decoration:none;display:block;margin-bottom:8px}
 
 <div class="hero">
 <h1>CizaDelivery+</h1>
-<p>Livraison premium sécurisée, humaine et suivie de bout en bout.</p>
+<p>
+Livraison premium sécurisée, suivie et traitée humainement.<br>
+Chaque demande est validée par notre équipe avant exécution.
+</p>
+<a href="#form" class="btn">Demander une livraison</a>
 </div>
 
 <section>
 <h2>Processus de livraison</h2>
 <div class="process">
-<div class="step"><h3>1️⃣ Demande</h3><p>Formulaire sécurisé.</p></div>
-<div class="step"><h3>2️⃣ Validation humaine</h3><p>Analyse réelle.</p></div>
-<div class="step"><h3>3️⃣ Ramassage</h3><p>Organisation contrôlée.</p></div>
-<div class="step"><h3>4️⃣ Transport</h3><p>Sécurisé et suivi.</p></div>
-<div class="step"><h3>5️⃣ Livraison</h3><p>Confirmation finale.</p></div>
+<div class="step"><h3>1️⃣ Demande</h3><p>Formulaire complet requis.</p></div>
+<div class="step"><h3>2️⃣ Validation humaine</h3><p>Analyse par notre équipe.</p></div>
+<div class="step"><h3>3️⃣ Ramassage</h3><p>Organisation & preuve possible.</p></div>
+<div class="step"><h3>4️⃣ Transport</h3><p>Transport sécurisé et contrôlé.</p></div>
+<div class="step"><h3>5️⃣ Livraison</h3><p>Remise + confirmation.</p></div>
+<div class="step"><h3>6️⃣ Suivi</h3><p>Numéro de suivi communiqué.</p></div>
 </div>
 </section>
 
 <section id="form">
-<h2>Demande de livraison</h2>
+<h2>Formulaire de livraison</h2>
 
 <div class="form-box">
-<form id="deliveryForm">
+<form action="https://formsubmit.co/infos@cizagroup.com" method="POST">
+
+<input type="hidden" name="_subject" value="CizaDelivery+ | Nouvelle demande">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="Numéro de suivi" value="2026-DEL-{{random}}">
 
 <label>Type de client *</label>
-<select required>
+<select name="Client" required>
 <option value="">-- Sélectionner --</option>
 <option>Particulier</option>
 <option>Entreprise</option>
 </select>
 
-<label>Nom complet *</label>
-<input required>
+<label>Nom complet / Entreprise *</label>
+<input type="text" name="Nom" required>
 
 <label>Email *</label>
-<input type="email" required>
+<input type="email" name="Email" required>
 
 <label>Téléphone *</label>
-<input required>
+<input type="text" name="Téléphone" required>
 
 <label>Adresse de ramassage *</label>
-<textarea required></textarea>
+<textarea name="Ramassage" required></textarea>
 
 <label>Adresse de livraison *</label>
-<textarea required></textarea>
+<textarea name="Livraison" required></textarea>
 
-<label>Détails *</label>
-<textarea required></textarea>
+<label>Détails du colis *</label>
+<textarea name="Détails" required></textarea>
 
 <div class="checkbox">
 <input type="checkbox" required>
-<span>J’accepte la <a href="confidentialite.html" target="_blank" style="color:#F2B840">politique de confidentialité</a></span>
+<span>J’accepte la <a href="confidentialite.html" target="_blank" style="color:#F2B840">politique de confidentialité</a>.</span>
 </div>
 
 <button type="submit">Envoyer la demande</button>
 </form>
-</div>
 
-<div id="confirmation">
-<h2 style="color:#F2B840;">Merci pour votre confiance</h2>
-<p>Votre demande CizaDelivery+ a bien été reçue.</p>
-<p><strong>Numéro de suivi :</strong><br>
-<span id="tracking" style="font-size:22px;color:#F2B840;font-weight:800"></span></p>
-
-<hr style="margin:30px 0;border-color:rgba(255,255,255,.15)">
-
-<p>
-🌍 +1 514 502 9503<br>
-🇧🇮 +257 79 94 50 07<br>
-   +257 79 64 48 93<br>
-📧 infos@cizagroup.com
+<p style="margin-top:20px;text-align:center;opacity:.85">
+Merci pour votre confiance.<br>
+Votre demande sera validée humainement.<br>
+Un <strong>numéro de suivi</strong> vous sera communiqué.
 </p>
 </div>
-
 </section>
 
+<!-- FOOTER -->
 <footer>
-<div class="footer-inner">
-<div>
-<h4>CIZA GROUP Services</h4>
-<a href="https://cizagroup.com">cizagroup.com</a>
-</div>
-<div>
-<h4>Contact</h4>
-<a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
-</div>
-</div>
-<div class="copy">© 2026 CIZA GROUP Services — CizaDelivery+</div>
-</footer>
+  <div class="footer-inner">
 
-<script>
-document.getElementById("deliveryForm").addEventListener("submit",function(e){
-e.preventDefault();
-const tracking="CD-"+new Date().getFullYear()+"-"+Math.floor(100000+Math.random()*900000);
-document.getElementById("tracking").textContent=tracking;
-document.getElementById("confirmation").style.display="block";
-this.style.display="none";
-});
-</script>
+    <div>
+      <h4>CIZA GROUP Services</h4>
+      <a href="https://cizagroup.com" target="_blank">🌐 Site officiel</a>
+      <a href="https://instagram.com/cizagroup_official" target="_blank">
+        📸 Instagram @cizagroup_official
+      </a>
+    </div>
+
+    <div>
+      <h4>Contact direct</h4>
+      <a href="https://wa.me/15145029503">🌍 International : +1 514 502 9503</a>
+      <a href="https://wa.me/25779945007">🇧🇮 Burundi : +257 79 94 50 07</a>
+      <a href="https://wa.me/25779644893">🇧🇮 Burundi : +257 79 64 48 93</a>
+      <a href="mailto:infos@cizagroup.com">📧 infos@cizagroup.com</a>
+    </div>
+
+    <div>
+      <h4>Légal</h4>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
+
+  </div>
+
+  <div class="copy">
+    © 2026 CIZA GROUP Services — CizaDelivery+ · Tous droits réservés
+  </div>
+</footer>
 
 </body>
 </html>

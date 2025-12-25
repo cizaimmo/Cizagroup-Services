@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demande de service | CIZA GROUP Services</title>
+
+<style>
+:root{
+--gold:#F2B840;
+--dark:#020617;
+--card:#0b1738;
+--text:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+background:radial-gradient(circle at top,#06142E,#020617);
+color:var(--text);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 16px;
+}
+.card{
+width:100%;
+max-width:560px;
+background:linear-gradient(180deg,#0b1738,#071126);
+border-radius:28px;
+padding:36px 30px;
+border:1px solid rgba(242,184,64,.35);
+box-shadow:0 40px 90px rgba(0,0,0,.7);
+}
+.logo{text-align:center;margin-bottom:16px}
+.logo img{height:64px}
+h1{text-align:center;color:var(--gold);margin-bottom:6px}
+.subtitle{text-align:center;opacity:.9;margin-bottom:24px;font-size:15px}
+
+label{display:block;margin-top:16px;font-size:14px}
+input, textarea, select{
+width:100%;
+padding:14px;
+margin-top:6px;
+border-radius:14px;
+border:none;
+background:#020617;
+color:white;
+font-size:15px;
+}
+textarea{resize:vertical;min-height:100px}
+
+.checkbox{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-top:18px;
+font-size:13px;
+opacity:.9;
+}
+.checkbox input{width:auto;margin-top:4px}
+
+button{
+margin-top:28px;
+width:100%;
+padding:16px;
+border:none;
+border-radius:30px;
+background:var(--gold);
+color:#000;
+font-weight:700;
+font-size:16px;
+cursor:pointer;
+}
+
+button:disabled{
+opacity:.4;
+cursor:not-allowed;
+}
+
+#msg{
+margin-top:18px;
+text-align:center;
+font-size:14px;
+min-height:18px;
+}
+
+.footer{
+margin-top:26px;
+font-size:13px;
+text-align:center;
+opacity:.85;
+}
+.footer span{color:var(--gold)}
+.footer a{color:var(--gold);text-decoration:none}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png">
+  </div>
+
+  <h1 id="serviceTitle">Demande de service</h1>
+  <p class="subtitle">
+    Merci de remplir ce formulaire.  
+    Un conseiller CIZA GROUP vous contactera après validation.
+  </p>
+
+  <form id="serviceForm">
+    <label>Nom complet *</label>
+    <input required>
+
+    <label>Email *</label>
+    <input type="email" required>
+
+    <label>Téléphone *</label>
+    <input required>
+
+    <label>Détails de la demande *</label>
+    <textarea required placeholder="Décrivez précisément votre besoin..."></textarea>
+
+    <div class="checkbox">
+      <input type="checkbox" id="policy">
+      <label for="policy">
+        J’accepte la <a href="confidentialite.html" target="_blank">politique de confidentialité</a>
+        et comprends que le service sera fourni après validation et, le cas échéant, paiement confirmé.
+      </label>
+    </div>
+
+    <button id="submitBtn" disabled>Soumettre la demande</button>
+  </form>
+
+  <div id="msg"></div>
+
+  <div class="footer">
+    Besoin d’aide immédiate ?<br>
+    WhatsApp 🇧🇮 <span>+257 79 94 50 07 · 79 64 48 93</span><br>
+    International 🇨🇦 <span>+1 514 502 9503</span><br>
+    📧 infos@cizagroup.com · 📸 <a href="https://instagram.com/cizagroup_official">@cizagroup_official</a>
+  </div>
+</div>
+
+<script>
+/* ===== SERVICE DYNAMIQUE ===== */
+const params = new URLSearchParams(window.location.search);
+const service = params.get("service") || "service";
+
+const serviceNames = {
+  cizaride:"CizaRide+ — Réservation VIP",
+  cizadelivery:"CizaDelivery+ — Livraison",
+  cizaassist:"CizaAssist+ — Assistance",
+  cizahome:"CizaHome+ — Entretien",
+  cizaimmo:"CizaImmo+ — Accompagnement immobilier",
+  cizajobs:"CizaJobs+ — Emploi & RH",
+  cizalogistics:"CizaLogistics+ — Logistique",
+  cizamarket:"CizaMarket+ — Marketplace"
+};
+
+document.getElementById("serviceTitle").innerText =
+  serviceNames[service] || "Demande de service CIZA GROUP";
+
+/* ===== VALIDATION ===== */
+const policy = document.getElementById("policy");
+const btn = document.getElementById("submitBtn");
+
+policy.addEventListener("change",()=>{
+  btn.disabled = !policy.checked;
+});
+
+/* ===== SUBMIT ===== */
+document.getElementById("serviceForm").addEventListener("submit", e=>{
+  e.preventDefault();
+
+  const dossier =
+    "CIZA-" + service.toUpperCase() + "-" +
+    new Date().getFullYear() + "-" +
+    Math.floor(100000 + Math.random()*900000);
+
+  document.getElementById("msg").innerHTML =
+    "✅ <b>Merci pour votre confiance.</b><br>" +
+    "Votre demande a bien été enregistrée.<br><br>" +
+    "<b>Numéro de dossier :</b> " + dossier + "<br><br>" +
+    "Un conseiller CIZA GROUP Services vous contactera très prochainement.";
+
+  btn.disabled = true;
+});
+</script>
+
+</body>
+</html>

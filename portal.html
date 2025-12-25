@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portail Client | CIZA GROUP Services</title>
 
-<meta name="description" content="Portail client sécurisé CIZA GROUP Services. Accédez à tous vos services premium : transport VIP, assistance, emploi, logistique, immobilier.">
+<meta name="description" content="Portail client sécurisé CIZA GROUP Services. Accédez à tous vos services premium.">
 
 <style>
 :root{
-  --blue:#06142E;
   --gold:#F2B840;
+  --blue:#06142E;
   --dark:#020617;
   --card:#0b1738;
   --text:#ffffff;
@@ -23,7 +23,7 @@ body{
   line-height:1.7;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   position:fixed;
   top:0;left:0;right:0;
@@ -36,8 +36,8 @@ header{
   margin:auto;
   padding:14px 22px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 }
 .logo img{height:52px}
 .logout{
@@ -50,29 +50,17 @@ header{
   font-weight:600;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   margin-top:90px;
   padding:70px 24px;
-  background:linear-gradient(180deg,#06142E,#020617);
   text-align:center;
 }
-.hero h1{
-  color:var(--gold);
-  font-size:38px;
-}
-.hero p{
-  max-width:800px;
-  margin:14px auto;
-  opacity:.9;
-}
+.hero h1{color:var(--gold);font-size:38px}
+.hero p{max-width:820px;margin:14px auto;opacity:.9}
 
-/* ===== GRID ===== */
-section{
-  padding:90px 24px;
-  max-width:1300px;
-  margin:auto;
-}
+/* GRID */
+section{padding:80px 24px;max-width:1300px;margin:auto}
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -85,14 +73,8 @@ section{
   border:1px solid rgba(242,184,64,.25);
   transition:.3s;
 }
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--gold);
-}
-.card h3{
-  color:var(--gold);
-  margin-bottom:12px;
-}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.card h3{color:var(--gold);margin-bottom:12px}
 .card p{opacity:.9}
 .card a{
   display:inline-block;
@@ -101,67 +83,24 @@ section{
   background:var(--gold);
   color:#000;
   border-radius:30px;
+  font-weight:700;
   text-decoration:none;
-  font-weight:600;
 }
 
-/* ===== SUPPORT ===== */
-.support{
-  background:#0b1738;
-  border:1px solid rgba(242,184,64,.35);
-  border-radius:26px;
-  padding:40px;
-  text-align:center;
-}
-.support h2{color:var(--gold)}
-.support p{margin:10px 0}
-.support a{
-  color:var(--gold);
-  text-decoration:none;
-  display:block;
-  margin-top:6px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
-  position:relative;
-  background:#020617;
-  border-top:2px solid var(--gold);
-}
-footer::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/af7b0385b79f9f030ce8ee44bca672121d582666/logotransparent.png")
-  center/520px no-repeat;
-  opacity:.035;
-  pointer-events:none;
-}
-.footer-inner{
-  max-width:1300px;
-  margin:auto;
-  padding:60px 24px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:40px;
-  position:relative;
-}
-footer h4{color:var(--gold);margin-bottom:14px}
-footer a{color:white;text-decoration:none;display:block;margin-bottom:10px}
-footer a:hover{color:var(--gold)}
-.copy{
+  border-top:1px solid rgba(255,255,255,.15);
+  padding:40px 24px;
   text-align:center;
-  padding:20px;
   font-size:14px;
-  opacity:.7;
-  border-top:1px solid rgba(255,255,255,.1);
+  opacity:.85;
 }
+footer a{color:var(--gold);text-decoration:none}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo">
@@ -171,118 +110,75 @@ footer a:hover{color:var(--gold)}
   </div>
 </header>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>Bienvenue dans votre espace CIZA GROUP Services</h1>
-  <p>
-    Accédez à l’ensemble de nos services premium.
-    Chaque demande est traitée de manière humaine, sécurisée et suivie.
-  </p>
+  <h1>Portail Client Premium</h1>
+  <p>Accédez à l’ensemble des services CIZA GROUP, organisés et sécurisés.</p>
 </div>
 
-<!-- SERVICES -->
 <section>
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>🚘 CizaRide+ (VIP)</h3>
-      <p>Transport discret, sur réservation, pour clients exigeants.</p>
-      <a href="portal-cizaride.html">Accéder</a>
-    </div>
-
-    <div class="card">
-      <h3>🧽 CizaCarWash+</h3>
-      <p>Lavage automobile station & mobile avec suivi.</p>
-      <a href="portal-carwash.html">Accéder</a>
-    </div><div class="card">
-  <h3>🚚 CizaLogistics+</h3>
-  <p>
-    Stockage, logistique, transport et accompagnement commercial structuré.
-  </p>
-  <a href="cizalogistics.html">Accéder</a>
+<div class="card">
+<h3>🚘 CizaRide+</h3>
+<p>Transport VIP discret et sécurisé.</p>
+<a href="/portal-cizaride.html">Accéder</a>
 </div>
 
 <div class="card">
-  <h3>🏢 CizaImmo+</h3>
-  <p>
-    Services immobiliers premium pour la diaspora et le local :
-    gestion, suivi et coordination.
-  </p>
-  <a href="cizaimmo.html">Accéder</a>
+<h3>📦 CizaDelivery+</h3>
+<p>Livraison sécurisée avec preuve.</p>
+<a href="/portal-cizadelivery.html">Accéder</a>
 </div>
 
 <div class="card">
-  <h3>🛒 CizaMarket+</h3>
-  <p>
-    Marketplace professionnelle pour commerçants, entreprises et partenaires.
-  </p>
-  <a href="cizamarket.html">Accéder</a>
+<h3>🧽 CizaCarWash+</h3>
+<p>Lavage automobile premium.</p>
+<a href="/portal-cizacarwash.html">Accéder</a>
 </div>
 
-    <div class="card">
-      <h3>📦 CizaDelivery+</h3>
-      <p>Livraison sécurisée avec traçabilité.</p>
-      <a href="portal-delivery.html">Accéder</a>
-    </div>
+<div class="card">
+<h3>🏠 CizaHome+</h3>
+<p>Services organisés pour la maison.</p>
+<a href="/portal-cizahome.html">Accéder</a>
+</div>
 
-    <div class="card">
-      <h3>🏠 CizaHome+</h3>
-      <p>Entretien ménager et services organisés.</p>
-      <a href="portal-home.html">Accéder</a>
-    </div>
+<div class="card">
+<h3>🧑‍💼 CizaAssist+</h3>
+<p>Assistance administrative & pro.</p>
+<a href="/portal-cizaassist.html">Accéder</a>
+</div>
 
-    <div class="card">
-      <h3>🧑‍💼 CizaAssist+</h3>
-      <p>Assistance administrative & professionnelle.</p>
-      <a href="portal-assist.html">Accéder</a>
-    </div>
+<div class="card">
+<h3>💼 CizaJobs+</h3>
+<p>Emploi et recrutement.</p>
+<a href="/portal-cizajobs.html">Accéder</a>
+</div>
 
-    <div class="card">
-      <h3>💼 CizaJobs+</h3>
-      <p>Emploi, recrutement et partenariats RH.</p>
-      <a href="portal-jobs.html">Accéder</a>
-    </div>
+<div class="card">
+<h3>🚚 CizaLogistics+</h3>
+<p>Logistique & transport structuré.</p>
+<a href="/portal-cizalogistics.html">Accéder</a>
+</div>
 
-  </div>
+<div class="card">
+<h3>🏢 CizaImmo+</h3>
+<p>Immobilier diaspora & local.</p>
+<a href="/portal-cizaimmo.html">Accéder</a>
+</div>
+
+<div class="card">
+<h3>🛒 CizaMarket+</h3>
+<p>Marketplace professionnelle.</p>
+<a href="/portal-cizamarket.html">Accéder</a>
+</div>
+
+</div>
 </section>
 
-<!-- SUPPORT -->
-<section>
-  <div class="support">
-    <h2>Besoin d’assistance immédiate ?</h2>
-    <p>Nos agents CIZA GROUP Services sont disponibles.</p>
-
-    <a href="https://wa.me/15145029503">🌍 WhatsApp International : +1 514 502 9503</a>
-    <a href="https://wa.me/25779945007">🇧🇮 WhatsApp Burundi : +257 79 945 007</a>
-    <a href="https://wa.me/25779644893">🇧🇮 WhatsApp Burundi : +257 79 64 48 93</a>
-
-    <p style="margin-top:16px;opacity:.85">
-      Les services sont fournis après validation et, le cas échéant,
-      après paiement confirmé. Une facture est fournie.
-    </p>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div>
-      <h4>CIZA GROUP Services</h4>
-      <a href="https://cizagroup.com" target="_blank">🌐 Site officiel : cizagroup.com</a>
-    </div>
-    <div>
-      <h4>Légal</h4>
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Confidentialité</a>
-      <a href="conditions.html">Conditions générales</a>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <a href="mailto:infos@cizagroup.com">infos@cizagroup.com</a>
-      <p>📍 Bujumbura – Burundi</p>
-    </div>
-  </div>
-  <div class="copy">© 2026 CIZA GROUP Services — Tous droits réservés</div>
+📱 WhatsApp : +1 514 502 9503 · +257 79 94 50 07 · +257 79 64 48 93<br>
+📧 infos@cizagroup.com · 📸 Instagram <a href="https://instagram.com/cizagroup_official">@cizagroup_official</a><br>
+© 2026 CIZA GROUP Services
 </footer>
 
 <script>

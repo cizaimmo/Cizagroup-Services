@@ -254,12 +254,12 @@ Aucune exécution automatique.
 <textarea id="details" placeholder="Description du colis *" required></textarea>
 
 <div class="checkbox">
-<input type="checkbox" id="privacy" required>
-<span>J’accepte la politique de confidentialité</span>
+<input type="checkbox" id="privacy" required><span>J’accepte la politique de confidentialité</span>
 </div>
 
 <button type="submit">Envoyer la demande</button>
 </form>
+  
 <p class="note">
 Le service est fourni après validation de la demande et confirmation du paiement.  
 Une facture officielle est fournie.
@@ -310,7 +310,7 @@ alert("Veuillez accepter la politique de confidentialité");
 return;
 }
 
-const tracking="2026-"+Math.floor(100000+Math.random()*900000);
+const tracking="CIZ-DEL-2026-"+Math.floor(100000+Math.random()*900000);
 
 const payload={
 Email:email.value,

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CizaCarWash+ — Lavage Premium | CIZA GROUP Services</title>
+<meta name="description" content="CizaCarWash+ – Lavage automobile premium, station & mobile, avec suivi humain.">
+
+<style>
+:root{
+--gold:#F2B840;
+--blue:#06142E;
+--dark:#020617;
+--card:#0b1738;
+--text:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+background:var(--dark);
+color:var(--text);
+line-height:1.7;
+}
+
+/* WATERMARK DISCRET */
+body::before{
+content:"CizaCarWash+";
+position:fixed;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:170px;
+font-weight:900;
+color:rgba(255,255,255,.012);
+pointer-events:none;
+z-index:0;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;left:0;right:0;
+background:rgba(6,20,46,.97);
+border-bottom:1px solid rgba(242,184,64,.25);
+z-index:10000;
+}
+.header-inner{
+max-width:1300px;
+margin:auto;
+padding:16px 22px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+.logo img{height:72px}
+.header-actions a{
+color:var(--gold);
+border:2px solid var(--gold);
+padding:10px 22px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* HERO */
+.hero{
+margin-top:120px;
+padding:90px 24px 70px;
+text-align:center;
+position:relative;
+z-index:1;
+}
+.hero h1{font-size:44px;color:var(--gold)}
+.hero p{
+max-width:900px;
+margin:18px auto 30px;
+font-size:18px;
+opacity:.9;
+}
+.cta{
+display:inline-block;
+padding:16px 34px;
+border-radius:40px;
+background:var(--gold);
+color:#000;
+font-weight:800;
+text-decoration:none;
+}
+
+/* SECTIONS */
+section{
+padding:90px 24px;
+max-width:1200px;
+margin:auto;
+position:relative;
+z-index:1;
+}
+h2{
+text-align:center;
+color:var(--gold);
+font-size:36px;
+margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:26px;
+}
+.card{
+background:var(--card);
+padding:32px;
+border-radius:26px;
+border:1px solid rgba(242,184,64,.25);
+}
+
+/* FORM */
+.form-box{
+background:linear-gradient(180deg,#0b1738,#071126);
+border-radius:34px;
+padding:48px;
+border:1px solid rgba(242,184,64,.35);
+}
+input,textarea,select{
+width:100%;
+padding:15px;
+margin-top:12px;
+border-radius:14px;
+border:none;
+background:#020617;
+color:white;
+}
+.checkbox{
+margin-top:18px;
+display:flex;
+gap:10px;
+align-items:flex-start;
+}
+button{
+margin-top:28px;
+width:100%;
+padding:18px;
+border:none;
+border-radius:50px;
+background:var(--gold);
+color:#000;
+font-size:17px;
+font-weight:800;
+cursor:pointer;
+}
+
+/* SUCCESS */
+#successBox{
+display:none;
+text-align:center;
+padding:100px 24px;
+}
+#successBox h2{color:var(--gold);font-size:38px}
+#codeBox{
+margin:26px auto;
+display:inline-block;
+padding:14px 28px;
+border-radius:30px;
+border:2px dashed var(--gold);
+font-size:20px;
+font-weight:900;
+letter-spacing:2px;
+}
+
+/* FOOTER */
+footer{
+border-top:2px solid var(--gold);
+background:#020617;
+}
+.footer-inner{
+max-width:1300px;
+margin:auto;
+padding:60px 24px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{color:white;text-decoration:none;display:block;margin-bottom:8px}
+.copy{
+text-align:center;
+padding:20px;
+font-size:14px;
+opacity:.7;
+border-top:1px solid rgba(255,255,255,.1);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+<div class="logo">
+<img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
+</div>
+<div class="header-actions">
+<a href="portal.html">← Retour portail</a>
+</div>
+</div>
+</header>
+
+<div class="hero">
+<h1>CizaCarWash+</h1>
+<p>
+Lavage automobile premium, intérieur & extérieur.<br>
+Service station ou mobile avec traitement professionnel.
+</p>
+<a href="#form" class="cta">Réserver un lavage</a>
+</div>
+
+<section>
+<h2>Nos prestations</h2>
+<div class="grid">
+<div class="card">Lavage extérieur premium</div>
+<div class="card">Nettoyage intérieur complet</div>
+<div class="card">Traitement sièges & tapis</div>
+<div class="card">Service mobile ou station</div>
+</div>
+</section>
+
+<section id="form">
+<h2>Formulaire de réservation</h2>
+<div class="form-box">
+
+<form id="carwashForm">
+
+<input id="email" type="email" placeholder="Email *" required>
+<input id="phone" type="text" placeholder="Téléphone *" required>
+
+<select id="type" required>
+<option value="">Type de lavage *</option>
+<option>Extérieur</option>
+<option>Intérieur</option>
+<option>Complet</option>
+<option>Traitement premium</option>
+</select>
+
+<select id="mode" required>
+<option value="">Lieu du service *</option>
+<option>Station CizaCarWash+</option>
+<option>Service mobile (à domicile)</option>
+</select>
+
+<textarea id="details" placeholder="Informations supplémentaires *" required></textarea>
+
+<div class="checkbox">
+<input type="checkbox" id="privacy" required>
+<span>J’accepte la politique de confidentialité</span>
+</div>
+
+<button type="submit">Envoyer la réservation</button>
+</form>
+
+</div>
+</section>
+
+<div id="successBox">
+<h2>Merci pour votre réservation</h2>
+<p>Notre équipe vous contactera pour confirmation.</p>
+<div id="codeBox"></div>
+<p>
+📞 International : +1 514 502 9503<br>
+🇧🇮 Burundi : +257 79 94 50 07 · +257 79 64 48 93<br>
+📧 infos@cizagroup.com<br>
+📸 @cizagroup_official
+</p>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div>
+<h4>CIZA GROUP Services</h4>
+<a href="https://cizagroup.com">cizagroup.com</a>
+<a href="https://instagram.com/cizagroup_official">@cizagroup_official</a>
+</div>
+<div>
+<h4>Contact</h4>
+<a>International +1 514 502 9503</a>
+<a>Burundi +257 79 94 50 07</a>
+<a>Burundi +257 79 64 48 93</a>
+</div>
+<div>
+<h4>Légal</h4>
+<a>Mentions légales</a>
+<a>Confidentialité</a>
+</div>
+</div>
+<div class="copy">© 2026 CIZA GROUP Services</div>
+</footer>
+
+<script>
+document.getElementById("carwashForm").addEventListener("submit", async function(e){
+e.preventDefault();
+
+if(!privacy.checked){
+alert("Veuillez accepter la politique de confidentialité");
+return;
+}
+
+const tracking="2026-"+Math.floor(100000+Math.random()*900000);
+
+const payload={
+Email:email.value,
+Téléphone:phone.value,
+"Type de lavage":type.value,
+"Mode de service":mode.value,
+Détails:details.value,
+"Numéro de dossier":tracking,
+_cc:email.value,
+_subject:"Nouvelle réservation CizaCarWash+",
+_captcha:"false"
+};
+
+const res=await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{
+method:"POST",
+headers:{ "Content-Type":"application/json","Accept":"application/json" },
+body:JSON.stringify(payload)
+});
+
+if(res.ok){
+document.getElementById("form").style.display="none";
+document.getElementById("successBox").style.display="block";
+document.getElementById("codeBox").innerText="Numéro de dossier : "+tracking;
+}else{
+alert("Erreur d’envoi. Veuillez réessayer.");
+}
+});
+</script>
+
+</body>
+</html>

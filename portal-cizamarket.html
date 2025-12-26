@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CizaMarket+ | Commandes & Partenariats</title>
+
+<style>
+:root{
+  --gold:#F2B840;
+  --blue:#06142E;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+}
+
+.container{
+  max-width:1000px;
+  margin:120px auto;
+  padding:20px;
+}
+
+h1,h2{
+  color:var(--gold);
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid rgba(242,184,64,.25);
+  border-radius:20px;
+  padding:30px;
+  margin-bottom:40px;
+}
+
+label{
+  display:block;
+  margin:14px 0 6px;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  background:#020617;
+  color:white;
+}
+
+textarea{min-height:100px}
+
+button{
+  margin-top:20px;
+  background:var(--gold);
+  color:#000;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  font-weight:700;
+  width:100%;
+  cursor:pointer;
+}
+
+button:hover{opacity:.9}
+
+#successBox{
+  display:none;
+  text-align:center;
+  background:#06142E;
+  padding:40px;
+  border-radius:20px;
+  border:2px solid var(--gold);
+}
+#codeBox{
+  font-size:22px;
+  color:var(--gold);
+  display:block;
+  margin:12px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>CizaMarket+</h1>
+
+<!-- FORMULAIRE PACK NOURRITURE -->
+<div class="card service-form">
+<h2>🛒 Commander un Pack Nourriture</h2>
+
+<form id="foodForm">
+<label>Choix du pack</label>
+<select id="food_pack" required>
+  <option value="">-- Sélectionner --</option>
+  <option>Pack Essentiel – 85 000 BIF</option>
+  <option>Pack Famille – 150 000 BIF</option>
+  <option>Pack Premium – 280 000 BIF</option>
+</select>
+
+<label>Email</label>
+<input id="food_email" type="email" required>
+
+<label>Téléphone</label>
+<input id="food_phone" required>
+
+<label>Ville de livraison</label>
+<input id="food_city" required>
+
+<label>Détails / instructions</label>
+<textarea id="food_details"></textarea>
+
+<button type="submit">Valider la commande</button>
+</form>
+</div>
+
+<!-- FORMULAIRE ENTREPRISE / PARTENARIAT -->
+<div class="card service-form">
+<h2>🏢 Entreprise / Commerce / Partenariat</h2>
+
+<form id="marketForm">
+<label>Type de demande</label>
+<select id="m_type" required>
+  <option value="">-- Sélectionner --</option>
+  <option>Entreprise</option>
+  <option>Commerce</option>
+  <option>Marketplace</option>
+  <option>Partenariat</option>
+</select>
+
+<label>Pack souhaité</label>
+<select id="m_pack">
+  <option>Aucun</option>
+  <option>Essentiel</option>
+  <option>Famille</option>
+  <option>Premium</option>
+</select>
+
+<label>Email</label>
+<input id="m_email" type="email" required>
+
+<label>Téléphone</label>
+<input id="m_phone" required>
+
+<label>Description du projet</label>
+<textarea id="m_details" required></textarea>
+
+<button type="submit">Envoyer la demande</button>
+</form>
+</div>
+
+<!-- SUCCÈS -->
+<div id="successBox">
+<h2>Demande enregistrée avec succès</h2>
+<p>Veuillez conserver votre référence :</p>
+<strong id="codeBox"></strong>
+
+<p>
+📧 infos@cizagroup.com<br>
+📞 International : +1 514 502 9503<br>
+🇧🇮 Burundi : +257 79 94 50 07
+</p>
+</div>
+
+</div>
+
+<script>
+function generateCode(type){
+  const rand = Math.floor(100000 + Math.random() * 900000);
+  if(type==="PACK") return "CIZA-MKET-2026-" + rand;
+  if(type==="DOSSIER") return "CIZA-MKET-DOS-2026-" + rand;
+}
+
+async function sendForm(data, code){
+  data["_cc"] = data.Email;
+  data["_captcha"] = "false";
+
+  const res = await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json",
+      "Accept":"application/json"
+    },
+    body:JSON.stringify(data)
+  });
+
+  if(res.ok){
+    document.querySelectorAll(".service-form").forEach(f=>f.style.display="none");
+    document.getElementById("successBox").style.display="block";
+    document.getElementById("codeBox").innerText = code;
+  } else {
+    alert("Erreur lors de l’envoi.");
+  }
+}
+
+/* PACK */
+foodForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  const code = generateCode("PACK");
+
+  sendForm({
+    Service:"CizaMarket+ | Pack Nourriture",
+    "Numéro de commande":code,
+    Pack:food_pack.value,
+    Email:food_email.value,
+    Téléphone:food_phone.value,
+    Ville:food_city.value,
+    Détails:food_details.value
+  },code);
+});
+
+/* ENTREPRISE */
+marketForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  const code = generateCode("DOSSIER");
+
+  sendForm({
+    Service:"CizaMarket+ | Entreprise / Partenariat",
+    "Numéro de dossier":code,
+    Type:m_type.value,
+    Pack:m_pack.value,
+    Email:m_email.value,
+    Téléphone:m_phone.value,
+    Détails:m_details.value
+  },code);
+});
+</script>
+
+</body>
+</html>

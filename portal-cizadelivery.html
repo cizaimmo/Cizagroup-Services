@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CizaDelivery+ — Portail Premium | CIZA GROUP Services</title>
 
+<title>CizaDelivery+ — Portail Premium | CIZA GROUP Services</title>
 <meta name="description" content="CizaDelivery+ – Livraison premium sécurisée avec suivi humain.">
 
 <style>
 :root{
 --gold:#F2B840;
+--blue:#06142E;
 --dark:#020617;
 --card:#0b1738;
 --text:#ffffff;
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
@@ -23,7 +25,7 @@ color:var(--text);
 line-height:1.7;
 }
 
-/* WATERMARK DISCRET */
+/* WATERMARK */
 body::before{
 content:"CizaDelivery+";
 position:fixed;
@@ -31,9 +33,9 @@ inset:0;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:140px;
+font-size:180px;
 font-weight:900;
-color:rgba(255,255,255,.006);
+color:rgba(255,255,255,.012);
 pointer-events:none;
 z-index:0;
 }
@@ -42,51 +44,79 @@ z-index:0;
 header{
 position:fixed;
 top:0;left:0;right:0;
-background:#06142E;
+background:rgba(6,20,46,.97);
 border-bottom:1px solid rgba(242,184,64,.25);
 z-index:10000;
 }
 .header-inner{
 max-width:1300px;
 margin:auto;
-padding:18px 24px;
+padding:16px 22px;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 }
-.logo img{height:70px}
-.header-inner a{
+.logo img{height:72px}
+.header-actions a{
 color:var(--gold);
 border:2px solid var(--gold);
 padding:10px 22px;
 border-radius:30px;
 text-decoration:none;
-font-weight:800;
+font-weight:600;
 }
 
 /* HERO */
 .hero{
 margin-top:120px;
-padding:90px 24px;
+padding:90px 24px 70px;
 text-align:center;
+position:relative;
+z-index:1;
 }
 .hero h1{font-size:44px;color:var(--gold)}
-.hero p{max-width:900px;margin:18px auto 30px;font-size:18px}
-.hero .cta{
+.hero p{
+max-width:900px;
+margin:18px auto 30px;
+font-size:18px;
+opacity:.9;
+}
+.cta{
 display:inline-block;
-padding:16px 38px;
+padding:16px 34px;
 border-radius:40px;
 background:var(--gold);
 color:#000;
-font-weight:900;
+font-weight:800;
 text-decoration:none;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
 padding:90px 24px;
-max-width:1100px;
+max-width:1200px;
 margin:auto;
+position:relative;
+z-index:1;
+}
+h2{
+text-align:center;
+color:var(--gold);
+font-size:36px;
+margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:26px;
+}
+.card{
+background:var(--card);
+padding:32px;
+border-radius:26px;
+border:1px solid rgba(242,184,64,.25);
 }
 
 /* FORM */
@@ -96,20 +126,24 @@ border-radius:34px;
 padding:48px;
 border:1px solid rgba(242,184,64,.35);
 }
-label{display:block;margin-top:18px;font-weight:800}
-input,textarea{
+input,textarea,select{
 width:100%;
 padding:15px;
-margin-top:6px;
+margin-top:12px;
 border-radius:14px;
 border:none;
 background:#020617;
 color:white;
 }
 textarea{min-height:120px}
-.checkbox{margin-top:22px;display:flex;gap:12px}
+.checkbox{
+margin-top:18px;
+display:flex;
+gap:10px;
+align-items:flex-start;
+}
 button{
-margin-top:30px;
+margin-top:28px;
 width:100%;
 padding:18px;
 border:none;
@@ -117,32 +151,50 @@ border-radius:50px;
 background:var(--gold);
 color:#000;
 font-size:17px;
-font-weight:900;
+font-weight:800;
 cursor:pointer;
 }
 
 /* THANK YOU */
-#thankYou{display:none;text-align:center;padding:90px 24px}
-#thankYou h2{color:var(--gold);font-size:38px}
-.code{
-margin:30px auto;
+#successBox{
+display:none;
+text-align:center;
+padding:100px 24px;
+}
+#successBox h2{color:var(--gold);font-size:38px}
+#codeBox{
+margin:26px auto;
 display:inline-block;
-padding:16px 32px;
+padding:14px 28px;
+border-radius:30px;
 border:2px dashed var(--gold);
-border-radius:40px;
-font-size:22px;
+font-size:20px;
 font-weight:900;
+letter-spacing:2px;
 }
 
 /* FOOTER */
 footer{
 border-top:2px solid var(--gold);
-padding:50px 24px;
-text-align:center;
-font-size:14px;
-opacity:.85;
+background:#020617;
 }
-footer a{color:var(--gold);text-decoration:none}
+.footer-inner{
+max-width:1300px;
+margin:auto;
+padding:60px 24px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+}
+footer h4{color:var(--gold);margin-bottom:14px}
+footer a{color:white;text-decoration:none;display:block;margin-bottom:8px}
+.copy{
+text-align:center;
+padding:20px;
+font-size:14px;
+opacity:.7;
+border-top:1px solid rgba(255,255,255,.1);
+}
 </style>
 </head>
 
@@ -153,31 +205,53 @@ footer a{color:var(--gold);text-decoration:none}
 <div class="logo">
 <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
 </div>
+<div class="header-actions">
 <a href="portal.html">← Retour portail</a>
+</div>
 </div>
 </header>
 
 <div class="hero">
 <h1>CizaDelivery+</h1>
-<p>Livraison premium sécurisée, validée humainement et suivie.</p>
-<a href="#form" class="cta">Demander une livraison</a>
+<p>
+Livraison premium sécurisée, suivie et validée humainement.<br>
+Aucune exécution automatique.
+</p>
+<a href="#form" class="cta">Commander une livraison</a>
 </div>
 
+<section>
+<h2>Processus de livraison</h2>
+<div class="grid">
+<div class="card">Demande sécurisée</div>
+<div class="card">Validation humaine</div>
+<div class="card">Ramassage contrôlé</div>
+<div class="card">Transport sécurisé</div>
+<div class="card">Livraison confirmée</div>
+<div class="card">Suivi & clôture</div>
+</div>
+</section>
+
 <section id="form">
+<h2>Formulaire de livraison</h2>
 <div class="form-box">
+
 <form id="deliveryForm">
 
-<label>Nom complet *</label>
-<input name="Nom" required>
+<input id="email" type="email" placeholder="Email *" required>
+<input id="phone" type="text" placeholder="Téléphone *" required>
 
-<label>Email *</label>
-<input type="email" name="Email" required>
+<select id="zone" required>
+<option value="">Zone *</option>
+<option>Burundi</option>
+<option>Sous-région</option>
+<option>International</option>
+</select>
 
-<label>Téléphone *</label>
-<input name="Téléphone" required>
+<input id="from" type="text" placeholder="Ville de départ *" required>
+<input id="to" type="text" placeholder="Ville de destination *" required>
 
-<label>Détails de la livraison *</label>
-<textarea name="Détails" required></textarea>
+<textarea id="details" placeholder="Description du colis *" required></textarea>
 
 <div class="checkbox">
 <input type="checkbox" id="privacy" required>
@@ -186,46 +260,81 @@ footer a{color:var(--gold);text-decoration:none}
 
 <button type="submit">Envoyer la demande</button>
 </form>
+
 </div>
 </section>
 
-<section id="thankYou">
+<div id="successBox">
 <h2>Merci pour votre confiance</h2>
-<p>Votre demande a bien été reçue.</p>
-<div class="code" id="trackingCode"></div>
+<p>Votre demande a été transmise à notre équipe.</p>
+<div id="codeBox"></div>
 <p>
 📞 International : +1 514 502 9503<br>
 🇧🇮 Burundi : +257 79 94 50 07 · +257 79 64 48 93<br>
 📧 infos@cizagroup.com<br>
 📸 @cizagroup_official
 </p>
-</section>
+</div>
 
 <footer>
-© 2026 CIZA GROUP Services ·
-<a href="#">Mentions légales</a> ·
-<a href="#">Confidentialité</a>
+<div class="footer-inner">
+<div>
+<h4>CIZA GROUP Services</h4>
+<a href="https://cizagroup.com">cizagroup.com</a>
+<a href="https://instagram.com/cizagroup_official">@cizagroup_official</a>
+</div>
+<div>
+<h4>Contact</h4>
+<a>International +1 514 502 9503</a>
+<a>Burundi +257 79 94 50 07</a>
+<a>Burundi +257 79 64 48 93</a>
+</div>
+<div>
+<h4>Légal</h4>
+<a>Mentions légales</a>
+<a>Confidentialité</a>
+</div>
+</div>
+<div class="copy">© 2026 CIZA GROUP Services</div>
 </footer>
 
 <script>
 document.getElementById("deliveryForm").addEventListener("submit", async function(e){
 e.preventDefault();
 
-const code = "2026-" + Math.floor(100000 + Math.random()*900000);
-document.getElementById("trackingCode").innerText = "Numéro de suivi : " + code;
+if(!privacy.checked){
+alert("Veuillez accepter la politique de confidentialité");
+return;
+}
 
-const formData = new FormData(this);
-formData.append("Numéro de suivi", code);
-formData.append("_subject", "Nouvelle demande CizaDelivery+");
-formData.append("_cc", formData.get("Email"));
+const tracking="2026-"+Math.floor(100000+Math.random()*900000);
 
-await fetch("https://formsubmit.co/infos@cizagroup.com", {
-method: "POST",
-body: formData
+const payload={
+Email:email.value,
+Téléphone:phone.value,
+Zone:zone.value,
+Départ:from.value,
+Destination:to.value,
+Description:details.value,
+"Numéro de suivi":tracking,
+_cc:email.value,
+_subject:"Nouvelle demande CizaDelivery+",
+_captcha:"false"
+};
+
+const res=await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{
+method:"POST",
+headers:{ "Content-Type":"application/json","Accept":"application/json" },
+body:JSON.stringify(payload)
 });
 
+if(res.ok){
 document.getElementById("form").style.display="none";
-document.getElementById("thankYou").style.display="block";
+document.getElementById("successBox").style.display="block";
+document.getElementById("codeBox").innerText="Numéro de suivi : "+tracking;
+}else{
+alert("Erreur d’envoi. Veuillez réessayer.");
+}
 });
 </script>
 

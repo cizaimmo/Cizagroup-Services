@@ -62,7 +62,6 @@ body::before{
   text-decoration:none;
   font-weight:600;
 }
-.btn-back:hover{background:var(--gold);color:#000}
 
 /* ===== MAIN ===== */
 main{
@@ -73,67 +72,24 @@ main{
   position:relative;
   z-index:1;
 }
-h1{
-  color:var(--gold);
-  font-size:38px;
-  margin-bottom:10px;
-}
+h1{color:var(--gold);font-size:38px}
 .lead{opacity:.9;margin-bottom:40px}
 
 /* ===== CTA ===== */
-.cta-bar{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-  margin-bottom:60px;
-}
-.cta{
-  padding:16px 30px;
-  border-radius:40px;
-  font-weight:800;
-  text-decoration:none;
-}
+.cta-bar{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:60px}
+.cta{padding:16px 30px;border-radius:40px;font-weight:800;text-decoration:none}
 .cta.primary{background:var(--gold);color:#000}
-.cta.secondary{
-  border:2px solid var(--gold);
-  color:var(--gold);
-}
+.cta.secondary{border:2px solid var(--gold);color:var(--gold)}
 
 /* ===== SECTIONS ===== */
 section{margin-bottom:80px}
-h2{
-  color:var(--gold);
-  font-size:32px;
-  margin-bottom:30px;
-  text-align:center;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-}
-.card{
-  background:var(--card);
-  padding:30px;
-  border-radius:22px;
-  border:1px solid rgba(242,184,64,.25);
-}
+h2{text-align:center;color:var(--gold);font-size:32px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:var(--card);padding:30px;border-radius:22px;border:1px solid rgba(242,184,64,.25)}
 
 /* ===== TABS ===== */
-.tabs{
-  display:flex;
-  gap:12px;
-  margin-bottom:40px;
-  flex-wrap:wrap;
-}
-.tab{
-  padding:12px 22px;
-  border-radius:30px;
-  border:2px solid var(--gold);
-  color:var(--gold);
-  cursor:pointer;
-  font-weight:600;
-}
+.tabs{display:flex;gap:12px;margin-bottom:40px;flex-wrap:wrap}
+.tab{padding:12px 22px;border-radius:30px;border:2px solid var(--gold);color:var(--gold);cursor:pointer}
 .tab.active{background:var(--gold);color:#000}
 
 /* ===== FORM ===== */
@@ -145,7 +101,6 @@ h2{
   display:none;
 }
 .form-box.active{display:block}
-
 label{display:block;margin-top:18px;font-weight:600}
 input,select,textarea{
   width:100%;
@@ -157,11 +112,7 @@ input,select,textarea{
   color:white;
 }
 textarea{min-height:120px}
-.checkbox{
-  margin-top:20px;
-  display:flex;
-  gap:10px;
-}
+.checkbox{margin-top:20px;display:flex;gap:10px}
 button{
   margin-top:30px;
   width:100%;
@@ -175,11 +126,7 @@ button{
 }
 
 /* ===== THANK YOU ===== */
-.thankyou{
-  display:none;
-  text-align:center;
-  padding:80px 20px;
-}
+.thankyou{display:none;text-align:center;padding:80px 20px}
 .thankyou h2{color:var(--gold)}
 .code{
   margin:20px auto;
@@ -192,11 +139,7 @@ button{
 }
 
 /* ===== FOOTER ===== */
-footer{
-  margin-top:120px;
-  border-top:2px solid var(--gold);
-  background:#020617;
-}
+footer{border-top:2px solid var(--gold);background:#020617}
 .footer-inner{
   max-width:1300px;
   margin:auto;
@@ -207,13 +150,7 @@ footer{
 }
 footer h4{color:var(--gold);margin-bottom:14px}
 footer a{color:#fff;text-decoration:none;display:block;margin-bottom:8px}
-.copy{
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-  opacity:.7;
-  border-top:1px solid rgba(255,255,255,.1);
-}
+.copy{text-align:center;padding:20px;font-size:14px;opacity:.7}
 </style>
 </head>
 
@@ -231,65 +168,71 @@ footer a{color:#fff;text-decoration:none;display:block;margin-bottom:8px}
 <main>
 
 <h1>CizaMarket+</h1>
-<p class="lead">
-Marketplace structurée pour l’achat de packs alimentaires
-et les partenariats commerciaux professionnels.
-</p>
+<p class="lead">Marketplace structurée pour packs alimentaires et partenariats professionnels.</p>
 
 <div class="cta-bar">
-  <a href="#forms" class="cta primary">🛒 Achat Pack alimentaire</a>
-  <a href="#forms" class="cta secondary">🏢 Partenariat Entreprise</a>
+  <a href="#forms" class="cta primary">🛒 Achat Pack</a>
+  <a href="#forms" class="cta secondary">🏢 Partenariat</a>
 </div>
-
-<section>
-<h2>Comment ça marche</h2>
-<div class="grid">
-  <div class="card">Choix du pack ou partenariat</div>
-  <div class="card">Soumission sécurisée</div>
-  <div class="card">Validation humaine</div>
-  <div class="card">Numérotation officielle</div>
-  <div class="card">Exécution & suivi</div>
-</div>
-</section>
 
 <section id="forms">
 <h2>Soumettre une demande</h2>
 
 <div class="tabs">
-  <div class="tab active" onclick="switchForm('pack')">🛒 Achat Pack</div>
-  <div class="tab" onclick="switchForm('partner')">🏢 Partenariat</div>
+  <div class="tab active" onclick="switchForm('pack')">Achat Pack</div>
+  <div class="tab" onclick="switchForm('partner')">Partenariat</div>
 </div>
 
+<!-- PACK -->
 <div class="form-box active" id="form-pack">
-<form onsubmit="sendForm(event,'PACK')">
-<label>Nom complet *</label><input required>
-<label>Email *</label><input type="email" required>
-<label>Téléphone *</label><input required>
+<form id="packForm" onsubmit="sendPack(event)">
+<input type="hidden" name="Type" value="Achat Pack">
+<input type="hidden" name="Numéro de commande" id="packCode">
+
+<label>Nom complet *</label><input name="Nom" required>
+<label>Email *</label><input type="email" name="Email" id="packEmail" required>
+<label>Téléphone *</label><input name="Téléphone" required>
+
 <label>Pack *</label>
-<select required>
+<select name="Pack" required>
 <option>Pack Essentiel</option>
 <option>Pack Famille</option>
 <option>Pack Business</option>
 </select>
-<label>Adresse *</label><textarea required></textarea>
-<div class="checkbox"><input type="checkbox" required><span>J’accepte la confidentialité</span></div>
+
+<label>Adresse *</label><textarea name="Adresse" required></textarea>
+
+<input type="hidden" name="_subject" value="Commande CizaMarket+">
+<input type="hidden" name="_captcha" value="false">
+
+<div class="checkbox"><input type="checkbox" required><span>Confidentialité</span></div>
 <button>Commander</button>
 </form>
 </div>
 
+<!-- PARTNER -->
 <div class="form-box" id="form-partner">
-<form onsubmit="sendForm(event,'DOSSIER')">
-<label>Entreprise *</label><input required>
-<label>Email *</label><input type="email" required>
-<label>Téléphone *</label><input required>
+<form id="partnerForm" onsubmit="sendPartner(event)">
+<input type="hidden" name="Type" value="Partenariat">
+<input type="hidden" name="Numéro de dossier" id="partnerCode">
+
+<label>Entreprise *</label><input name="Entreprise" required>
+<label>Email *</label><input type="email" name="Email" id="partnerEmail" required>
+<label>Téléphone *</label><input name="Téléphone" required>
+
 <label>Type *</label>
-<select required>
+<select name="Partenariat" required>
 <option>Vente via CizaMarket</option>
 <option>Affichage business</option>
 <option>Fournisseur officiel</option>
 </select>
-<label>Description *</label><textarea required></textarea>
-<div class="checkbox"><input type="checkbox" required><span>J’accepte la confidentialité</span></div>
+
+<label>Description *</label><textarea name="Description" required></textarea>
+
+<input type="hidden" name="_subject" value="Partenariat CizaMarket+">
+<input type="hidden" name="_captcha" value="false">
+
+<div class="checkbox"><input type="checkbox" required><span>Confidentialité</span></div>
 <button>Envoyer</button>
 </form>
 </div>
@@ -299,63 +242,55 @@ et les partenariats commerciaux professionnels.
 <div class="thankyou" id="thankyou">
 <h2>Merci pour votre confiance</h2>
 <div class="code" id="codeBox"></div>
-<p>
-📞 International : +1 514 502 9503<br>
-🇧🇮 Burundi : +257 79 94 50 07 · +257 79 64 48 93<br>
-📧 infos@cizagroup.com · 📸 @cizagroup_official
-</p>
+<p>infos@cizagroup.com · @cizagroup_official</p>
 </div>
 
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <div>
-      <h4>CIZA GROUP Services</h4>
-      <a href="https://instagram.com/cizagroup_official">@cizagroup_official</a>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <a>International +1 514 502 9503</a>
-      <a>Burundi +257 79 94 50 07</a>
-      <a>Burundi +257 79 64 48 93</a>
-      <a>infos@cizagroup.com</a>
-    </div>
-    <div>
-      <h4>Légal</h4>
-      <a>Mentions légales</a>
-      <a>Confidentialité</a>
-    </div>
-  </div>
-  <div class="copy">© 2026 CIZA GROUP Services</div>
+<div class="footer-inner">
+  <div><h4>CIZA GROUP</h4><a>@cizagroup_official</a></div>
+  <div><h4>Contact</h4><a>+1 514 502 9503</a><a>+257 79 94 50 07</a></div>
+  <div><h4>Légal</h4><a>Confidentialité</a></div>
+</div>
+<div class="copy">© 2026 CIZA GROUP Services</div>
 </footer>
 
 <script>
-function switchForm(type){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.form-box').forEach(f=>f.classList.remove('active'));
-  if(type==='pack'){
-    document.querySelectorAll('.tab')[0].classList.add('active');
-    document.getElementById('form-pack').classList.add('active');
-  }else{
-    document.querySelectorAll('.tab')[1].classList.add('active');
-    document.getElementById('form-partner').classList.add('active');
-  }
+function switchForm(t){
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.form-box').forEach(x=>x.classList.remove('active'));
+  t==='pack'
+    ? (document.querySelectorAll('.tab')[0].classList.add('active'),
+       document.getElementById('form-pack').classList.add('active'))
+    : (document.querySelectorAll('.tab')[1].classList.add('active'),
+       document.getElementById('form-partner').classList.add('active'));
 }
 
-async function sendForm(e,type){
+async function sendPack(e){
   e.preventDefault();
-  const code="CIZA-MARKET-2026-"+Math.floor(1000+Math.random()*9000);
+  const code="CIZA-MARKET-2026-CMD-"+Math.floor(10000+Math.random()*90000);
+  document.getElementById('packCode').value=code;
+  const fd=new FormData(e.target);
+  fd.append("_cc",document.getElementById('packEmail').value);
+  await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{method:"POST",headers:{Accept:"application/json"},body:fd});
+  done("Numéro de commande",code);
+}
+
+async function sendPartner(e){
+  e.preventDefault();
+  const code="CIZA-MARKET-2026-DOS-"+Math.floor(10000+Math.random()*90000);
+  document.getElementById('partnerCode').value=code;
+  const fd=new FormData(e.target);
+  fd.append("_cc",document.getElementById('partnerEmail').value);
+  await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{method:"POST",headers:{Accept:"application/json"},body:fd});
+  done("Numéro de dossier",code);
+}
+
+function done(label,code){
   document.getElementById('forms').style.display='none';
   document.getElementById('thankyou').style.display='block';
-  document.getElementById('codeBox').innerText=
-    (type==="PACK"?"Numéro de commande : ":"Numéro de dossier : ")+code;
-
-  await fetch("https://formsubmit.co/ajax/infos@cizagroup.com",{
-    method:"POST",
-    headers:{'Accept':'application/json'},
-    body:new FormData(e.target)
-  });
+  document.getElementById('codeBox').innerText=label+" : "+code;
 }
 </script>
 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Admin — CIZA GROUP Services</title>
+
+<style>
+:root{
+  --gold:#F2B840;
+  --blue:#06142E;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:radial-gradient(circle at top,#06142E,#020617);
+  color:var(--text);
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(6,20,46,.97);
+  border-bottom:1px solid rgba(242,184,64,.3);
+  z-index:10000;
+}
+.header-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo img{height:56px}
+.header-actions{
+  display:flex;
+  gap:14px;
+}
+.header-actions a{
+  border:2px solid var(--gold);
+  color:var(--gold);
+  padding:10px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+}
+.header-actions a:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* ===== MAIN ===== */
+main{
+  margin-top:110px;
+  max-width:1400px;
+  margin-inline:auto;
+  padding:40px 24px;
+}
+
+h1{
+  color:var(--gold);
+  font-size:42px;
+  margin-bottom:10px;
+}
+.subtitle{
+  opacity:.9;
+  margin-bottom:40px;
+  font-size:18px;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:linear-gradient(180deg,#0e1d42,#071126);
+  border-radius:26px;
+  padding:30px;
+  border:1px solid rgba(242,184,64,.25);
+  box-shadow:0 30px 70px rgba(0,0,0,.6);
+  transition:.35s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+}
+.card h3{
+  color:var(--gold);
+  margin-bottom:12px;
+}
+.card p{
+  opacity:.9;
+  margin-bottom:18px;
+}
+.card a{
+  display:inline-block;
+  background:var(--gold);
+  color:#000;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:800;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  margin-top:100px;
+  border-top:2px solid var(--gold);
+  background:#020617;
+}
+.footer-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:40px 24px;
+  text-align:center;
+  opacity:.8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
+    </div>
+    <div class="header-actions">
+      <a href="portal.html">← Retour portail</a>
+      <a href="mailto:infos@cizagroup.com">📧 Boîte Admin</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Dashboard Admin</h1>
+  <p class="subtitle">
+    Vue centrale de gestion — CIZA GROUP Services  
+    <br>Suivi global des demandes, commandes et dossiers.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🚕 CizaRide+</h3>
+      <p>Transport VIP — réservations & chauffeurs.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>📦 CizaDelivery+</h3>
+      <p>Livraisons, suivi & numéros de dossier.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>🧽 CizaCarWash+</h3>
+      <p>Lavage auto — réservations & planning.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>🛒 CizaMarket+</h3>
+      <p>Packs alimentaires & partenariats.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>🏠 CizaHome+</h3>
+      <p>Services ménagers & demandes clients.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>🏢 CizaImmo+</h3>
+      <p>Dossiers immobiliers & suivi.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>🚚 CizaLogistics+</h3>
+      <p>Logistique & transport structuré.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>🧑‍💼 CizaAssist+</h3>
+      <p>Assistance administrative & pro.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+    <div class="card">
+      <h3>💼 CizaJobs+</h3>
+      <p>Emplois, candidatures & partenaires.</p>
+      <a href="#">Gérer</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    © 2026 CIZA GROUP Services — Dashboard Admin Global
+  </div>
+</footer>
+
+</body>
+</html>

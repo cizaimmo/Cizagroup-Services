@@ -1,0 +1,53 @@
+<!-- ===== PAIEMENT – VERSION MOBILE ===== -->
+<section class="payment-mini">
+  <h2>Modalités de paiement</h2>
+
+  <div class="payment-box">
+    <p>
+      🔎 <strong>Aucun paiement automatique</strong><br>
+      Chaque demande est validée humainement par CIZA GROUP.
+    </p>
+
+    <p>
+      🧾 <strong>Après validation</strong><br>
+      Vous recevez un numéro officiel (commande ou dossier)
+      + le montant à payer.
+    </p>
+
+    <p>
+      💰 <strong>Moyens acceptés</strong><br>
+      <u>Burundi</u> : Lumicash · Econet Cash · Onatel Money<br>
+      <u>International</u> : PayPal · Zelle · Virement · Western Union
+    </p>
+
+    <p>
+      🧾 Facture disponible · Aucun frais caché
+    </p>
+  </div>
+</section>
+
+<style>
+.payment-mini{
+  padding:60px 20px;
+  max-width:900px;
+  margin:auto;
+}
+.payment-mini h2{
+  text-align:center;
+  color:var(--gold);
+  font-size:26px;
+  margin-bottom:24px;
+}
+.payment-box{
+  background:linear-gradient(180deg,#0b1738,#071126);
+  border-radius:24px;
+  padding:24px;
+  border:1px solid rgba(242,184,64,.35);
+  font-size:15px;
+  line-height:1.6;
+}
+.payment-box p{
+  margin-bottom:16px;
+}
+</style>
+<!-- ===== FIN PAIEMENT ===== -->

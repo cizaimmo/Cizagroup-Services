@@ -13,7 +13,6 @@
   --card:#0b1738;
   --text:#ffffff;
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
@@ -22,7 +21,7 @@ body{
   color:var(--text);
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   position:fixed;
   top:0;left:0;right:0;
@@ -56,7 +55,7 @@ header{
   color:#000;
 }
 
-/* ===== MAIN ===== */
+/* MAIN */
 main{
   margin-top:110px;
   max-width:1400px;
@@ -67,22 +66,21 @@ main{
 h1{
   color:var(--gold);
   font-size:42px;
-  margin-bottom:10px;
 }
 .subtitle{
   opacity:.9;
-  margin-bottom:40px;
+  margin:10px 0 40px;
   font-size:18px;
 }
 
-/* ===== GRID ===== */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:26px;
 }
 
-/* ===== CARD ===== */
+/* CARD */
 .card{
   background:linear-gradient(180deg,#0e1d42,#071126);
   border-radius:26px;
@@ -95,14 +93,8 @@ h1{
   transform:translateY(-6px);
   border-color:var(--gold);
 }
-.card h3{
-  color:var(--gold);
-  margin-bottom:12px;
-}
-.card p{
-  opacity:.9;
-  margin-bottom:18px;
-}
+.card h3{color:var(--gold)}
+.card p{opacity:.9;margin:12px 0 18px}
 .card a{
   display:inline-block;
   background:var(--gold);
@@ -113,7 +105,7 @@ h1{
   text-decoration:none;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   margin-top:100px;
   border-top:2px solid var(--gold);
@@ -138,81 +130,81 @@ footer{
     </div>
     <div class="header-actions">
       <a href="portal.html">← Retour portail</a>
-      <a href="mailto:infos@cizagroup.com">📧 Boîte Admin</a>
+      <a href="admin-inbox.html">📊 Admin Inbox</a>
     </div>
   </div>
 </header>
 
 <main>
-  <h1>Dashboard Admin</h1>
-  <p class="subtitle">
-    Vue centrale de gestion — CIZA GROUP Services  
-    <br>Suivi global des demandes, commandes et dossiers.
-  </p>
+<h1>Dashboard Admin</h1>
+<p class="subtitle">
+Vue centrale de gestion — CIZA GROUP Services<br>
+Suivi global des demandes, commandes et dossiers.
+</p>
 
-  <div class="grid">
+<div class="grid">
 
-    <div class="card">
-      <h3>🚕 CizaRide+</h3>
-      <p>Transport VIP — réservations & chauffeurs.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>🚕 CizaRide+</h3>
+<p>Transport VIP — réservations & chauffeurs.</p>
+<a href="portal-cizaride.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>📦 CizaDelivery+</h3>
-      <p>Livraisons, suivi & numéros de dossier.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>📦 CizaDelivery+</h3>
+<p>Livraisons & numéros de suivi.</p>
+<a href="portal-cizadelivery.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>🧽 CizaCarWash+</h3>
-      <p>Lavage auto — réservations & planning.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>🧽 CizaCarWash+</h3>
+<p>Lavage auto & planning.</p>
+<a href="portal-cizacarwash.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>🛒 CizaMarket+</h3>
-      <p>Packs alimentaires & partenariats.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>🛒 CizaMarket+</h3>
+<p>Packs & partenariats.</p>
+<a href="portal-cizamarket.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>🏠 CizaHome+</h3>
-      <p>Services ménagers & demandes clients.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>🏠 CizaHome+</h3>
+<p>Services à domicile.</p>
+<a href="portal-cizahome.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>🏢 CizaImmo+</h3>
-      <p>Dossiers immobiliers & suivi.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>🏢 CizaImmo+</h3>
+<p>Dossiers immobiliers.</p>
+<a href="portal-cizaimmo.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>🚚 CizaLogistics+</h3>
-      <p>Logistique & transport structuré.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>🚚 CizaLogistics+</h3>
+<p>Logistique & transport.</p>
+<a href="portal-cizalogistics.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>🧑‍💼 CizaAssist+</h3>
-      <p>Assistance administrative & pro.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>🧑‍💼 CizaAssist+</h3>
+<p>Assistance pro.</p>
+<a href="portal-cizaassist.html">Gérer</a>
+</div>
 
-    <div class="card">
-      <h3>💼 CizaJobs+</h3>
-      <p>Emplois, candidatures & partenaires.</p>
-      <a href="#">Gérer</a>
-    </div>
+<div class="card">
+<h3>💼 CizaJobs+</h3>
+<p>Emplois & candidatures.</p>
+<a href="portal-cizajobs.html">Gérer</a>
+</div>
 
-  </div>
+</div>
 </main>
 
 <footer>
-  <div class="footer-inner">
-    © 2026 CIZA GROUP Services — Dashboard Admin Global
-  </div>
+<div class="footer-inner">
+Designed by © 2026 CIZA GROUP Services — Dashboard Admin Global
+</div>
 </footer>
 
 </body>

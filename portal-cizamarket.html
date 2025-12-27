@@ -240,27 +240,6 @@ Marketplace structurée pour <strong>packs alimentaires</strong> et
   <div class="card">Confidentialité & cadre légal</div>
 </div>
 </section>
-
-<section id="forms">
-<h2>Soumettre une demande</h2>
-
-<!-- PACK -->
-<div class="form-box active" id="form-pack">
-<form onsubmit="sendForm(event,'PACK')">
-<label>Nom complet *</label><input name="Nom" required>
-<label>Email *</label><input type="email" name="Email" required>
-<label>Téléphone *</label><input name="Téléphone" required>
-<label>Pack *</label>
-<select name="Pack" required>
-<option>Pack Essentiel (~85 000 BIF)</option>
-<option>Pack Famille (~150 000 BIF)</option>
-<option>Pack Premium (~280 000 BIF)</option>
-</select>
-<label>Adresse de livraison *</label><textarea name="Adresse" required></textarea>
-<div class="checkbox"><input type="checkbox" required><span>J’accepte la confidentialité</span></div>
-<button>Commander le pack</button>
-</form>
-</div>
 <!-- ===== PAIEMENT ENTREPRISE / PARTENARIAT ===== -->
 <section class="payment-mini">
   <h2>Modalités de paiement – Entreprises & Partenaires</h2>
@@ -295,6 +274,52 @@ Marketplace structurée pour <strong>packs alimentaires</strong> et
     </p>
   </div>
 </section>
+
+<style>
+.payment-mini{
+  padding:60px 20px;
+  max-width:900px;
+  margin:auto;
+}
+.payment-mini h2{
+  text-align:center;
+  color:var(--gold);
+  font-size:26px;
+  margin-bottom:24px;
+}
+.payment-box{
+  background:linear-gradient(180deg,#0b1738,#071126);
+  border-radius:24px;
+  padding:24px;
+  border:1px solid rgba(242,184,64,.35);
+  font-size:15px;
+  line-height:1.6;
+}
+.payment-box p{
+  margin-bottom:16px;
+}
+</style>
+<!-- ===== FIN PAIEMENT ENTREPRISE ===== -->
+<section id="forms">
+<h2>Soumettre une demande</h2>
+
+<!-- PACK -->
+<div class="form-box active" id="form-pack">
+<form onsubmit="sendForm(event,'PACK')">
+<label>Nom complet *</label><input name="Nom" required>
+<label>Email *</label><input type="email" name="Email" required>
+<label>Téléphone *</label><input name="Téléphone" required>
+<label>Pack *</label>
+<select name="Pack" required>
+<option>Pack Essentiel (~85 000 BIF)</option>
+<option>Pack Famille (~150 000 BIF)</option>
+<option>Pack Premium (~280 000 BIF)</option>
+</select>
+<label>Adresse de livraison *</label><textarea name="Adresse" required></textarea>
+<div class="checkbox"><input type="checkbox" required><span>J’accepte la confidentialité</span></div>
+<button>Commander le pack</button>
+</form>
+</div>
 
 <style>
 .payment-mini{

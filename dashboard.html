@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Admin — CIZA GROUP</title>
+
+<style>
+:root{
+  --gold:#F2B840;
+  --blue:#06142E;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:system-ui,Segoe UI,Roboto;
+  background:var(--dark);
+  color:var(--text);
+  display:flex;
+  min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:260px;
+  background:#06142E;
+  border-right:1px solid rgba(242,184,64,.25);
+  padding:20px;
+}
+.sidebar h2{
+  color:var(--gold);
+  margin-bottom:20px;
+}
+.sidebar button{
+  width:100%;
+  background:none;
+  border:1px solid rgba(242,184,64,.4);
+  color:white;
+  padding:12px;
+  border-radius:12px;
+  margin-bottom:10px;
+  cursor:pointer;
+}
+.sidebar button.active,
+.sidebar button:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* MAIN */
+.main{
+  flex:1;
+  padding:30px;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+.header h1{color:var(--gold)}
+
+.table{
+  background:var(--card);
+  border-radius:20px;
+  padding:20px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+th,td{
+  padding:12px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  font-size:14px;
+}
+th{color:var(--gold);text-align:left}
+
+.status{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+}
+.recu{background:#b8860b}
+.encours{background:#1e90ff}
+.termine{background:#2ecc71;color:#000}
+.refuse{background:#e74c3c}
+
+select{
+  background:#020617;
+  color:white;
+  border:none;
+  padding:6px;
+  border-radius:8px;
+}
+
+.action-btn{
+  background:var(--gold);
+  border:none;
+  padding:6px 12px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>CIZA GROUP</h2>
+  <button class="active" onclick="loadService('delivery')">📦 Delivery</button>
+  <button onclick="loadService('carwash')">🚿 CarWash</button>
+  <button onclick="loadService('market')">🛒 Market</button>
+  <button onclick="loadService('ride')">🚗 Ride</button>
+  <button onclick="loadService('assist')">🤝 Assist</button>
+  <button onclick="loadService('home')">🏠 Home+</button>
+  <button onclick="loadService('jobs')">💼 Jobs</button>
+  <button onclick="loadService('diaspora')">🌍 Diaspora+</button>
+  <button onclick="loadService('business')">🏢 Business & ONG</button>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="header">
+    <h1 id="serviceTitle">CizaDelivery</h1>
+    <span>Admin connecté</span>
+  </div>
+
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Numéro</th>
+          <th>Nom</th>
+          <th>Téléphone</th>
+          <th>Email</th>
+          <th>Statut</th>
+          <th>Paiement</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr>
+          <td>CIZA-DEL-2026-0001</td>
+          <td>Jean N.</td>
+          <td>+257 79 00 00 00</td>
+          <td>client@email.com</td>
+          <td>
+            <span class="status recu">Reçu</span>
+          </td>
+          <td>
+            <select>
+              <option>En attente</option>
+              <option>Cash</option>
+              <option>Mobile Money</option>
+            </select>
+          </td>
+          <td>
+            <button class="action-btn">Voir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+function loadService(service){
+  document.getElementById("serviceTitle").innerText = "Ciza" + service.charAt(0).toUpperCase() + service.slice(1);
+  // plus tard : charger les données dynamiquement
+}
+</script>
+
+</body>
+</html>

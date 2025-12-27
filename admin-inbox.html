@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Inbox — CIZA GROUP Services</title>
+
+<style>
+:root{
+  --gold:#F2B840;
+  --dark:#020617;
+  --card:#0b1738;
+  --text:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+  background:radial-gradient(circle at top,#06142E,#020617);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:#06142E;
+  border-bottom:1px solid rgba(242,184,64,.3);
+}
+.header-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header img{height:56px}
+header a{
+  border:2px solid var(--gold);
+  color:var(--gold);
+  padding:10px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* MAIN */
+main{
+  margin-top:110px;
+  max-width:1400px;
+  margin-inline:auto;
+  padding:40px 24px;
+}
+h1{
+  color:var(--gold);
+  font-size:42px;
+  margin-bottom:10px;
+}
+.subtitle{
+  opacity:.9;
+  margin-bottom:40px;
+  font-size:18px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+}
+.card{
+  background:linear-gradient(180deg,#0e1d42,#071126);
+  border-radius:26px;
+  padding:30px;
+  border:1px solid rgba(242,184,64,.25);
+}
+.card h3{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+.card p{
+  opacity:.9;
+  margin-bottom:14px;
+}
+.card span{
+  font-size:14px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <img src="https://raw.githubusercontent.com/cizaimmo/Cizagroup-Services/main/logotransparent.png">
+    <a href="dashboard-admin.html">← Retour Dashboard</a>
+  </div>
+</header>
+
+<main>
+  <h1>Admin Inbox</h1>
+  <p class="subtitle">
+    Boîte centrale de gestion — toutes les demandes et commandes  
+    issues des services CIZA GROUP.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📦 CizaDelivery+</h3>
+      <p>Commandes & numéros de suivi</p>
+      <span>Source : formulaires + email</span>
+    </div>
+
+    <div class="card">
+      <h3>🛒 CizaMarket+</h3>
+      <p>Packs & partenariats commerciaux</p>
+      <span>Numéros de commande / dossiers</span>
+    </div>
+
+    <div class="card">
+      <h3>🧽 CizaCarWash+</h3>
+      <p>Réservations & planning</p>
+      <span>Validation manuelle</span>
+    </div>
+
+    <div class="card">
+      <h3>🚕 CizaRide+</h3>
+      <p>Demandes VIP & chauffeurs</p>
+      <span>Connexion App / Web</span>
+    </div>
+
+    <div class="card">
+      <h3>🏢 CizaImmo+</h3>
+      <p>Dossiers immobiliers</p>
+      <span>Suivi humain</span>
+    </div>
+
+    <div class="card">
+      <h3>💼 CizaJobs+</h3>
+      <p>Candidatures & entreprises</p>
+      <span>Traitement RH</span>
+    </div>
+
+    <div class="card">
+      <h3>🏠 CizaHome+</h3>
+      <p>Services ménagers</p>
+      <span>Demandes clients</span>
+    </div>
+
+    <div class="card">
+      <h3>🚚 CizaLogistics+</h3>
+      <p>Logistique & transport</p>
+      <span>Suivi opérationnel</span>
+    </div>
+
+    <div class="card">
+      <h3>🧑‍💼 CizaAssist+</h3>
+      <p>Assistance pro</p>
+      <span>Dossiers administratifs</span>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

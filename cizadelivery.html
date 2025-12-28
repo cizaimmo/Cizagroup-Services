@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CizaDelivery+ — Livraison sécurisée</title>
+
+<style>
+:root{
+  --bg:#06142E;
+  --gold:#F2B840;
+  --glass:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.15);
+  --txt:#fff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Roboto;
+  background:linear-gradient(180deg,#06142E,#050F24);
+  color:var(--txt);
+}
+header{
+  position:sticky;top:0;z-index:10;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px;
+  background:rgba(6,20,46,.9);
+  border-bottom:1px solid var(--gold);
+}
+header img{height:34px}
+header button{
+  background:rgba(255,255,255,.1);
+  border:none;color:#fff;
+  padding:8px 14px;border-radius:20px;
+}
+.hero{padding:40px 20px}
+.container{max-width:1000px;margin:auto;padding:20px}
+.card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;margin-bottom:25px;
+}
+label{font-size:14px;opacity:.85}
+input,select,textarea{
+  width:100%;margin-top:6px;margin-bottom:14px;
+  padding:14px;border-radius:14px;border:none;
+}
+textarea{resize:none}
+.btn{
+  width:100%;padding:15px;
+  border-radius:16px;border:none;
+  background:var(--gold);
+  color:#06142E;font-weight:700;font-size:16px;
+}
+.small{font-size:13px;opacity:.85}
+#success{display:none;text-align:center}
+footer{text-align:center;padding:25px;font-size:13px;opacity:.85}
+</style>
+</head>
+
+<body>
+
+<header>
+  <button onclick="history.back()">←</button>
+  <img src="logotransparent.png">
+  <button onclick="location.reload()">⟳</button>
+</header>
+
+<section class="hero">
+  <h1>CizaDelivery+ 📦</h1>
+  <p>Livraison humaine, fiable et suivie — Burundi & sous-région.</p>
+</section>
+
+<div class="container">
+
+<!-- PROCESS -->
+<div class="card">
+  <h3>Comment ça marche</h3>
+  <ol class="small">
+    <li>Vous soumettez la demande</li>
+    <li>Validation humaine CIZA GROUP</li>
+    <li>Ramassage & livraison</li>
+    <li>Confirmation finale</li>
+  </ol>
+</div>
+
+<!-- FORM -->
+<div class="card" id="formBox">
+<h3>Commander une livraison</h3>
+
+<form action="https://formsubmit.co/infos@cizagroup.com"
+      method="POST"
+      enctype="multipart/form-data"
+      onsubmit="submitDelivery(event)">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Nouvelle demande — CizaDelivery+">
+<input type="hidden" name="Référence" id="refInput">
+
+<label>Nom complet *</label>
+<input name="Nom" required>
+
+<label>Téléphone (WhatsApp) *</label>
+<input name="Téléphone" required>
+
+<label>Email *</label>
+<input type="email" name="email" required>
+
+<label>Lieu de ramassage *</label>
+<input name="Départ" placeholder="Quartier, point connu, marché…" required>
+
+<label>Lieu de livraison *</label>
+<input name="Destination" placeholder="Quartier, point connu" required>
+
+<label>Type de colis *</label>
+<select name="Colis" required>
+<option value="">Choisir</option>
+<option>Document</option>
+<option>Petit colis</option>
+<option>Colis moyen</option>
+<option>Marchandise</option>
+</select>
+
+<label>Photo du colis (facultatif)</label>
+<input type="file" name="Photo colis" accept="image/*">
+
+<label>Localisation GPS (facultatif)</label>
+<input type="text" name="GPS" id="gps" placeholder="Auto si autorisé">
+
+<label>Instructions</label>
+<textarea name="Instructions" rows="3"></textarea>
+
+<button class="btn" type="submit">Envoyer la demande</button>
+</form>
+</div>
+
+<!-- SUCCESS -->
+<div class="card" id="success">
+<h2>Demande reçue ✅</h2>
+<p>Référence : <b id="refShow"></b></p>
+<p class="small">
+Un agent CIZA GROUP vous contactera rapidement.<br><br>
+📧 infos@cizagroup.com<br>
+🇧🇮 +257 79 94 50 07<br>
+🇨🇦 +1 514 502 9503
+</p>
+
+<a id="waLink" class="btn" style="margin-top:15px">WhatsApp CIZA GROUP</a>
+</div>
+
+<!-- FAQ -->
+<div class="card">
+<h3>FAQ</h3>
+<p class="small">
+<b>Adresses exactes ?</b><br>
+Nous utilisons quartiers, points connus et GPS.<br><br>
+<b>Paiement ?</b><br>
+Après validation humaine uniquement.<br><br>
+<b>International ?</b><br>
+Selon partenaires logistiques.
+</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 CIZA GROUP — Powered by CIZA GROUP<br>
+infos@cizagroup.com
+</footer>
+
+<script>
+function submitDelivery(e){
+  e.preventDefault();
+  const form = e.target;
+
+  const ref = "CZD-" + new Date().getFullYear() + "-" + Math.floor(100000+Math.random()*900000);
+  document.getElementById("refInput").value = ref;
+
+  // copie client
+  const email = form.querySelector('input[type="email"]').value;
+  let cc = document.createElement("input");
+  cc.type="hidden";cc.name="_cc";cc.value=email;
+  form.appendChild(cc);
+
+  fetch(form.action,{method:"POST",body:new FormData(form)})
+  .then(()=>{
+    document.getElementById("formBox").style.display="none";
+    document.getElementById("success").style.display="block";
+    document.getElementById("refShow").innerText=ref;
+    document.getElementById("waLink").href=
+      "https://wa.me/25779945007?text=Bonjour%20CizaDelivery%20Référence%20"+ref;
+    window.scrollTo({top:0,behavior:"smooth"});
+    form.reset();
+  });
+}
+
+// GPS facultatif
+if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(p=>{
+    document.getElementById("gps").value=
+      p.coords.latitude+","+p.coords.longitude;
+  });
+}
+</script>
+
+</body>
+</html>
